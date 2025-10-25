@@ -1,0 +1,65 @@
+/*
+ * CSS
+ * Footer
+ */
+ 
+footer#footer {
+  border-top: 3px solid var(--c-accent); //
+  // border: $s_border; //   
+
+  // --footer-gap-v: 2em; //
+  --footer-gap-v: 3em; //
+
+	.inner {
+    display: flex;
+    flex-direction: column;
+    /*
+    gap: 2em; // SAME SPACE AS PADDING-BLOCK
+    padding-block: 2em; // // SAME SPACE AS PADDING-BLOCK 
+    */
+    gap: var(--footer-gap-v); // SAME SPACE AS PADDING-BLOCK - do a calc for half for example
+    padding-block: var(--footer-gap-v); 
+
+    // color: var(--c-white); // TEMP	
+    color: var(--c-text); // TEMP	// vs alt or inv, if footer color bg ois sinverted or sth 
+
+    a {
+      // color: inherit;
+      // border: $s_border;
+    }
+    
+
+  } // inner
+
+} // footer
+
+
+
+/*
+ * FOOTER BAR TOP
+ */
+.footer_bar_top {  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+} // footer_bar_top
+
+
+/*
+ * FOOTER BAR MAIN
+ */
+ .footer_bar_main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+} // footer_bar_main
+
+
+/*
+ * FOOTER BAR BOTTOM
+ */
+.footer_bar_bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+} // footer_bar_bottom

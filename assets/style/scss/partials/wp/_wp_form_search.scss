@@ -1,0 +1,103 @@
+/*
+ * WP Form Search - standalone - just eh basics for the search fomr inetrally, nothing exteral here ...
+ */
+
+
+ .wp_form_search { // form_search
+	// border: $s_border; // DEV
+
+	/* WORDPRESS */ 
+
+	form {
+		// border: $s_border; // DEV
+	  display: flex;
+	  align-items: center; // TEMP, AS PRECAUTION, TO MAKE SURE THE INPUTS ARE VERTICALLY CENTERED
+	  gap: 0.5em; // TEMP
+	} // form
+	
+	
+	label {
+		// margin-bottom: 0px; // RESET DEL PARTIAL ...
+		margin-bottom: unset; // RESET DEL PARTIAL ...
+	  }
+
+	label span {display:none;} // TEMP - hide the label text, just for now ... // accessibiity ... 
+	
+	// here do the layt now, taht im there 
+
+	// WORDPRESS CODE, INPUT IS INSIDE A LABEL ...
+	label {
+	  flex-grow: 1; // TO MAKE IT STRECTH OUT 
+	}
+	
+		input[type=search] { 
+		// apply same as to nomral inputs 
+		// stretch: 1; // ???
+		/*
+		border-top-left-radius: 24px;
+		border-bottom-left-radius: 24px;
+		*/
+		/*
+		border-top-left-radius: 0.4em;
+		border-bottom-left-radius: 0.4em;		
+		*/
+		} // search
+	
+
+
+
+	
+	input[type=submit] { 
+	  // border-radius: 24px;
+	  /*
+	  border-top-right-radius: 24px;
+	  border-bottom-right-radius: 24px;
+	  */
+	  /*
+	  // padding-left: $spacing2; // TEST EXAGERADO / esero que no haya width o max width en algun lado ....
+	  // padding-left: $spacing; 
+	  padding-left: $spacing075; 
+	  padding-right: $spacing; // TEST 
+	  */	
+	  /*	
+	  padding-left: 0.8em; 
+	  padding-right: 1em; // TEST 
+	  */	
+	  // reset default thinsg que estan vineindo de submit ...
+	  
+	  
+	  font-weight: bold;
+	  font-size: 14px; // TEMP
+	  /*
+	  
+	  @include a_ui_default; // add to cowosass syetem !!! 
+
+	  */
+	  
+
+
+
+		// TODO - - - THIS SHOUDL COME FMR THE FMR ELEMENTS DEFAULTS OF THE SITE !!!!
+
+
+
+	  transition: var(--transition);
+	  // background-color: var(--moss-c-a-3); // DO SOME OTHER WAY .....
+	  &:hover {
+		background-color: var(--moss-c-a-4); // THE DARKEN, MAKE IT A VARIABLE ...
+	  } // hover
+	  
+
+
+
+
+
+	  
+	  // focu / actyive state wtf !!!!!
+	  
+	  
+	  
+	} // submit
+	
+	
+  } // wp_form_search

@@ -1,0 +1,235 @@
+/* 
+*
+*	cowoGRID - a responsive Grid Framework with Sass
+*	by Carl Johansson (@lo_kal)
+*/
+
+.section_separator {
+	// font-size: var(--fs-xl);
+	margin:40px 0; 
+	// color:$c_text_2;  
+	}
+	
+	
+	
+// Golden Sassy Responsive Grid
+// RWD GRID #2 - do it with the golden ratio !!!!
+
+
+
+/* CSS Document - SASS FUNCTION TO CALCULATE COLUMN-WIDTHS */
+
+
+/* 
+STEP 1 - Define the gutter-width (gutterwidth )
+*/
+$gutterwidth: 2%; /* LEAVE THIS OUTSIDE AS ITS GENERIC */ /* !!!!!!!!!!!!! MAYBE GUTTER WIDTH CAN BE CHANGED AT BREAKPONT, AND THEN ADD A CSS TRANSITION TO THESE CHANGES IN WIDTH.... */
+
+/* 
+STEP 2 - Create a function to determine the column width (%) in each scenario 
+The 1st variable is the gutterwidth defined in Step 1, the second variable is the number of columns (cnumber) 
+*/
+@function my-columnwidth-function($cnumber){
+  @return (100 - (($cnumber - 1) * $gutterwidth)) / $cnumber
+}
+/* 
+STEP 3 - Create a function to determine the width of an element that comprises n columns and n-1 gutters / osea, una fraccción no nth. 
+*/
+@function my-global-columnwidth-function($cnumber, $fraction){
+  @return (((100 - (($cnumber - 1) * $gutterwidth)) / $cnumber) * $fraction) + (($fraction - 1) * $gutterwidth)
+}
+
+
+
+
+.row {
+	overflow:hidden;  /* VS CLEARFIX - could be jquery to add clearfix class to each row class, but its unnecessary... */     
+	// background-color:#ccc; /* DEMO */      
+	// margin-bottom:10px; /* DEMO */
+	}
+
+/* can be taken away....... not yet */
+.col {
+	float:left; 
+	background-color:#999; /* DEMO */
+	
+	background-color: $c_primary_light; /* DEMO */
+	margin-bottom:$gutterwidth; /* DEMO */
+	position: relative;
+	padding: 6px;
+	color: $c_white;
+	text-align: center;
+	
+	&:last-of-type {
+		// background-color: #999; // va bien para quitar elmargin right, pero solo en 1-line scenario !!!!
+		
+		margin-right:0%; // CON ESTO ASEGURAMOS LOS 1 LINE SCENARIOS, PERO ENCIMA TAMBIEN QUE CON LOS CASOS ASIMETRICOS (de tb solo 1 linea, of course, but it's good enough !)
+		
+		}
+	
+	}
+
+/* RESPONSIVE GRID FRAMEWORK ============================================================ */
+
+/* DEMO CSS !!! */
+
+
+
+@media only screen and (max-width: 800px) {
+
+
+
+.col {
+	font-size: 12px; 
+	padding: 6px 0px;
+} // DEMO
+
+		
+}
+
+
+
+@media only screen and (max-width: 480px) {
+
+// .col:last-of-type {margin-bottom:0px;}
+
+
+.col {
+	font-size: 10px; 
+	// padding: 6px 0px;
+} // DEMO
+
+		
+}
+
+
+
+
+.span_1of1 {width:100%;} /* SELF-OBVIOUS, no need to define it */
+
+.span_1of2 {width:my-columnwidth-function(2); margin-right:$gutterwidth;} // margfin - righ: gutterwidth . . . .gutter width, could be added to col !!!!!!!!!!!!!!!!!
+	.span_1of2:nth-of-type(2n) {margin-right:0%;} /* FOR SINGLE-LINE & MULTI-LINE SCENARIO */ 
+
+.span_1of3 {width:my-columnwidth-function(3); margin-right:$gutterwidth;} 
+	.span_1of3:nth-of-type(3n) {margin-right:0%;} 
+		
+.span_1of4 {width:my-columnwidth-function(4); margin-right:$gutterwidth;} 
+	.span_1of4:nth-of-type(4n) {margin-right:0%;}
+
+.span_1of5 {width:my-columnwidth-function(5); margin-right:$gutterwidth;} 
+	.span_1of5:nth-of-type(5n) {margin-right:0%;}
+	
+.span_1of6 {width:my-columnwidth-function(6); margin-right:$gutterwidth;} 
+	.span_1of6:nth-of-type(6n) {margin-right:0%;}
+		
+.span_1of7 {width:my-columnwidth-function(7); margin-right:$gutterwidth;} 
+	.span_1of7:nth-of-type(7n) {margin-right:0%;}
+
+.span_1of8 {width:my-columnwidth-function(8); margin-right:$gutterwidth;} 
+	.span_1of8:nth-of-type(8n) {margin-right:0%;}
+
+.span_1of9 {width:my-columnwidth-function(9); margin-right:$gutterwidth;}  
+	.span_1of9:nth-of-type(9n) {margin-right:0%;}
+	
+.span_1of10 {width:my-columnwidth-function(10); margin-right:$gutterwidth;} 
+	.span_1of10:nth-of-type(10n) {margin-right:0%;}
+	
+.span_1of11 {width:my-columnwidth-function(11); margin-right:$gutterwidth;} 
+	.span_1of11:nth-of-type(11n) {margin-right:0%;}
+
+.span_1of12 {width:my-columnwidth-function(12); margin-right:$gutterwidth;} 
+	.span_1of12:nth-of-type(12n) {margin-right:0%;}
+	
+	
+	
+	
+	
+/* INTERNAL COMBINATIONS */
+
+
+/* COMBINATIONS of 3 */
+.span_2of3 {width:my-global-columnwidth-function(3,2); margin-right:$gutterwidth;}
+.span_3of3 {width:my-global-columnwidth-function(3,3); margin-right:$gutterwidth;}
+
+/* COMBINATIONS of 4 */
+.span_2of4 {width:my-global-columnwidth-function(4,2); margin-right:$gutterwidth;}
+.span_3of4 {width:my-global-columnwidth-function(4,3); margin-right:$gutterwidth;}
+.span_4of4 {width:my-global-columnwidth-function(4,4); margin-right:$gutterwidth;}	
+	
+/* COMBINATIONS of 5 */
+.span_2of5 {width:my-global-columnwidth-function(5,2); margin-right:$gutterwidth;}		
+.span_3of5 {width:my-global-columnwidth-function(5,3); margin-right:$gutterwidth;} 
+.span_4of5 {width:my-global-columnwidth-function(5,4); margin-right:$gutterwidth;} 
+.span_5of5 {width:my-global-columnwidth-function(5,5); margin-right:$gutterwidth;} 
+
+/* COMBINATIONS of 6 */
+.span_2of6 {width:my-global-columnwidth-function(6,2); margin-right:$gutterwidth;}	
+.span_3of6 {width:my-global-columnwidth-function(6,3); margin-right:$gutterwidth;} 	
+.span_4of6 {width:my-global-columnwidth-function(6,4); margin-right:$gutterwidth;} 	
+.span_5of6 {width:my-global-columnwidth-function(6,5); margin-right:$gutterwidth;} 
+.span_6of6 {width:my-global-columnwidth-function(6,6); margin-right:$gutterwidth;} 
+
+/* COMBINATIONS of 7 */
+.span_2of7 {width:my-global-columnwidth-function(7,2); margin-right:$gutterwidth;}
+.span_3of7 {width:my-global-columnwidth-function(7,3); margin-right:$gutterwidth;} 
+.span_4of7 {width:my-global-columnwidth-function(7,4); margin-right:$gutterwidth;} 
+.span_5of7 {width:my-global-columnwidth-function(7,5); margin-right:$gutterwidth;} 
+.span_6of7 {width:my-global-columnwidth-function(7,6); margin-right:$gutterwidth;} 
+.span_7of7 {width:my-global-columnwidth-function(7,7); margin-right:$gutterwidth;} 
+
+/* COMBINATIONS of 8 */
+.span_2of8 {width:my-global-columnwidth-function(8,2); margin-right:$gutterwidth;}
+.span_3of8 {width:my-global-columnwidth-function(8,3); margin-right:$gutterwidth;} 
+.span_4of8 {width:my-global-columnwidth-function(8,4); margin-right:$gutterwidth;} 
+.span_5of8 {width:my-global-columnwidth-function(8,5); margin-right:$gutterwidth;} 
+.span_6of8 {width:my-global-columnwidth-function(8,6); margin-right:$gutterwidth;} 
+.span_7of8 {width:my-global-columnwidth-function(8,7); margin-right:$gutterwidth;} 
+.span_8of8 {width:my-global-columnwidth-function(8,8); margin-right:$gutterwidth;} 
+	
+/* COMBINATIONS of 9 */
+.span_2of9 {width:my-global-columnwidth-function(9,2); margin-right:$gutterwidth;}
+.span_3of9 {width:my-global-columnwidth-function(9,3); margin-right:$gutterwidth;} 
+.span_4of9 {width:my-global-columnwidth-function(9,4); margin-right:$gutterwidth;} 
+.span_5of9 {width:my-global-columnwidth-function(9,5); margin-right:$gutterwidth;} 
+.span_6of9 {width:my-global-columnwidth-function(9,6); margin-right:$gutterwidth;} 
+.span_7of9 {width:my-global-columnwidth-function(9,7); margin-right:$gutterwidth;} 
+.span_8of9 {width:my-global-columnwidth-function(9,8); margin-right:$gutterwidth;} 	
+.span_9of9 {width:my-global-columnwidth-function(9,9); margin-right:$gutterwidth;} 
+	
+/* COMBINATIONS of 10 */
+.span_2of10 {width:my-global-columnwidth-function(10,2); margin-right:$gutterwidth;}
+.span_3of10 {width:my-global-columnwidth-function(10,3); margin-right:$gutterwidth;} 
+.span_4of10 {width:my-global-columnwidth-function(10,4); margin-right:$gutterwidth;} 
+.span_5of10 {width:my-global-columnwidth-function(10,5); margin-right:$gutterwidth;} 
+.span_6of10 {width:my-global-columnwidth-function(10,6); margin-right:$gutterwidth;} 
+.span_7of10 {width:my-global-columnwidth-function(10,7); margin-right:$gutterwidth;} 
+.span_8of10 {width:my-global-columnwidth-function(10,8); margin-right:$gutterwidth;} 	
+.span_9of10 {width:my-global-columnwidth-function(10,9); margin-right:$gutterwidth;} 
+.span_10of10 {width:my-global-columnwidth-function(10,10); margin-right:$gutterwidth;} 
+	
+/* COMBINATIONS of 11 */
+.span_2of11 {width:my-global-columnwidth-function(11,2); margin-right:$gutterwidth;}	
+.span_3of11 {width:my-global-columnwidth-function(11,3); margin-right:$gutterwidth;} 
+.span_4of11 {width:my-global-columnwidth-function(11,4); margin-right:$gutterwidth;} 
+.span_5of11 {width:my-global-columnwidth-function(11,5); margin-right:$gutterwidth;} 
+.span_6of11 {width:my-global-columnwidth-function(11,6); margin-right:$gutterwidth;} 
+.span_7of11 {width:my-global-columnwidth-function(11,7); margin-right:$gutterwidth;} 
+.span_8of11 {width:my-global-columnwidth-function(11,8); margin-right:$gutterwidth;} 	
+.span_9of11 {width:my-global-columnwidth-function(11,9); margin-right:$gutterwidth;} 
+.span_10of11 {width:my-global-columnwidth-function(11,10); margin-right:$gutterwidth;} 
+.span_11of11 {width:my-global-columnwidth-function(11,11); margin-right:$gutterwidth;} 
+	
+/* COMBINATIONS of 12 */
+.span_2of12 {width:my-global-columnwidth-function(12,2); margin-right:$gutterwidth;}
+.span_3of12 {width:my-global-columnwidth-function(12,3); margin-right:$gutterwidth;} 
+.span_4of12 {width:my-global-columnwidth-function(12,4); margin-right:$gutterwidth;} 
+.span_5of12 {width:my-global-columnwidth-function(12,5); margin-right:$gutterwidth;} 
+.span_6of12 {width:my-global-columnwidth-function(12,6); margin-right:$gutterwidth;} 
+.span_7of12 {width:my-global-columnwidth-function(12,7); margin-right:$gutterwidth;} 
+.span_8of12 {width:my-global-columnwidth-function(12,8); margin-right:$gutterwidth;} 	
+.span_9of12 {width:my-global-columnwidth-function(12,9); margin-right:$gutterwidth;} 
+.span_10of12 {width:my-global-columnwidth-function(12,10); margin-right:$gutterwidth;} 
+.span_11of12 {width:my-global-columnwidth-function(12,11); margin-right:$gutterwidth;} 
+.span_12of12 {width:my-global-columnwidth-function(12,12); margin-right:$gutterwidth;} 
+
+							

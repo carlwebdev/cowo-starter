@@ -1,0 +1,847 @@
+/*
+ * CSS
+ * Layout
+ */
+
+
+
+// move this to resuklst fodler partial ....
+
+
+.wp_search_no_results {
+  // background-color: $c_green;
+  /*
+  background-color: $c_accent;
+  color: $c_white;
+  */
+  background-color: var(--bg-c-gray-light);
+  padding: $spacing075; // 
+  
+  
+  font-size: 24px; // !!!!
+  font-weight: 300;
+  
+  /*
+  a {
+    color: $c_accent;
+    @include a_ui_default;
+  } // a
+  */
+  
+  
+  h2 {
+    font-weight: 500; // $fw_bold .... use for kidle
+    margin-bottom: $spacing05;
+  }
+  
+  
+  /*
+   * LISTS
+   */
+  ul {
+    margin-left:24px;
+    // margin-bottom: 12px;
+    margin-bottom: 24px;
+    list-style:  disc;
+    // list-style-image: url('../assets/img/bullet_blue.jpg'); /* deberia ser un gif */
+    }
+
+    li {
+      // margin-bottom: 18px;
+      // margin-bottom: 12px;
+      margin-bottom: 10px;
+      }   
+
+      li ul {
+        margin-top: 10px;
+        }  
+  
+  
+  
+  
+  
+} // wp_search_no_results
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+ * LAYOUT TEMPLATE
+ * PAGE BLOG (POSTS) aka NEWS
+ * 
+ * Build a specific sidebar "Blog Sidebar" to be used here, and then anothe rone for "Blog Post Sidebar" with more or different widgets  -so copy teh widget system fomr oomg 
+and store it somehwere correct
+ */
+
+
+
+/* layout systems .- tempaltes ........ getting there */
+
+
+/*
+- layout_page_blog
+  - sidebar
+    - search
+    - categories aka the rest
+  - main  
+    - banner
+    - toolbar
+    - content...
+
+
+  TABLET
+    - banner
+    - toolbar +  dropdowen & search ... or search free...
+    - content
+
+
+
+*/
+
+/*
+add classes for mods a rwd behavioru !! dummY! styel agnoistidc!!
+.rwd_hide_tablet {} // l
+.rwd_hide_mobile {} // m vs s
+
+.rwd_hide_l {} // means it jumsp at bp_l, good system
+.rwd_hide_2 {} 
+.rwd_hide_3 {} 
+
+*/
+
+
+.rwd_hide_l {
+
+  @media only screen and (max-width: $bp_l) {
+    display: none !important;
+  } // MEDIA-QUERY
+  
+} // rwd_hide_l
+.rwd_hide_m {
+
+  @media only screen and (max-width: $bp_m) {
+    display: none !important;
+  } // MEDIA-QUERY
+
+} // rwd_hide_m
+.rwd_hide_s {
+
+  @media only screen and (max-width: $bp_s) {
+    display: none !important;
+  } // MEDIA-QUERY
+
+} // rwd_hide_s
+
+
+
+.rwd_show_xl {
+
+  @media only screen and (max-width: $bp_xl) {
+    display: block !important;
+  } // MEDIA-QUERY
+  
+} // rwd_hide_l
+
+
+
+.rwd_show_l {
+
+  @media only screen and (max-width: $bp_l) {
+    display: block !important;
+  } // MEDIA-QUERY
+  
+} // rwd_hide_l
+.rwd_show_m {
+
+  @media only screen and (max-width: $bp_m) {
+    display: block !important; // ah wil be issue with blck vs flex !!!
+  } // MEDIA-QUERY
+
+} // rwd_hide_m
+.rwd_show_s {
+
+  @media only screen and (max-width: $bp_s) {
+    display: none !important;
+  } // MEDIA-QUERY
+
+} // rwd_hide_s
+
+
+
+
+.layout_page_blog {
+  // border: 12px solid red; // 
+
+  
+  display: grid;
+  // grid-template-columns: 2fr 1fr;
+  // grid-template-columns: 3fr 1fr;
+  // grid-template-columns: 3fr 360px;
+  grid-template-columns: 360px 3fr;
+  // gap: $spacing2; // ?? VARIABLE 
+  // gap: 4em; 
+  gap: 2em; 
+
+  
+} // layout_page_blog
+
+
+
+// RWD BEHAVIOUR DESIGN
+
+@media only screen and (max-width: $bp_xl) { // WAS bp_l, but ebetter do it before so that sidbar and conetnt can coeist but under the banner !!!
+
+  .layout_page_blog {
+    grid-template-columns: 240px 3fr;
+  } // layout_page_blog
+
+} // MEDIA-QUERY
+
+
+
+@media only screen and (max-width: $bp_l) { // WAS bp_l, but ebetter do it before so that sidbar and conetnt can coeist but under the banner !!!
+
+  .layout_page_blog {
+      grid-template-columns: 1fr;
+  } // layout_page_blog
+
+
+  .sidebar {
+    display: none; // must add the sidebar conte tinto a toolbar filter dropdowney jr
+  } // sidebar
+
+
+} // MEDIA-QUERY
+
+
+
+
+
+
+// can move this inito a folder de wordpress VS woocommerce s
+
+
+
+
+/*
+ * 1 - page layouts
+ */
+
+
+/* 
+ * 2 - ssame sidebar  - with same tinsg inside .... 
+ */
+
+
+// SIDEBAR - wc manualillo, + 2 for wp pages  
+
+/*
+// TODO - FALAT CLASE SPEIOCIF CMPAAR ELMAIN, PAR PODERLE HACER FLEX GAPS POR DEFAULT !!! ASI BANNER_ADD NO TIENE MARHIN BOOTOM !!! 
+// .main,
+main { // WAS "PLACEHOLDER"
+  display: flex;
+  flex-direction: column;
+  // gap: 2em; // ???
+  gap: 0.5em; // ???
+} // vs main a secas... 
+
+*/
+
+
+
+
+// doing sidebar sticky logic.
+
+.layout_page_blog {
+  display: flex;
+
+  main { 
+    // border: 12px solid purple; // DEBUGGING 
+    display: flex;
+    flex-direction: column;
+    // gap: 2em; // ???
+    gap: 0.5em; // ???
+    
+    
+  // flex: 1;
+  /*
+  width: 100%; // THE CONTRAIN THATHE SWIPER NEEDED 
+  width: 100%;
+  max-width: 100%; // its taking uop the hwo parent container, as the parent container ios flexed and not grid!!! aaah !!!
+   */ 
+
+  flex: 1; /* This is shorthand for flex-grow: 1; flex-shrink: 1; flex-basis: 0%; */
+  /* Remove width and max-width properties */
+  
+  
+  width: calc(100% - 300px); // very hacky or not, dunno, but it swaht it is for now !!! - RWD NO NEED, AS IT DISAAPEARS 
+  
+
+
+}
+
+  
+  
+
+  .sidebar {
+
+
+    // border: 12px solid pink; // DEBUGGING  
+
+
+    position: -webkit-sticky; /* For Safari */
+    position: sticky;
+    // top: 0; /* Adjust this value to control the sticky position */
+
+    // top: var(--header-height); // VIP - tets this, plus an extra ,with calc
+    top: calc(var(--header-height) + 2em); // VIP - tets this, plus an extra ,with calc
+
+    // z-index: 1000; /* Ensure the sidebar stays above other content */
+    /*
+    width: 300px; // Adjust the width as needed
+    */
+    height: 100vh; /* Ensure the sidebar takes the full height of the viewport */
+    overflow-y: auto; /* Add scroll if the content overflows */
+
+    // physically here, but then also in the tolbar, so name it sidebar_coinetnt insietad, as inner menas tha tits inside the parent.
+    // .sidebar_inner {} // sidebar__inner
+
+
+
+    // flex-shrink: 0; // TETSING SWIIEPR ISSUE
+    flex: 0 0 300px; /* Fixed width of 250px */
+
+
+    .sidebar_content {} // sidebar__inner
+
+  }
+  
+} // layout_page_blog
+
+
+
+
+
+
+
+
+
+
+// TODO - GOAL - split the sidebar laytu extenral behaviour c¡form interanl compenets 
+
+
+
+
+
+
+// to have it in the incude, so that it works both in teh sidebar as in the toolbar  -so sidbear :cinetnt (as in sidebar) is notr really a good name 
+.sidebar_content {
+  // here si the conetent taht wil be reused in the tolbar drodwon 
+  // border: var(--s-border); // DEV
+} // sidebar_content
+
+
+
+
+// PAREN TLAYER FOR sidebar_cntet in the totolbar so that we can manage the layout in grid etc or beetre even with flex..
+
+.toolbar_sidebar_content {
+
+  .sidebar_content {
+      /*
+      display: grid;
+      // grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: repeat(3, 1fr);
+      // gap: 2em; // 
+      // gap: 1em; // 
+      gap: 1.5em; // 
+      */
+
+      padding: 1em;
+      border: 1px solid #ccc; // TEMP
+      /*
+      border-bottom-left-radius: 8px;
+      border-bottom-right-radius: 8px;
+      */
+      border-radius: 8px;
+
+
+      display: flex;
+      flex-direction: row;
+      gap: 1.5em;
+      flex-wrap: wrap; // FOR THE LATS ONE TO BREAK LINE
+      
+     
+      > div:last-of-type {
+        // border: var(--s-border); // DEV
+
+        // and or make it be fullw idth
+        flex-grow: 1; // Make the last child take the remaining space
+
+        display: flex;
+        justify-content: flex-end; // align to the right (the clear filters button)
+        align-items: end; // BOTOTM 
+      } // first-of-type
+      
+      /*
+      > div:first-of-type {
+        display: none; // TEMP - hide the search form here, for now ...
+        // and or make it be fullw idth
+      } // first-of-type
+      */
+      @media only screen and (max-width: $bp_m) {
+          grid-template-columns: repeat(2, 1fr);
+      } // MEDIA-QUERY
+      /*
+      @media only screen and (max-width: $bp_s) { 
+        grid-template-columns: 1fr; // TODO - MAYBE NOT NECESSARY ??? 
+      } // MEDIA-QUERY
+      */
+
+   } // sidebar_content
+
+
+} // toolbar_sidebar_content
+
+
+
+
+
+// .siderbar aside (when comes form .wp_search_no_results/ /vs
+// sidebar.aside when mine.. )
+
+// .sidebar,
+.sidebar_content {
+
+  // big tasks - diferenciate bewteen manua sidebar and wp sidebar - as wp sidebar comes with h3 etc inyeected code, whil I in peroanl mode want o have abetre control !!!!
+  // HOW TRO DEBUG THS? i MUST HAVE A WO SIDEBAR FOR THE POSTS PAGE !!! O QUE??
+
+  // DEFAULT, IN THE SIDEBAR  LATER IN THE TOOLBAR WE HAVE PAREN TLAYER TO MODIFY THIS LAYOUT
+  display: flex;
+  flex-direction: column;
+  // gap: 2em; // 
+  // gap: 1em; // 
+  gap: 1.5em; // 
+
+
+/*
+// TODO - tod test to stick the sidebar ... ojo !!!! - lo habia conseguid en el steirerkole last, css del sidebar !!!
+// en steinerportalen:
+// https://steinerportal.webprosjekt.net/pedagogikk
+
+  // THE ISSUE IS TAHT ITS STICKTY TO PARENT, NOT TO WHE PAGE  ... 
+	// http://caniuse.com/#feat=css-sticky
+	position: -webkit-sticky;
+	position: sticky;
+	// top: 0px; // VIP
+  // top: var(--header-height); // VIP - tets this, plus an extra ,with calc 
+  top: calc(var(--header-height) + 2em);
+*/
+
+
+  // maybe have flex with gap here... 
+
+
+
+
+
+
+
+  // @extend %dev;
+  
+  // s_card_other 
+  
+  // s_sidebar  yeah !!!!!
+  
+  // background-color: #D8D8D8; //  this was the dark i guesss
+  
+  
+  /* 
+  // background-color: var(--bg-c-gray-light); // c-bg_alt
+  // background-color: var(--c-bg-website-alt); // c-bg_alt
+  background-color: var(--c-bg-alt); // c-bg_alt
+  // border: 1px solid #ccc; // ???? 
+  border: 1px solid var(--c-text); // 
+  padding: 2em; // TEST 
+  
+  align-self: baseline; // FROM STEINERPORTALEN, TO  MAKE IT STICK TO THE TOP, AND NOT TO THE BOTTOM, AS IT WAS DOING ... NOT!
+  
+
+
+  */
+
+
+  
+  /* align-self: start */
+    
+
+
+
+    /*
+    display: grid;
+    gap: 2em; //
+    */
+    /*
+    display: flex;
+    flex-direction: column;
+    gap: 2em; // ??? - this flex was only for the gap ... but h3's are teking care of that at teh memtn ... 
+    */
+    .placeholder {} // aka item ...
+
+    
+  /*
+   * SIDEBAR IS REALLY ONLY FOR WIDGETS... o no.... 
+   */
+  
+  /* WORDPRESS - WIDGET */
+  h3, /* standalone */
+  h3.widget-title  { 
+    font-weight: bold; // ??? 
+    
+    // font-size: 20px; // ????
+    // font-size: var(--fs-xl); // ???
+    // font-size: var(--fs-l); // ???
+    font-size: 14px; // 
+    /*
+    margin-bottom: $spacing; 
+    margin-top: $spacing2; // WCS
+    */
+    margin-bottom: 1em; 
+    // margin-top: 2em; // WCS  
+    margin-top: unset; // WCS      
+    
+  } // h3
+  
+
+  div:first-of-type h3, // para el new "placehodler" manual system in placeing
+  aside:first-of-type h3.widget-title { // so my sidebar, should be an aside tag., with sidebar class, i guet it, and it would nake it both wp able ..
+    margin-top: 0px; // OK - FINALLY !!!
+  } // aside = "widget"
+  
+  /* WORDPRESS SEARCH WIDGET */
+  aside.widget_search {
+    
+    h3.widget-title {display: none;}
+    span.screen-reader-text {display: none;}
+    
+  } // aside.widget_search
+  
+  
+  
+  /* 
+   * WORDPRESS WIDGET
+   * TAGS - WORDPRESS "TAG CLOUD" 
+  */
+  aside.widget_tag_cloud .tagcloud {
+    // border: 3px solid red; 
+    display:flex;
+    gap: 24px;
+    
+    a {
+      display: block; // ...s
+      @extend .buttonSmall;  // OR MAYBE SHOUDL BE PILLS .... COPY FMOR MOSS OR WHATEVRE , OR Cb... 
+    } // a
+    
+  } // aside.tagcloud
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+  // ABSATRER EL LAYOUT STYLE SYSTEM DE ESTO Y METERO EN FROM:LAYOT O QUCOM SE LLAME
+  
+  
+  
+  // METER TB AQUI EL TEMA DEL SERAHC DEL HEADRE, ESE LAYUT SYUSTEM... 
+  
+  
+  form[role=search] {
+    
+    
+    
+    
+  } // form[role=search]  
+  
+  
+  
+  
+  // this is only for sidebar widget seah, ojo!! im buidln teh noral in the disdebar for now ...
+
+
+
+  
+  
+  /*
+  form {
+    
+    
+    // LAYOUT FOR COMBO SEARCH FORM 
+    
+    display: flex;
+    
+    // WORDPRESS CODE, INPUT IS INSIDE A LABEL ...
+    label {
+      flex-grow: 1; // TO MAKE IT STRECTH OUT 
+    }
+      input[type=search] { 
+      } // search
+    button[type=submit] { 
+    } // submit  
+    
+
+    
+    // ETSO ES LQO UE TENGO QU EEXTEWNDER, ASUQI EY EN FOMRS, PAATR UW SIEA LO MISMSO 
+    
+
+    
+      // 2 - STYLE
+      
+      // now for the styke - ovverdide tinsg taht come fomr general fomr fomratting
+      
+      // must have les svert padidng here, 
+      // and d the whole button sustem...
+      
+      
+      // hanging-punctuation: 
+      
+      input[type=search] {
+        
+        // & placeholder color ...??
+        
+        padding-top: 12px;
+        padding-bottom: 12px;
+        
+        // new: 
+        border-top-width: 0px;
+        border-left-width: 0px;
+        border-right-width: 0px;
+        
+        // o si acaso, aqui hay border bototm, y en el caseo del header no hat nada de borders... - mejor solution 
+        
+      } // input
+      
+      
+      // OBS  HEIGHT MINGLED BY FLEX !!!
+      
+      // button[type=submit] { // auqi si que era un input, y no un button .... 
+      input[type=submit] { // auqi si que era un input, y no un button .... 
+        padding-top: 12px;
+        padding-bottom: 12px;
+
+        // // // border: $s_border; // TEST 
+
+        background-color: white;
+        color: var(--text-c-gray); // VERY TEMP
+        // color: var(--c-black); // VERY TEMP
+        // ADD TRANSITION 
+        &:hover {
+          // color: var(--text-c-gray); 
+        } // hover
+        
+        
+        // ADD ICON INSTEAD OF THE WORD !!!!!
+        
+        
+        // background-image:url(https://form2email.dwbooster.com/images/logo.png);
+        // vs conetnt 
+        color:transparent; // OK
+        // background-image:url(https://form2email.dwbooster.com/images/logo.png);
+        // background-image:url(../img/icons/ui/search-24px.svg); // get the materia desig icon, as svg ...
+        background-image:url(../../img/icons/ui/search-24px.svg); // get the materia desig icon, as svg ...
+        background-repeat: no-repeat;
+        background-position: center;
+        padding-right: 0px;
+        padding-left: 0px;
+        
+        &:hover {
+          color:transparent; // AKA INHERIT...
+          background-color: transparent; // ?? VS NONE ??   
+        } // hover
+        
+        
+        // MAKING THE LATERAL SERAHC BE EXACTLY HOW IT SHOWULD, AND THEN FOX THE HEADRE ONE AS EWELL, 
+        
+        // AND THEN CHECK THE ONE IN THE 404 PAGE 
+        
+
+      } // submit    
+    
+
+    
+    
+} // form
+ */ 
+
+  
+  
+  
+  
+  
+  
+ul.checkboxes {
+  // border: $s_border; // DEV
+  font-size: 14px; // 
+
+  li {
+    // border: $s_border; // DEV
+    // border: var(--s-border); // DEV
+    display: flex; 
+    align-items: center;
+    gap: 0.5em;
+
+    input[type=checkbox] { }
+
+    label {
+      font-size: unset; // 
+    }
+    span {
+      // color: red;
+      font-size: unset; //
+    }
+    
+  } // li
+
+} // ul.checkboxes
+
+  
+
+
+// RESTE FILTER BUTTON
+button#clear-filters { // OBS, THIS ID IS AJAX FUNCTONAL, SO NEVER RENAME IT!!!  - REUSE IIT IN ALL SIDEBARS
+  // @extend %pill; // TEST 
+        // @extend %pill_small;
+        // @extend .buttonSmall;  
+    // @extend .buttonMedium;   
+    // @extend %button_outline_small;
+    // @extend %button_outline;  
+    @extend %button_outline_medium;  
+      
+} // clear-filters 
+
+
+
+
+
+
+
+
+  // now, return to the old list styem, so as to no tfuc it up, with a container for the disebarcoet t
+  
+
+  // case-widget VS not
+  
+  
+  
+  //  TREMP, ACTUALLY 2 DIFERE TLAYOUT . JUST GET THISSG DFOEN, NO PASA NADA 
+    
+   //  .list { // UNNCESSARY, AS I WANT TO APLPY THE SAME TO THE OTHER SIDEBAR ....
+      
+      ul {
+
+        li {
+          /*
+          margin-right: $spacing05; // TEST 
+          &:last-of-type {margin-right:0px;}
+          */
+          
+          a { 
+            display: block; // BUTTON BEHAVIOUR !!!
+            // padding: $spacing025 $spacing05;   
+            // padding: $spacing025 0; 
+            padding: $spacing05 0; 
+            border-bottom: 1px solid var(--c-form-border);
+            color: var(--text-c-gray-lighter);
+            // font-size: var(--fs-header); // hmm, ok, it works
+            font-size: 16px; // ??? ok so wasnt needed
+            
+            // a_ui_hover_bold
+            // @include a_ui_alt;
+            
+            &:hover {
+              text-decoration: underline;
+              // @include f_main_bold;
+            }
+            
+          } // a
+
+
+
+          /*
+           *  2nd LEVEL 
+           */
+
+          &:hover {
+            ul {display: block;}
+          }
+
+
+
+            // !!! MUST BE AS WIDE AS TEXT, NO LINE BREAKING !!! FORCE IT SOMEHOW, ME SUENA HABELRO HECO YA EN EL PASADO...		
+
+            ul {
+              display: none;
+
+              // border: 1px solid black; // DEV
+              // background-color: $c_white;
+              background-color: var(--c-bg);
+              padding-top: $spacing3; // TEST ------------------------------
+
+              padding-right: $spacing2; // TEST
+              // padding-bottom: $spacing2; 
+              padding-bottom: 36px; 
+
+              position: absolute;
+
+              li {
+                // float: none;
+
+                /* 3rd LEVEL */
+                ul {
+                  // border: 3px solid red; // DEV
+                  padding-top: 0px; // RESET
+                  position: relative; // RESET
+                  padding-bottom: 0px; // RESET
+                  // margin-left: $spacing05; // TEST
+                  margin-left: $spacing075; // TEST
+                } // ul
+
+              } // li
+
+            } // ul
+
+          } // li
+
+      } // ul.menu
+      
+   //  } // list
+  
+  
+  
+
+
+
+
+
+
+
+
+
+  
+  
+} // sidebar

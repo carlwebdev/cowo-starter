@@ -1,0 +1,53 @@
+/*
+ * Author: Carl Johansson @carlwebdev
+ * Project: cowo-Boilerplate
+ * File: Dev temp stuff - basic version, to aply to everything, without worriyying about WP #adminbar situation
+ */
+
+/* https://www.build-a-website.net/using-a-wildcard-selector-in-css-and-excluding-some-tags/251/ */
+ /* *:not(#wpadminbar), *:before, *:after { */  /* IT DID IT! BUT ONLY THE ADMINBAR, NOT THE CNTENT !!! SO EXPAND ONTHE SELECTOR !!! */
+
+/*
+ * 1 - DEV - OUTLINE ::: OK, AS IT DOESN'T INTEFRERE WITH LAYOUT NOR STYLE 
+ */
+*, *:before, *:after {
+  /* TODO - CHOOSE A MORE NEUTRAL COLOR !!!  */
+  outline: 1px solid #999 !important; /* not all tags where getitng te outline for some odd reason...  */
+  
+  
+    /* https://forum.freecodecamp.org/t/here-s-my-favorite-weird-trick-to-debug-css/189151 */
+    /*
+    color:                    hsla(210, 100%, 100%, 0.9) !important;
+    background:               hsla(210, 100%,  50%, 0.5) !important;
+    outline:    solid 0.25rem hsla(210, 100%, 100%, 0.5) !important;
+    */
+  /* background-color: rgba(240,243,196,0.05); */
+  /* background-color: rgba(240,243,196,0.20); */
+  /* background-color: rgba(240,243,196,0.80); */ /* pk, this is being aplpied to things that dont have bg colro deined., only. But thigs with bg colro are not being affected.,.. */ 
+  
+  
+  
+  /* https://stackoverflow.com/questions/13248289/css-setting-background-opacity-without-rgba */
+  background-color: yellow20; /* THIS DIDNT WORK -  if (as) this worked, then it shoudl also wotk with inherit, thogh inherit is not ehat i really want, si acaso transparent?? */
+  
+  
+  /* */background-color: #ff006650;  /* 8 DIGITS, WITH LAST 2 BEING THE OPACITY, WORKS IN CHROME... */
+  
+  background-color: #ff006625; /* 25% opacity */
+  
+  /* THIS STILL WORK ON ONLY LAYERS WITHOUT DEINFED COLOR ... OK, BUT MAYBE CAN BE IMPROVED  */
+  
+  /* background-color: inherit20; */  /* ELSE TETS WITH LOCAL VARIABL EETC */
+}
+/*
+ * 2 - DEV - BACKGROUND OPACITY ! OBS, JUST OPACITY, NOT COLOR ... ?!!?! 
+ */
+*, *:before, *:after {
+  /* background-color: rgba(240,243,196,0.50); */
+  /* background-color: rgba(240,243,196,0.10);  // MORE SUBTLE, ALLOWS WHITE TEXT TO STILL WORK  */
+  
+  
+  /*
+  background-color: rgba(240,243,196,0.05); // MORE SUBTLE, ALLOWS WHITE TEXT TO STILL WORK
+  */
+}

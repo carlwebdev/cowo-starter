@@ -1,0 +1,34 @@
+/*
+ * Author: Carl Johansson @carlwebdev
+ * Project: cowo-Reset
+ * File: Layout - Sticky Footer (Flex)
+ */
+
+/* 
+Reference Source - STICKY FOOTER - SOLVED BY FLEXBOX 
+https://philipwalton.github.io/solved-by-flexbox/demos/sticky-footer/
+<body class="Site">
+  <header>…</header>
+  <main class="Site-content">…</main>
+  <footer>…</footer>
+</body>
+.Site { // MY CASE - apply to #page, and or body
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+.Site-content { // MY CASE - apply to #content
+  flex: 1;
+}
+*/
+
+ /* body , */ #page  { // MY CASE - apply to #page, and or body
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  // border: 3px solid orange; // DEV
+}
+#page_content { // #content  // MY CASE - apply to #content - rename thsi as sth more visual, like page_content VS sticky footer - vs page_footer  YES - #page_content & page_footer // footer
+  flex: 1;
+	// border: 3px solid green; // DEV
+} // page_content

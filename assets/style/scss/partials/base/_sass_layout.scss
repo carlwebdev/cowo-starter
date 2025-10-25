@@ -1,0 +1,211 @@
+/*
+ * Author: Carl Johansson @carlwebdev
+ * Project: cowo-Boilerplate
+ * File: Sass - Layout
+ */
+ 
+
+/* FUNCTIONS */ // for the sass grid thingee	 - would be as sepoarate file anyways - DO THIS FOR THE BOLEPLATE !!!!!!!!!!!!!!!!!!!!
+
+/*
+ * SASS - VARIABLES - LAYOUT - BREAK-POINTS 
+ */ 
+$bp_xl: 1200px;
+$bp_l: 1024px;
+$bp_m: 800px;
+$bp_s: 599px;
+$bp_xs: 480px;
+
+/*
+ * SASS - VARIABLES - LAYOUT - SPACING
+ */
+$spacing: 24px;
+$spacing2: $spacing * 2;
+$spacing3: $spacing * 3;
+$spacing4: $spacing * 4;
+$spacing6: $spacing * 6;
+$spacing8: $spacing * 8;
+$spacing075: $spacing * 0.75;
+$spacing05: $spacing * 0.5;
+$spacing025: $spacing * 0.25;
+$spacing0125: $spacing * 0.125;
+
+
+
+
+/* SPACINGS */
+
+@mixin spacing($anyth)  {
+	margin-bottom: $baseSpacing x $anyth;
+	}
+	
+
+
+
+
+
+
+/* 
+ * SASS - MIXINS - LAYOUT - line clamp / clamps // css clamps 
+ */
+ @mixin css_line_clamp($lines) {
+  display: -webkit-box;
+  -webkit-line-clamp: $lines; // number of lines
+  -webkit-box-orient: vertical;  
+  overflow: hidden;
+}
+
+
+
+
+
+/*
+ * SASS - MIXINS - LAYOUT - RESPONSIVE
+ */
+@mixin centered {
+	/* display: block; */
+	margin-left: auto; // fallback
+	margin-right: auto; // fallback
+  margin-inline: auto;
+	}
+@mixin fullwidth {
+	float:none; 
+	width:100%;
+	}
+	
+
+
+
+/* 
+ * SASS - MIXINS - LAYOUT - PADDING
+ */
+@mixin paddingh($paddingh) {
+	padding-left: $paddingh; // fallback
+	padding-right: $paddingh; // fallback
+  padding-inline: $paddingh;
+	}
+
+@mixin paddingv($paddingv) {
+	padding-top: $paddingv; // fallback
+	padding-bottom: $paddingv; // fallback
+  padding-block: $paddingv;
+	}
+	
+
+/* 
+ * SASS - MIXINS - LAYOUT - MARGIN
+ */  
+@mixin marginh($marginh) {
+  margin-left: $marginh; // fallback
+  margin-right: $marginh; // fallback
+  margin-inline: $marginh;
+  }
+@mixin marginv($marginv) {
+  margin-top: $marginv; // fallback
+  margin-bottom: $marginv; // fallback
+  margin-block: $marginv;
+  }
+
+/* 
+ * SASS - MIXINS - IMAGES
+ */  
+@mixin img { 
+  width: 100%;
+  display: block;
+  }       
+@mixin bg_img {
+  background-position: center center;
+  background-repeat: no-repeat; 
+  background-size: cover;
+  }  
+
+/* 
+ * SASS - MIXINS - IMAGES - ASPECT RATIOS
+ */
+  
+@mixin ar_square {padding-top: 100%;} 
+@mixin ar_4_3 {padding-top: 75%;} 
+@mixin ar_16_9 {padding-top: 56.25%;} 
+@mixin ar_cinemascope {padding-top: 42.55%;}        
+@mixin ar_poster {padding-top: 134.5%;}
+
+
+/* 
+ * SASS - MIXINS - SIMPLE SHAPES
+ */ 
+ 
+@mixin circle($diameter) {
+    width: $diameter;
+    height: $diameter;
+    border-radius:50%;
+    }
+    
+@mixin square($edge) {
+    width: $edge;
+    height: $edge;
+    }  
+    
+@mixin rectangle($h_edge, $v_edge) {
+    width: $h_edge;
+    height: $v_edge;
+    } 
+	
+/* 
+ * SASS - MIXINS - TEXT
+ */
+  
+@mixin ellipsis {
+	overflow: hidden;
+	
+  white-space: nowrap; 
+  text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;
+  -ms-text-overflow: ellipsis;  
+  }
+	
+		
+		
+
+/* START - CLEARFIX */ /* apply clearfix to parent */
+.clearfix:after {
+	visibility: hidden;
+	display: block;
+	font-size: 0;
+	content: " ";
+	clear: both;
+	height: 0;
+	}
+* html .clearfix             { zoom: 1; } /* IE6 */
+*:first-child+html .clearfix { zoom: 1; } /* IE7 */
+/*/END - CLEARFIX */
+
+
+/* oveflow:hidden; VS clearfix hack VS float:inline-block with font-size issues..... */
+
+/*
+
+I USE overflow:hidden, hwich works the same, UNLESS YOU GET FUCKED UP BY DELETED OVERFLOWING CONTENT.
+
+view-source:http://mattbango.com/demos/hover-zoom/
+
+http://css-tricks.com/snippets/css/clear-fix/
+
+///
+to avoid cleafix hack, use display inline block, and then add the vertcal align top..
+but ther's the sapcing issue too... several ways to fix that
+
+
+*/
+
+
+
+
+
+	
+/* FUNCTIONS */ // for the sass grid thingee	 - would be as sepoarate file anyways
+
+
+
+
+
+

@@ -1,0 +1,42 @@
+/*
+ *
+ * CSS Custom Properties aka CSS Variables
+ * 
+ * font-sizes
+ * etc
+ *
+ */
+
+
+ /* 
+ * VARIABLES - Font size - TODO - S&D !!!
+ */
+/*
+$fs_xxl: 34px; // 
+$fs_xl: 28px;
+$fs_l: 20px;
+$fs_m: 16px;
+$fs_s: 12px;
+*/
+
+
+
+/*
+ * STEP 1 - DEFINITIONS - DO GOLDEN RATIO SUSTE, 1.618 - CHECK IN THE STYLEGYUDIE FOR HEADERS !!! 
+ */
+:root {
+  --fs-xxl: 34px;
+  --fs-xl: 28px;
+  --fs-l: 20px;
+  --fs-m: 16px;
+  --fs-s: 12px;
+}
+
+
+
+/*
+ * STEP 2 - USAGE, IMPLEMENTATION
+ */
+:root {
+
+}

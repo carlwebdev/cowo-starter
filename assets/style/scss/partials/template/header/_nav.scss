@@ -1,0 +1,53 @@
+/*
+ * Author: Carl Johansson @carlwebdev
+ * Project: cowo-Reset
+ * File: Header
+ */
+
+
+
+
+	
+nav.main {
+	// border-top: $spacing solid $c_primary_dark; // implement THIS N OTHER REPOS TOO
+	
+	.inner {
+		padding: $spacing025; 
+		@include paddingv($spacing05);
+		overflow:hidden;
+		position:relative;
+  }
+	
+	
+	ul {
+    display: flex;
+    gap: $spacing05;
+    
+    li {
+
+      a {
+        color: var(--c-white);
+
+        &:hover,
+        &.is-current {text-decoration: underline;}
+
+      } // a
+      
+      
+      ul {
+        display: none; // HIDE 2ND LEVEL TEMP
+      } // ul
+
+    } // li
+    
+  } // ul
+	
+
+  
+
+	@media only screen and (max-width: $bp_m) { 				
+		display: none;
+  } // MEDIA-QUERY	
+
+
+} // nav.main

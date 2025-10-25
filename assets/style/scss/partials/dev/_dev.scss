@@ -1,0 +1,41 @@
+/*
+ * Author: Carl Johansson @carlwebdev
+ * Project: cowo-Boilerplate
+ * File: Dev temp stuff
+ */
+
+
+@mixin test {
+	background-color: #f0f;
+	padding: 24px;
+}
+
+
+// rename as sass_dev....... 
+
+.dev_hide {display: none;}
+
+
+
+
+
+
+
+// CSS DEBUGGING
+// 1 - OUTLINE
+// 2 BACKGROUND WITH OPACITY ETC ...
+
+
+/*
+*, *:before, *:after {
+  // outline: 1px solid red; // TODO - CHOOSE A MORE NEUTRAL COLOR !!! 
+  // outline: 1px solid red !important; // not all tags where getitng te outline for some odd reason... 
+  outline: 1px solid #999 !important; // not all tags where getitng te outline for some odd reason... 
+}
+
+*, *:before, *:after {
+  background-color: rgba(240,243,196,0.50)
+}
+*/
+
+

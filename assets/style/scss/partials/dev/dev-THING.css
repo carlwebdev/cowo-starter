@@ -1,0 +1,41 @@
+/*
+ * Author: Carl Johansson @carlwebdev
+ * Project: cowo-Boilerplate
+ * File: Dev temp stuff
+ */
+
+/* https://www.build-a-website.net/using-a-wildcard-selector-in-css-and-excluding-some-tags/251/ */
+ /* *:not(#wpadminbar), *:before, *:after { */  /* IT DID IT! BUT ONLY THE ADMINBAR, NOT THE CNTENT !!! SO EXPAND ONTHE SELECTOR !!! */
+
+
+/*  *, *:before, *:after { */
+
+
+/* i might acyally be leanring some css again ! */ /* POK, BUT THE ASTERISK ONLY GOES 1 LEVEL DEEP, I WANT EVERYHTING INSIDE !! */
+
+/* */ *:not(#wpadminbar), *:before, *:after { /* THIS OMANAGES TO OVERRIDE AL THE LOCAL BG COLROS THAT ARE DEIFNED ... */ 
+/* *:not(#wpadminbar *), *:before, *:after { */  
+/*  *:not(#wpadminbar *), *:not(#wpadminbar * *), *:before, *:after {    */
+/*  *:not(#wpadminbar), *:not(#wpadminbar *), *:not(#wpadminbar * *), *:before, *:after  { */
+/* *:not(#wpadminbar), *:not(#wpadminbar *), *:not(#wpadminbar * *) { */
+/* *:not(#wpadminbar, #wpadminbar *)  { */ /* yes !!!! */
+/* *:not(#wpadminbar, #wpadminbar *), *:before, *:after  { */   /* OBS, before & after only applies to things with defined content value */
+  
+  
+  /* TODO - CHOOSE A MORE NEUTRAL COLOR !!!  */
+  outline: 1px solid #999 !important; /* not all tags where getitng te outline for some odd reason...  */
+  
+  /* background-color: rgba(240,243,196,0.50); */
+  /* background-color: rgba(240,243,196,0.10); */ /* MORE SUBTLE, ALLOWS WHITE TEXT TO STILL WORK */
+  /* background-color: rgba(240,243,196,0.05); */ /* MORE SUBTLE, ALLOWS WHITE TEXT TO STILL WORK */
+  
+  background-color: #ff006625; /* 25% opacity */
+  
+}
+/*
+*, *:before, *:after {
+  // background-color: rgba(240,243,196,0.50); 
+  // background-color: rgba(240,243,196,0.10);  // MORE SUBTLE, ALLOWS WHITE TEXT TO STILL WORK 
+  background-color: rgba(240,243,196,0.05); // MORE SUBTLE, ALLOWS WHITE TEXT TO STILL WORK
+}
+*/

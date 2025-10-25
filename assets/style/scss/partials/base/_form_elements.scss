@@ -1,0 +1,194 @@
+/*
+* cowoBoilerplate
+* Built by cowowo.cat
+* Author: Carl Johansson @carlwebdev 
+* Project: XXX
+* File: Forms
+* Filename: _forms.scss
+*/
+
+
+
+// boilrplate - button disabled ! and button submit vs reset, osea, yes vs no, con diferencia para que se vea qué ahu que clikar UX
+
+
+
+/* ====================================================================================================================== */
+/* FORMS                                                                                                                  */
+/* ====================================================================================================================== */
+	
+
+
+// CSS FORMS !!! - UI - FOCUS FACE IS IMPORTANT, SPECIALLY WEHN TOGGLING WITH TAB THROUGHT THE TAB INDEX
+
+
+/* INFO FRAMWEORK INPUT HOVER FOCUS ACTIVE ETC ----
+
+Write CSS? 
+
+Please don't forget to add :focus and :active styles along with :hover. :focus is important for keyboard and d-pad users.
+
+Iinput ytops _ HOVER &  FOCUS  ar now ok in my framework (and infoOD & fart be)
+
+BUT DSOES ACTIVE still apply to input typoes??????
+
+*/
+
+
+
+
+
+/* 
+ * FORM ELEMENTS 
+ */ 
+
+	
+label { // build that placeholder turenint label soilutin !!! just gogle it !!!
+	// color: $c_text_2;
+	color: var(--c-text-alt);
+	font-size: var(--fs-m);
+
+	&.is-clickable {} // VS DO THE INVERSE SITAUCTION ... 
+	cursor:pointer; /* for lables triggering checkboxes and radio buttons :-) */
+}
+	
+// label {cursor:pointer;} /* for lables triggering checkboxes and radio buttons :-) */
+
+
+
+
+input[type=range] {
+	width:100%; 
+	}
+	
+input[type=text],
+input[type=email],
+input[type=password], 
+textarea, 
+select, 
+input[type=file] {
+	width:100%; // RESET-ISH YEAH
+	// margin-bottom:10px;
+	// background-color:$c_divider;
+	// border:3px solid $c_primary;	
+	border:3px solid var(--c-accent);	
+	}
+	
+	 
+select {
+	padding:2px 5px; // ???????????
+	}
+
+input[type=text],
+input[type=email],
+input[type=password],
+textarea  {
+	padding: $spacing05 $spacing;
+	}
+	
+	
+	
+	
+input[type=button] { } // !!!!!!!!!!!!!!!
+	
+input[type=submit],
+input[type=reset] {
+	border:none;
+	@extend .buttonMedium;
+	}	
+	
+/*
+input[type=reset] {
+	@extend .buttonSmall;
+	}
+*/		
+	
+/*
+// THIS IS TOO BRAOD, CANNOT BE, NOW HAS CONFLICT WITH NMY HEADER BUTOTN S!!!
+button { // necesita mismos tratamientos que input type submit // reset etc
+	@extend .buttonMedium;
+  // width:125px;
+	}	
+*/
+
+	
+	
+	
+/* UI 
+ * FOCUS and ANIMATIONS +
+ */
+input[type=text], 
+input[type=email],
+input[type=password], 
+select, 
+textarea {
+	@include transitionButton;
+	}
+
+/* UI
+ * HOVER must be before ACTIVE 
+ */
+input[type=text]:hover,
+input[type=email]:hover, 
+input[type=password]:hover, 
+select:hover, 
+textarea:hover {
+	background:#ff9999;
+	/* border: 1px solid #D3D3D3; */
+	}
+
+/* UI
+ * ACTIVE must be after HOVER 
+ */
+input[type=text]:focus,
+input[type=email]:focus,
+input[type=password]:focus,
+textarea:focus,
+select:focus {
+	outline: none; /* VIP - wait a minute !! accesibility !!!!!!!!!!!!!!!!!!!!!!!!*/
+	// background-color:#fff;
+	background-color: var(--c-white); // very temp
+	// border:3px solid $c_primary_dark;
+	// border:3px solid var(--c-accent);	
+	border: 3px solid #60f;	// very temp
+	}
+	
+	
+	
+	
+	
+	
+/* & meter lo de los checkboxes !!!!!!!!!!!!!!!!!!!!!! */	
+	// COPY CHECKBOX SCALE, COMO EN EL FOMR DE SIMRACING !!!!!!!!!!!
+	
+	
+
+
+
+
+
+
+	
+/* ADD ALSO PLACEHOLDER TEXT THINGEES !!!!!!!!! */
+
+
+
+
+
+
+
+/* UI 
+ * DISABLED FORM ELEMENTS 
+ */
+ 
+ 
+ // ALSO COPY Ios TINGS DE SIMRACING FORM, LO DEL BG COLR Y FONT COLOR ETC !!!
+ 
+ 
+
+
+
+
+
+
+

@@ -1,0 +1,149 @@
+/*
+ * Author: Carl Johansson @carlwebdev
+ * Project: cowo-Reset
+ * File: Header - Components
+ */
+
+
+
+
+
+ /*
+ * HEADER - LOGO
+ */
+.header_logo {
+  flex-shrink: 0;
+  margin-right: auto; // RWD 
+
+
+
+  width: 300px; // TEMP
+  max-width: 300px; // TEMP  -as % mejor
+  // width: 160px; // TEST   
+  
+  img {
+    @include img; // MOVE TO REST !
+    // TEMP
+    background-color: white;
+    padding: 1em;
+    border-radius: 0.5em; 
+  }
+
+  // TODO- SVG FOR COLOR CHANGE (MODE & TRANSITIONS)
+
+} // header_logo
+
+
+
+
+
+
+
+
+
+
+// NO, NEVER USEFUL, JSUT KIL IT ALREADY !!!!!!!!!!!!!!!
+// header_slogan, coould be sth useful, could be....
+.slogan {
+  // position:absolute; bottom: $spacing05; right: $spacing025;
+  font-size: var(--fs-l);
+  // color: #fff;	
+
+  span {}
+
+  a {
+
+    // color: inherit; // sass for inherit color !!!!!!!!	 NOT, but this new thing is very useful !!!! in sass environments 
+    // thi is already in the reset 
+    
+
+    &:hover {color: var(--c-accent);}
+    }					
+
+  } // slogan
+
+
+
+
+
+
+
+
+
+
+
+
+					
+@media only screen and (max-width: $bp_m) { 
+
+	.header_logo {
+		// float:none;
+		// text-align:center;
+		
+		// display: none;
+		}
+  
+  
+  
+  
+	.slogan {
+		/*
+    position:relative;
+		text-align:center;
+		bottom: $spacing0125;						
+    */
+		} // slogan
+
+					
+} // MEDIA-QUERY		
+
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width: $bp_s) { 
+
+	.slogan {
+
+			span {display: block;}
+								
+		} // slogan
+		
+					
+} // MEDIA-QUERY	
+
+
+
+
+
+
+/* LANGUAGE SELECTOR */	
+
+
+
+
+/* OPTIONS - SOCIAL MEDIA */	
+.header_social {} // header_social 
+
+
+
+
+
+/* ncopy searech box de header de ssteinerskolen.. */
+.wp_searchBox {// wp_searchForm
+	// float: right;
+  
+
+} // wp_searchBox
+
+
+
+
+
+
+

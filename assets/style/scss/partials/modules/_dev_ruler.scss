@@ -1,0 +1,80 @@
+/* CSS Document */
+
+
+#devRuler {
+	// background-color: $color3;
+	background-color: $c_primary_dark;
+	
+	@include paddingv($spacing0125);
+	height: 24px;
+	
+	color:#fff;
+	// font-weight:bold;
+	
+	font-weight: 300; // LIGHT
+	
+	text-align:center;
+	// font-size:20px;
+	/* padding:10px 0px; */
+	}	
+
+.item {
+  display: none;
+  // &:nth-of-type(1) {display: block;}
+  } 
+		
+
+@media only screen and (max-width: 1200px) { 
+	
+.item {
+  &:nth-of-type(1) {display: none;}
+  &:nth-of-type(2) {display: block;}
+  } 
+  
+} // MEDIA-QUERY
+
+
+@media only screen and (max-width: 1024px) { 
+	
+.item {
+  &:nth-of-type(2) {display: none;}
+  &:nth-of-type(3) {display: block;}
+  } 
+  
+} // MEDIA-QUERY
+
+
+@media only screen and (max-width: 800px) { 
+
+.item {
+  &:nth-of-type(3) {display: none;}
+  &:nth-of-type(4) {display: block;}
+  } 
+		
+} // MEDIA-QUERY
+								
+								
+@media only screen and (max-width: 480px) { 
+
+.item {
+  &:nth-of-type(4) {display: none;}
+  &:nth-of-type(5) {display: block;}
+  } 
+		
+} // MEDIA-QUERY
+
+								
+
+@media only screen and (max-width: 320px) { 
+
+.item {
+  &:nth-of-type(5) {display: none;}
+  &:nth-of-type(6) {display: block;}
+  } 
+
+
+#devRuler {
+	background-color:#c0392b;
+	}
+  
+} // MEDIA-QUERY

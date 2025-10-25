@@ -1,0 +1,190 @@
+/*
+ * cowo-Boilerplate
+ * CSS
+ * cowo-gridlist // NOT ANYMORE 
+ * ui_gridlist
+ */ 
+
+
+// ACTUALLY IMPLEMET THIS GRI-LIST INSIDE THIS WEBSIET, IN THE BLOG FOR EXAMPLE.... AS A USAGE CASE .... 
+// BUT DONT ALTERANTE, SINO SIMPEMENT ASWITCH ENTRE 2 WHILES DIFERENETS .... 
+
+
+
+
+
+/* MIXIN TO DECLARE-CSS-COUNTER */
+.ui_gridlist_items ul li::before {
+	counter-increment: gridlist;                   /* Increment the value of section counter by 1 */
+	/* content: "# " counter(section) ": "; */   /* Display the word 'Section ', the value of section counter, and a colon before the content of each h3 */
+	  /* content: "# " counter(section); */ 
+	  /* content: counter(section);  */
+	  content: "Item " counter(gridlist);
+  }
+  
+  
+  
+  
+  
+  // .cowo-gridlist,
+  .ui_gridlist {
+	  
+	  /* PLACEHOLDER */
+	  
+  } // cowo-gridlist
+  
+  
+  
+  
+  
+  // KEEP STANADLONE, SO I CAN MOVE IT ARUND.
+  
+  /*
+   * cowo-gridlist
+   * menu
+   */ 
+   
+  .ui_gridlist_menu { // WAS .jq_tabsMenu
+	  display: flex; // "causes child to behave as if floated left"
+	  
+	  // margin-bottom: $space025;
+	  margin-bottom: $spacing05;
+	  
+	
+	  ul {
+		  display: flex;
+		  // justify-content: flex-end;
+		  // justify-content: flex-start; /* DEFAULT BEHAVIOR */
+		  // justify-content: space-around;
+		  gap: 1em; 
+	 }
+  
+	
+	  li {
+		  // width:64px; /* TEMP - DEMO */ 
+		  text-align:center; 
+		  // color: white;	
+		  color: var(--c-text);			
+		  border: $s_border;
+	  
+		  a {			
+			  display:block; /* */ 
+			  // padding: $spacing025;
+			  padding: 0.6em 1em;
+		
+			  background: $c_primary_dark; 				
+				color: inherit;
+		  } // a
+			  
+	  
+			  &.is-active a {
+				  background:$c_primary_light; 
+				  color: $c_primary_dark; 
+				  
+				  &:hover { // FORCED BEHAVIOR - COULD JUST USE AN IMPORTANT ON TOP Y PUNTO ... 
+					  background: $c_primary_light; 
+					  color: $c_primary_dark; 					
+					  }
+				  
+				  } // is-active
+				  
+			  a:hover {
+				  // background:$c_primary_light; 
+				  background:$c_primary; 
+				  // color: $c_white; // // // // 
+				  color: var(--c-text);	// whatever !!!!
+				  // color: $c_primary_dark; 
+				  }
+			  
+				  
+  
+  
+  
+  
+  
+  
+			  // OBS! IT WAS TUENED IT BUTTONS, BUT NO CSS WAS CERATED FOR THIS ?!?!?!
+  
+			  button {
+				  background-color: red; // !!!
+  
+				  &.is-active {
+					  background-color: green; // !!!
+				  } // is-active
+			  
+			  
+			  } // button
+  
+  
+  
+  
+		  } // li
+  
+				  
+	  } // ui_gridlist_menu
+	  
+	  
+	  
+  
+  
+  
+  /*
+   * cowo-gridlist
+   * items
+   */ 
+   
+  // MIGHT ALSO BE STANDALONE RWALLYY... NO NEED FOR THE SUPER WRAPPER PERHAPS... 
+  // is-list is the arbitrary starting point - could also have magazine layout, and article layout..
+  
+  .ui_gridlist_items { 
+	  border: 12px solid black; // ok, works
+  
+  
+	  ul { 
+		  
+	  
+		  li {
+			  background-color: var(--c-bg-dark);
+			  color: var(--c-text-inv); 
+			  border: $s_border; //       
+			  padding: $spacing; // TEST
+			  padding: 3em;
+		  } // li
+		  
+		  
+		  &.is-list { 
+			  
+		display: grid;
+		gap: 1em;
+		
+			  li { 
+				  /* LAYOUT */
+				  /*
+		  margin-bottom: $spacing05;
+				  :last-of-type {margin-bottom: 0px;}
+		  */
+		} // li
+  
+	  } // is-list
+		  
+		  
+		  &.is-grid { 
+			  /* LAYOUT - CSS GRID */
+			  display: grid;
+			// grid-template-columns: auto 100px 1fr 2fr;
+			// grid-template-rows: 50px 5em min-content auto;
+			grid-template-columns: repeat(6, 1fr); /* 6 COLUMNS */
+			// grid-template-rows: 50px 5em min-content auto; // REALLY UNNECESSARY... 
+			  // grid-gap: $spacing05;
+			  // gap: $spacing05;
+			  gap: 1em;
+			  
+			  li { 
+				  /* PLACEHOLDER */
+		}
+  
+	  } // is-grid
+  
+	} // ul
+  
+  } // ui_gridlist_items 	

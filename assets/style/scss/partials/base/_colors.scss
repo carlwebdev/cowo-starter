@@ -1,0 +1,210 @@
+/*
+ * CSS
+ * Variables - Colors
+ */
+
+/* 
+ * SASS - VARIABLES - Colors 
+ */
+ 
+/* GENERIC COLORS */
+/*
+$c_white: #fff; // white
+$c_black: #000; // black 
+*/
+$c_primary: #999; // FF5722
+$c_primary_dark: #E64A19; 
+$c_primary_light: #FFCCBC; 
+/* 
+$c_accent: #03A9F4;
+
+$c_white: #fff; // white
+$c_text: #212121;
+$c_text_2: #727272;
+$c_divider: #B6B6B6;
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+ * STEP 1 - COLOR DEFINITIONS
+ */
+:root {
+  --c-black: #212121; // 000
+  --c-black-alt: #131212; // white alt
+  --c-white: #ffffff;
+  --c-white-alt: antiquewhite; // white alt
+
+
+  --c-test: antiquewhite; // white alt
+  
+
+  --c-gray-light: #B6B6B6;
+  // --c-gray: #ffffff;
+  --c-gray-dark: #727272;
+  
+  // --c-accent: #60f; // find some nice pastel coors 
+  // --c-accent: #E0BBE4; // find some nice pastel coors // https://www.schemecolor.com/pastel-color-tones.php
+  // --c-accent: #f06; // find some nice pastel coors // https://www.schemecolor.com/pastel-color-tones.php
+  // --c-special: #f06;
+  --c-special: rgb(7 164 206);
+  
+
+}
+
+
+
+/*
+ * STEP 2 - COLOR USAGE,IMPLEMENTATION
+ */
+:root {
+  // define a typical light mode situation...
+  --c-text: var(--c-black);
+  --c-text-alt: var(--c-gray-dark); // TEMP 
+
+
+  --c-text-inv: var(--c-white);
+  // --c-text-inv: var(--c-white);
+
+  // --c-bg: var(--c-accent); // just a tets 
+  --c-bg: var(--c-test); // just a tets 
+
+/* */ 
+  --c-bg-light: var(--c-gray-light); // just a tets 
+  --c-bg-dark: var(--c-gray-dark); // just a tets 
+
+
+  --c-accent: var(--c-special);
+
+  /*
+  --c-bg-tails: red; // just a tets 
+  --c-text-tails: red; // just a tets 
+  */
+  --c-bg-tails: var(--c-bg); // just a tets 
+  --c-text-tails: var(--c-text); // just a tets   
+}
+
+
+
+
+
+
+
+
+
+
+// copyin dark mode grome ergo cowowo - to pplay here in wp_cowow, and then also to cowoBpileplate
+
+
+
+:root {
+  /* */ color-scheme: light dark; // ADDING THIS, TO SEE IF IT WORKS - TO SEE IF IT APPLIES DEFAULT STATING PONT.
+  // --c-accent: #60f;
+}
+
+
+  /* If user prefers a dark appearance */
+  @media (prefers-color-scheme: dark) { // AND ADJUST THE SCRIPT TO INCLUDE THE MEDIA QUERY REVIEW.
+    :root {
+      /*
+      background-color: #212121;
+      background-color: black;
+      color: white;
+      */
+      /* */
+      /*
+      --c-accent: #f06;
+      */
+
+      // --c-text: var(--c-white); // TEST ING
+      // --c-text: red; // TEST ING
+      
+    }
+  }
+
+
+
+
+html[data-theme="light"] {
+  color-scheme: light; // PRECAUTION BY KEVIN POWELL
+  // --background-color: var(--background-color-light);
+  
+  --c-bg: var(--c-white);
+  --c-bg-alt: var(--c-white-alt); // TESTING
+
+  // --c-bg-alt: antiquewhite; // TEST ING
+  // --c-bg: var(--c-white-alt);
+  // --c-bg-alt: var(--c-white-alt); // test 
+
+  --c-text: var(--c-black); 
+  --c-text-alt: var(--c-gray-dark); // TEMP
+
+  // --c-accent: #60f; // find some nice pastel coors // REDUNDANT
+  
+  /*
+  --c-bg-tails: red; // just a tets 
+  --c-text-tails: yellow; // just a tets 
+  */
+  --c-bg-tails: var(--c-bg); // REDUNDANT
+  --c-text-tails: var(--c-text); // REDUNDANT 
+}
+
+html[data-theme="dark"] {
+  color-scheme: dark; // PRECAUTION BY KEVIN POWELL
+  // TOD - TAKE ALL OF THIS AND ADD IT INTO THE PREFERS MEDIA QUERY ... 
+
+  // --background-color: var(--background-color-dark);
+  --c-bg: var(--c-black);
+  // --c-bg-alt: var(--c-black); // NO DIFFERECE HERE, BUT I HAVCE TO PREPARE IT, AS I WANT T DIFFREEC EIN THE LIGHT MODE 
+  --c-bg-alt: var(--c-bg-dark); 
+  
+
+  // --text-color: var(--text-color-dark);
+  --c-text: var(--c-white); 
+  --c-text-alt: var(--c-gray-light); // TEMP
+
+
+  // --c-accent: green; // we're in here,but the tppggle sodesnt work yet // REDUNDANT 
+
+
+  /*
+  --c-bg-tails: blue; // just a tets 
+  --c-text-tails: pink; // just a tets 
+  */
+  --c-bg-tails: var(--c-bg); // REDUNDANT
+  --c-text-tails: var(--c-text); // REDUNDANT  
+}
+
+
+
+
+
+
+
+
+
+/* IMPLEMENTATION, IS THEME AGOSTIC */
+body {
+  // background-color: var(--background-color);
+  // background-color: var(--c-bg);
+  background: var(--c-bg-alt); // TESTING
+  // color: var(--text-color);
+  color: var(--c-text);
+  /* */ transition: background-color 0.3s, color 0.3s;   /* not good, because it loads on page load and makes a flash */ /* OBS, BUT STIL HAS A FLASH ... */
+  // I SOLVED THE FLAHS BY ADDING A SCRIPT TO THE HEADRE, A MINAML SCRIPT, TO CHEKC FOR THEME DEIFNITIOSN AND REFERED ETC 
+}
+
+header#header {
+  transition: background-color 0.3s;
+}

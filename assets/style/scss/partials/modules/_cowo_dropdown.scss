@@ -1,0 +1,81 @@
+/* CSS Document */
+
+/* ============================================ */
+/* COWOWO DROPDOWN                              */
+/* ============================================ */
+
+
+/* DESIGN */					
+
+#genericDropdownContainer {}
+	
+	
+			
+											
+.genericDropdownItem {
+	clear:both;
+	overflow:hidden;
+	margin-bottom:10px;
+	}				
+	.genericDropdownItem:last-of-type {
+		margin-bottom:0px;
+		}
+			
+		/* TOP */
+		.genericDropdownItem_top {
+			position:relative; /* for the trigger */
+			padding-top:5px;
+			background-color:$c_primary;
+			min-height:50px;
+			}					
+										
+			.genericDropdownItem_top_trigger {
+				position:absolute; bottom:0px; right:0px;
+				background-color:$c_primary;
+				font-weight:bold;				
+				}
+				.genericDropdownItem_top_trigger:hover,
+				.genericDropdownItem_top_trigger.is_active {
+					background-color:$c_primary; /* TESTING NEW THING */    /* SASS IT !!!!!!!!!!!!!! */
+					// color:$c_white;
+					color: var(--c-white);
+					}	
+						
+
+		/* BOTTOM */		
+		.genericDropdownItem_bottom {
+			background-color:$c_primary_dark;
+			min-height:100px;
+			}		
+
+			
+					
+					
+												
+		
+		
+/* FUNCTION */		
+.jq_dropdown {/* THE PARENT OF EACH DROPDOWN TOP/BOTTOM PAIR */}
+
+
+	.jq_dropdown_shown {}
+
+		.jq_dropdown_shown.is_active {
+			background-color:$c_primary;
+			}	
+			
+			.jq_dropdown_trigger {
+				cursor:pointer;
+				}			
+				.jq_dropdown_trigger.is_active {
+					background-color:$c_primary_dark;
+					color: var(--c-white);
+					}	
+					.jq_dropdown_trigger.is_active:hover {
+						color:#000;
+						}
+									
+			
+	.jq_dropdown_hidden {
+		display:none;
+		}	

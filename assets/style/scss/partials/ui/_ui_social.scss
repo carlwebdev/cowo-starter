@@ -1,0 +1,110 @@
+/*
+ * Author: Carl Johansson @carlwebdev
+ * Project: cowo-Boilerplate
+ * File: UI-SOCIAL
+ */
+ 
+
+
+
+
+// social_media VS social_share . where teh saher doeses the sahring, and reuqires the text to the side ... 
+
+
+
+
+// SOCIAL ICONS HERE WITH FLEX, BUT CENTERED..    atoms / social for the stanadlaone list of social media, without external layout consideratios ...
+/* DO SOME UI - CHANGE SCALE OR STH !!! */
+.m_social { // m_social // a_social // atom_social // m_socialBox
+  // border: $s_border;  
+  /*
+  outline: 12px solid blue;
+  outline-offset: 3px;
+  */
+
+  ul {
+    display: flex;
+    // gap: 18px;
+    gap: 12px; 
+    
+    li {
+      flex-shrink: 0; // NOT TESTED YET 
+
+      a {
+        // display: block; // TETS !!!
+        /* CASE = SQUARED BOXES, NOT GON TO USE THAT RIGHT NOW ... 
+        display: block;
+        padding: 4px;
+        // ui_color_change
+        background-color: var(--c-white);
+        &:hover {background-color: var(--c-accent);}
+        */
+        /*
+        color: var(--c-text); 
+        &:hover {color: var(--c-accent);}
+        */
+        // PLAIN IMG 
+        img {
+          // border: $s_border;  
+          width: 32px;
+        } // img	
+        
+        // BOXICON
+        i {
+          // color: blue; 
+          // border: 1px solid red; //           
+          display: block;
+          // color: inherit; 
+          font-size: 1.5em;
+          color: var(--c-text); 
+          &:hover {color: var(--c-accent);}  
+        }  
+
+      } // a
+
+    } // li
+    
+  } // ul
+	
+} // m_social
+
+
+
+
+/* OPTIONS - SOCIAL MEDIA */	
+.header_social { 
+  // border: $s_border;
+  // padding: 24px; // 
+  
+  // NO NEED FORE THI MM_SOCIAL LAYER...WAIT, NED SOME INETRMEDIATE LAYER, FOR 1 IS FOR THE BASICS, JUST DO UL WITH CLASS, AND THEN HAVE L_'s for situations..
+  /*
+  .m_social ul {
+      // display: flex;
+      // gap: 18px;
+      gap: 6px;
+  }
+  */
+} // header_social 
+
+
+
+
+
+.footer_social { 
+  // border: $s_border;
+  // padding: 24px; // 
+
+  /*
+  // NO NEED FORE THI MM_SOCIAL LAYER...WAIT, NED SOME INETRMEDIATE LAYER, FOR 1 IS FOR THE BASICS, JUST DO UL WITH CLASS, AND THEN HAVE L_'s for situations..
+  .m_social ul {
+      // display: flex;
+      // gap: 18px;
+      gap: 6px;
+  }
+  */
+
+} // footer_social 
+
+
+
+// contact_social, for example, for the contact page, where the social media is in the contact section, and not in the footer or header

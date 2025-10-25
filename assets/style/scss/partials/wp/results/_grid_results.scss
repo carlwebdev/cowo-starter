@@ -1,0 +1,338 @@
+/*
+ * CSS
+ * search
+ * grid_results VS the other ne that is simpler
+ */
+
+// builld this for kilde, & copy partial to wp_eimoe !!!!!!!!!!!!!!!!!!!!!!!!!!
+
+// TO DO // chekc and kill space05 system, maybe its comes form boilerplate, so kill there too  for when i do copy paste !!!!!
+
+/*
+desde eimoe, hacia cowoow
+rename blog grid as grid_blog, not grid_posts // nor w_gridPosts
+*/
+
+// grey bg, white cards tas this !!!!!!!!!!!!
+
+/*
+INSTRUCTIONS FOR ANY GRID: 
+separate grid behavior (wrapper & cols) from item behavior (and its own rwd behavior)
+*/
+
+
+// 1 - grid_blog
+// 2 - card_blog (independent)
+
+// 3 - single_blog ...............
+
+
+
+
+
+
+
+
+// TODO . . .make a layout with some bigger, some smaller, etc, as a class modifier system.. KISS !!!
+
+
+
+.grid_results { // ANY NAME // was w_gridABC // w_gridPosts // grid_blog
+  // @extend %dev;
+  
+  display: grid;
+  // grid-template-columns: repeat(3, 1fr);
+  gap: $spacing2; // TEST 
+  
+  // / /3d tetsing s
+  perspective: 1000px;
+  
+  
+  /*
+  transform-style: preserve-3d;
+  // transform: rotateX(45deg);
+  // transform: rotateY(45deg);
+  transform: rotateZ(45deg);
+  */
+  
+  
+} // w_gridPosts
+	
+
+
+
+
+
+	
+	
+// TOTALLY SEPARATE, THE ITEMS, THE MODULES N
+	
+.card_result { 
+  
+  
+  /* START - ROTATION */
+    // clean this up !!!!
+    
+    transform: rotateX(5deg);
+    // transform: rotateX(10deg);
+    // @include transitionGeneral; // TEST S
+    // transition: rotateX 0.5s ease; // TEST S // ????????????????? NOT WORKING
+    transition: transform 0.5s ease; // TEST S // ????????????????? NOT WORKING
+    &:hover{
+      transform: rotateX(0deg);  
+    } // hover
+  
+  /* END - ROTATION */
+  
+  
+  
+  // CARD - CONTAINER
+  @include card;
+  overflow: hidden; /* new placement */ // IF FULLBLOWN IMAGE, BUT NOT GONNA BE
+  
+
+
+
+  // add image on the side, also border style , nice coherent ... and as bg image so uts fuklitem ....
+  
+  display: grid;;
+  // grid-template-columns: 200px 1fr; 
+  // grid-template-columns: 1.618fr 1fr; // GOLDEN, SO NO GAP
+  grid-template-columns: 1fr 1.618fr; // GOLDEN, SO NO GAP
+  // gap: 24px;
+  
+  
+  
+  // CARD - CONTENT
+
+  // padding: $spacing025;
+  // padding: $spacing05;
+  /* padding: $spacing075; */
+
+
+  // card mixin - card_base
+
+  // DOEN - BUT KMIMPROVEABLE - AD INTERIOR BORDER RADIUS SO IMG BORDER IS ALSO ROUND !! NCE EFFECT !!!!!
+
+  
+  
+
+  .image {
+    // background-color: $bg_c_placeholder; // TEMP PLACEHOLDER - use variable for this .... / CREATE bg_c_placeholder
+    background-color: green;
+
+
+    // border-radius: 6px; // 
+    /* border-radius: 3px; */ // TEMP - KINDA OK, BUT FORMMULA FOR BETTER MATHS ...
+    /* overflow: hidden; */ 
+
+    // OPTION A - IMAGE - BETTER FOR SEO - // 3 - HACER LO DE DEV IMG NOT ALT PONERLE UN OUTLINE CON ERROR COLOR CODE DEV ETC MSG - #F06 VS SOME NEWON THINGEEEEEEE...
+    img {
+      @include img; // 1, MOVE TO RESET 
+
+      // 2) ADD PICTURE TAG INSTEAD OF .IMAGE CLASS
+
+
+
+    } // use this, and also add lazy loading to check it anyways !!!
+
+
+
+
+    // OPTION B - BACKGORUND IMAGE
+    /* */
+    @include bg_img;
+    // S@include ar_4_3;
+    
+    /*
+    // case-no-image con su padding system, aka use aspect ratio testing css !!!!!!!!!!!!
+    &.case-no-image {
+      // @include bg_img;
+      @include ar_4_3;
+    } // case-no-image
+    */
+    
+    a {
+      // border: 3px solid red; // DEV
+      display: block;
+      height: 100%;
+    } // a
+      
+    // CLAR, IF IT'S BG IMAGE, THEN THE ANCHOR HAS TO BE INSIDE... 
+      
+  } // image
+
+
+  
+  
+
+  .info { 
+    // padding-top: 0.5em;
+    /*
+    padding-top: 1em;
+    padding: $spacing075;
+    */
+    padding: $spacing075;
+    
+    
+
+    // copied fomr oslo 
+    .category { // also in smalles font size possibel, // anad also tets to add fields for publishged date & author ...
+
+      // margin-bottom: 0.5em; // TEST 
+      margin-bottom: 1em; // TEST 
+
+      // @include f_main_bold;        
+      /*
+      
+      
+      
+      font-size: $fs_card_small; // TEST - NICE SYSTEM !!!! HAVE A GENERIDC FIEL FOR CRDS-
+
+
+
+
+      */
+      // color: $c_text_2; // TEST 
+      color: var(--c-gray); // TEST 
+
+
+      // & BOLD PERHAPS & LINK TOO !!!
+
+      a {
+        color: inherit;
+        
+        // text-decoration: none;
+        &:hover {text-decoration: underline;}
+
+      } // a
+
+
+
+    } // category
+
+
+
+
+
+
+
+
+
+    .title {
+      // margin-bottom: 1em; // TEST 
+      margin-bottom: 0.5em; // TEST 
+
+      
+      
+      
+      
+      @include css_line_clamp(2);
+
+      /*
+      
+      
+      // TODO - mixin for font_card_title - size, color, wwierght.... - SPECIALLY NOW QUE LO ESTOY REPLICANBDO EN grid_staff . . . . . . . . . .s
+      font-size: $fs_card_title;
+
+
+
+      */
+      font-weight: bold;
+
+      
+      
+      
+      
+      a {
+        &:hover {text-decoration: underline;} // mixin, and check default anchor behavior (with or withouundelrine to start off with ) / a_ui_base / alt / bold
+      } // a
+
+    } // title
+
+
+    // Author / Date .... with some greyish secondary text color .... 
+
+
+    .specs {
+      // margin-bottom: 0.5em; // TEST 
+      margin-bottom: 1em; // TEST 
+
+      // @include f_main_bold;        
+      // font-size: $fs_card_small; // TEST
+      // color: $c_text_2; // TEST 
+      color: var(--c-gray); // TEST 
+      
+      
+      
+      
+      display: flex;
+      gap: $spacing075; // TEST VS EM'S 
+
+      .author {} // author
+      .date {} // date
+      // TODO - have a separator .... with accent color, as a dot in the middle .... TODO 
+
+
+    } // specs
+
+
+    .text {
+      color: var(--c-gray); // TEST 
+      // // // font-size: $fs_card_text; // test the conetnt fvs system for exceport if filled inonlyh ,,,
+      // line height !!!! 1.5, not 1 .............
+      // line-height: 1.5em; // TETS TEMP !!!!
+      line-height: 1.7em; // TETS TEMP !!!!
+      @include css_line_clamp(3);
+    } // text
+
+
+
+    .link {
+      // margin-top: 1em; // PRECAUTION - MARGIN TOP HERE, IN CASE I REMOVE THIS DIV
+      margin-top: 1.5em; // PRECAUTION - MARGIN TOP HERE, IN CASE I REMOVE THIS DIV
+
+      display: flex;
+      // justify-content: flex-end;
+      // justify-content: flex-start; // IT'S THE DEFAULT BEHAVIOUR
+
+      // font-size: $fs_card_small; // TEST
+
+      a {          
+        /*
+        
+        
+        @extend .buttonSmall; // extend anchor style butotn simpe systems....   
+
+
+
+        */
+      } // a
+
+
+    } // link
+
+
+  } // info
+
+
+} // card_blog
+
+
+
+
+
+
+
+
+
+
+
+// SINGLE-BLOG ???????????????????????????????????????
+
+
+
+
+
+
+

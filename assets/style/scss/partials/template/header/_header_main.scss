@@ -1,0 +1,180 @@
+/*
+ * Author: Carl Johansson @carlwebdev
+ * Project: cowo-Reset
+ * File: Header
+ */
+
+/*
+#w_headroom {
+	
+	}
+*/
+
+// use sticky instead, copy de barlabeata...
+
+	
+header#header {
+	/* START - STICKY */
+	// As you can see in that demo, it's a decent candidate for progressive enhancement, as if you don't see the sticky header feature, it's no big deal.
+	// http://caniuse.com/#feat=css-sticky
+	position: -webkit-sticky;
+	position: sticky;
+	top: 0px; // VIP
+  
+  // misin, layout for position_sticky_top 
+  
+	// z-index: 2; // over map / not needed for sticky behaviour (THIS IS COPY PASTED)
+	@media only screen and (max-width: $bp_l) {
+		position: relative; // RESET
+		} // MEDIA-QUERY	
+	/* END - STICKY */	
+  
+  z-index: 1; // 
+  
+
+  color: var(--c-white);
+  a, a:visited {
+    color: inherit;
+  }
+  
+  
+	.inner {
+    /*
+		// padding: $spacing025; 
+    // // // padding-inline: $spacing025; // ???
+    
+		// @include paddingv($spacing05);
+    // padding-block: $spacing025; 
+    // padding-block: $spacing05; 
+    padding-block: $spacing075; 
+    */
+    padding-block: 1em; 
+    
+		// overflow: hidden; // nope
+		position: relative; // nope .. 
+    z-index: 1000;
+  }
+
+
+
+  border-bottom: 3px solid var(--c-accent); //
+
+
+
+} // header
+
+
+
+
+
+
+
+
+/*
+ *
+ * HEADER BAR TOP
+ *
+ */
+.header_bar_top {
+  // border: $s_border; //  
+  display: flex;
+  // justify-content: space-between;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 24px; // 
+} // header_bar_top
+
+
+
+
+/*
+ *
+ * HEADER BAR MAIN
+ *
+ */
+.header_bar_main {  
+  // border: $s_border; //  
+  display: flex;
+  justify-content: space-between;
+  // justify-content: space-between;
+  align-items: center;
+  gap: 1em; 
+  flex-wrap: wrap; // PRECAUTION
+} // header_bar_main 
+
+
+
+/*
+ *
+ * HEADER BAR BOTTOM
+ *
+ */
+.header_bar_bottom {
+  border: $s_border; //
+  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+} // header_bar_bottom
+
+
+
+
+
+// MOVE THIS TO IOTS OWN PARTIAL, AS ITA ADIFFERENT COMPOENE, A S SIDEBAR AKA POPUP, MODALS... 
+
+// to page partial 
+
+// and change to menu, as its not a nav... and rename lateral to side...
+nav#lateral { // AKA side_nav nav.lateral ... // m_lateralSocial
+  display: none; // shwo with jquery ... fadein or slide whatver foomr the side 
+
+
+
+
+
+  position: fixed;
+  right: 0px;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba( 255, 255, 255, 0.7);
+  border: 2px solid var(--c-accent);
+  // border-radius: 0.4em; // bt only left top & left bottom !!!
+  border-top-left-radius: 0.4em;
+  border-bottom-left-radius: 0.4em;
+  padding: 1em;
+  font-size: 0.8em; // 
+
+
+  z-index: 1;
+  
+  
+  // tasks - have adynaic menu, but with images... how to assign image to men item, by id? or just make it all pseudo hardcoded !!!
+
+  // .item {}
+
+  // ul vs menu tag !!!!!!!!!!!!! -but perhaps not both nav & menu tag within each other ?!
+  ul {
+      display: flex;
+      flex-direction: column;
+      gap: 1em; // 
+  }
+
+  li {
+      // border: 1px solid black; // 
+      align-self: center;
+  }
+
+  a {}
+
+  /*
+  img {
+      // width: 3em; // 
+      width: 4em; //
+      margin-inline: auto; 
+  }
+  */
+
+} // m_lateralSocial
+
+

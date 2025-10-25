@@ -1,0 +1,81 @@
+/*
+ * CSS
+ * WP SUBMENU - WORDPRESS
+ *
+ * MENU - SUBMNEU - 2 BOXES SYSTEMN, NICE COLOR & CENETERD TEXT ETC ...
+ */
+nav.submenu {
+  // border: $s_border;
+  
+  ul.submenu {
+    display: grid;
+    // grid-template-columns: repeat(4, minmax(0, 1fr)); // rwd this, vs 1 line max width etc !!!!!
+    gap: $spacing; // 
+    
+    // https://css-tricks.com/a-responsive-grid-layout-with-no-media-queries/  
+    // --auto-grid-min-size: 16rem; // DESKTOP 5 COLS
+    --auto-grid-min-size: 20rem; // DESKTOP 4 COLS
+    // display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(var(--auto-grid-min-size), 1fr));
+    // grid-gap: 1rem;
+
+    li {      
+      // border: 3px solid red; // 
+      // aspect-ratio: 16 / 9; // 
+      aspect-ratio: 1 / 1; // 
+      
+      a {
+        display: block; 
+        height: 100%; // vs other flex solution perhaps .. or grid with place iutesm ceneter ec 
+        display: grid;
+        place-items: center;
+        // text-align: center;
+        padding: $spacing;
+        
+        // color: $c_white;
+        // color: var(--text-primary-color); // s & d !!!!
+        color: var(--c-text);
+        
+        // font-size: $fs_xl; // 
+        // font-size: $fs_xxl; // 
+        font-size: 2em; //
+
+
+        /*
+        
+        
+        @include transitionGeneral;
+
+
+        */
+        
+        /*
+        background-color: $c_accent;
+        &:hover {background-color: $c_accent_dark;}        
+        */        
+        
+        /*
+        background-color: var(--primary-color);
+        &:hover {background-color: var(--dark-primary-color);}
+        */
+        
+        background-color: var(--c-accent);
+        &:hover {background-color: var(--c-accent-dark);}
+        
+      } // a
+
+      // WORDPRESS
+      &.current_page_item a {
+        // background-color: var(--dark-primary-color);
+        background-color: var(--accent-color);
+      } 
+
+      // 2ND LEVEL, HIDE
+      ul {display: none;}
+      
+      
+    } // li
+    
+  } // ul.nav.submenu
+  
+} // nav.submenu

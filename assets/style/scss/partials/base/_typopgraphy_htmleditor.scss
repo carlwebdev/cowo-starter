@@ -1,0 +1,155 @@
+/*
+ * Project: elcatala.cat
+ * Area: Front
+ * File: TYPOGRAPHY - HTML-EDITOR
+ */	
+	
+	
+	
+// que esto sea la que haga funcionar al styling de typography !!!!! tutto in uno !!! yiha !!!	
+
+
+
+.m_htmleditor { // REALMENTE SERIA S_ DE STYLE 
+
+    /*
+		&.case_dark {
+			// background-color: $c_black_2; // TEMP
+			background-color: #252525;
+			color: $c_white;
+			a {color: inherit;} // TEST
+			}
+		*/
+		
+		/*	
+    h2 { // se usa en legalpages !!! was
+        font-size: 28px;
+        margin-top:24px;
+        margin-bottom:24px;
+        }
+							
+    h3 { // se usa en legalpages !!! was
+        font-size: 20px;
+        // color: #f00;
+        margin-top:24px;
+        // margin-bottom:12px;
+				margin-bottom:6px;
+        // color: $c_blue;
+        }
+    */
+		
+    h1 {
+        font-size: 32px;
+        margin-top: $spacing;
+        margin-bottom: $spacing;
+        }
+						
+    h2 { // tb se usa en legalpages !!!
+        font-size: 28px;
+        margin-top: $spacing;
+        margin-bottom: $spacing075;
+        }
+							
+    h3 {
+        font-size: 24px;
+        // color: #f00;
+        margin-top:24px;
+        // margin-bottom:12px;
+				margin-bottom:6px;
+				margin-bottom: $spacing05;
+        // color: $c_blue;
+        }
+    
+    h4 {
+        font-size: 20px;
+        margin-top:24px;
+        margin-bottom:36px;
+				margin-bottom: $spacing05;
+        }
+				
+    h5 {
+        font-size: 18px;
+        margin-top:24px;
+        margin-bottom: $spacing025;
+        }
+				
+    h6 {
+        font-size: 16px;
+        margin-top:24px;
+        margin-bottom: $spacing025;
+        }
+			
+		
+		
+		
+		
+						
+    p {
+			margin-bottom: 12px;
+			// padding-bottom: 12px; // LAST OF TYPE...
+			}
+    
+		
+		
+    a {
+			// color: $c_black_grey; // test 
+			font-weight: bold; // HMMMMMMM
+			&:hover {text-decoration: underline;}
+			} // a
+    
+    
+		
+		
+		
+		/*
+		 * LISTS
+		 */
+    ul {
+			margin-left:24px;
+			// margin-bottom: 12px;
+			margin-bottom: 24px;
+			list-style:  disc;
+			// list-style-image: url('../assets/img/bullet_blue.jpg'); /* deberia ser un gif */
+			}
+			
+			li {
+				// margin-bottom: 18px;
+				// margin-bottom: 12px;
+				margin-bottom: 10px;
+				}   
+			
+				li ul {
+					margin-top: 10px;
+					}  	
+	
+	
+	
+		/*
+		 * MEDIA INSERTADO EN EL HTMLEDITOR
+		 */
+	
+		img {
+			@include img;
+			// @include marginv($spacing);	
+			
+			
+			@include marginv($spacing2);				
+			}	
+		
+		iframe { // TARGET IT WITH FITVIDS !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+			width: 100%;
+			// @include marginv($spacing);
+			
+			
+			@include marginv($spacing2);	
+			}
+	
+    } // m_htmleditor
+
+
+
+
+
+
+	
+	

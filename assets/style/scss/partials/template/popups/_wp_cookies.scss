@@ -1,0 +1,46 @@
+/* WP COOKIES POPUP */
+
+.cookie-notice-container {
+	border-top: 4px solid white;
+	// background-color: $c_primary !important;
+	background-color: var(--c-accent) !important;
+	} // cookie-notice-container
+		
+		
+		
+		
+// el boton, same as submit buttn, red with whiet bg 		
+
+
+#cookie-notice .cn-button {
+    margin-left: 10px;
+		
+		
+		background-color: white !important;
+		// color: $c_primary;
+		color: var(--c-accent);
+		
+		
+	cursor:pointer;
+	// background-color:$c_white;
+	background-color: var(--c-white);
+	// padding: $spacing05 $spacing05;
+	// padding: 7px $spacing05;
+	font-size: var(--fs-m);
+	color: #D92E3E;
+	
+	// width: 100%; // ok, but causes verticla unalignment ..  
+	// el issue del width es por alguna capa escondida dwl wp conract fomr, not my fault !!!
+	// <div class="wpcf7-response-output wpcf7-display-none"></div> 
+	
+	
+	text-transform: uppercase; /* PREACUTION */
+	// @include f_montserrat_bold;
+	
+	background-image: linear-gradient(to bottom,white,white) !important;	
+		
+		
+	border-radius: 0px !important;
+	text-shadow: none !important;
+}
+

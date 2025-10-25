@@ -1,0 +1,462 @@
+// generic page - gnwric recurrent layuout item
+
+// page title, section tiel, fullapge image etc etec etce
+
+
+
+
+
+/*
+ * CONTENT
+ *
+ * page hero
+ * page banner
+ * hgroup
+ * page title
+ * secton title
+ * section link
+ */
+
+
+
+/* 
+ * PAGE HERO
+ */
+
+ .page_hero {
+  // border: 12px solid red; // 
+
+  // height: 100dvh; // CALC AWAY TEH EHEADER
+  // height: calc(100vh - var(--header-height));
+  height: calc(100dvh - var(--header-height)); // JS CALCULATION
+
+  // height: calc(100dvh - 98px); // JS CALCULATION
+  /* 
+  margin-top: var(--header-height); // Ensure it starts below the header // !!!
+  */
+  /*
+  top: var(--header-height); // Ensure it starts below the header
+  position: relative; // Ensure it respects the top value
+  */
+
+
+  // height: calc(62dvh - var(--header-height)); // JS CALCULATION
+  /*
+  @media only screen and (max-width: $bp_l) {
+    height: calc(100dvh - var(--header-height)); // JS CALCULATION
+  } // MEDIA-QUERY
+  */
+
+  // height: calc(100dvh - var(--js-header-height)); // JS CALCULATION - naming concept: values extracted thorugh js are named --js- etc to make it clear that they are dynamicaly genertaed
+
+  // DONE - OK, NOW JUST NED TO GIEV THE PDDING TOP TO THE MAIN PAGE LAYER !!!!
+
+
+
+  // picture {}
+
+  // temp wil not be rwuiqred onecce i'nm done - FALSE
+  /* */
+  overflow: hidden; // A SIHAVE THE IMAG TAL CUAL, SI NOBJEVT FOIR NI BACKGROUDN IMAGE ETC !!! 
+
+  /*
+  display: grid;
+  place-items: center;
+  */
+  
+  // then stack things in the same temapet area using css grid ???
+
+  // https://joyofcode.xyz/stacking-items-with-css-grid
+  display: grid;
+  place-content: center;
+
+  // a very simple & elegants way to stack things in the same temapet area using css grid ! :-)
+  // pero hay n podoc fde funky en el bototm ... 
+
+// pèor pj, la im se está moviendo .. 
+
+  // picture {}
+  /*
+  img {
+    position: absolute;
+    inset: 0;
+    // height: 100%;
+    object-fit: cover;
+  }
+  */
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+
+  // POOR MAN'S PARALLAX:
+  background-attachment: fixed; // This creates the parallax effect
+
+
+  /*
+  .text {
+    // font-size: clamp(1.5rem, 3vw, 3rem); // 1.5rem, 3vw, 3rem - for exampleÇ
+    // font-size: clamp(1.5em, 7vw, 8em);
+    // font-size: clamp(2.5em, 7vw, 8em);
+    font-size: clamp(3em, 7vw, 8em);
+    color: var(--c-theme-white);
+    text-shadow: 0px 0px 2px var(--c-theme-beige);
+  } // text 
+  */
+  h1 { // inseid etext for now ..
+    // font-size: clamp(3em, 7vw, 8em);
+    // font-size: clamp(3em, 7vw, 6em);
+    // font-size: clamp(3em, 3vw, 6em);
+    font-size: clamp(4em, 10vw, 6em);
+    // color: var(--c-theme-white); // not e
+    // color: var(--c-text); // 
+    // color: var(--c-text-inv); // 
+    color: var(--c-bg); // 
+
+    text-shadow: 0px 0px 2px var(--c-theme-beige);
+
+    text-align: center; // PRECAUTION FOR SMALL SCREENS WHEN TEXT WRAPS
+  } // h1
+
+} // page_hero
+
+
+
+
+
+
+
+
+
+/* CSS Document *//* CSS Document */
+
+
+.hero_banner___NOT {
+  // height: 100dvh; // CALC AWAY TEH EHEADER
+  // height: calc(100vh - var(--header-height));
+  height: calc(100dvh - var(--header-height)); // JS CALCULATION
+  // height: calc(100dvh - var(--js-header-height)); // JS CALCULATION - naming concept: values extracted thorugh js are named --js- etc to make it clear that they are dynamicaly genertaed
+  // DONE - OK, NOW JUST NED TO GIEV THE PDDING TOP TO THE MAIN PAGE LAYER !!!!
+  // border: 3px solid var(--c-theme-red); // TEMP
+  // picture {}
+  // temp wil not be rwuiqred onecce i'nm done - FALSE
+  /* */
+  overflow: hidden; // A SIHAVE THE IMAG TAL CUAL, SI NOBJEVT FOIR NI BACKGROUDN IMAGE ETC !!! 
+
+  /*
+  display: grid;
+  place-items: center;
+  */
+
+  // then stack things in the same temapet area using css grid ???
+
+  // https://joyofcode.xyz/stacking-items-with-css-grid
+  display: grid;
+  place-content: center;
+
+  > * {
+    grid-area: 1 / 1;
+  }
+  
+  // a very simple & elegants way to stack things in the same temapet area using css grid ! :-)
+  // pero hay n podoc fde funky en el bototm ... 
+
+// pèor pj, la im se está moviendo .. 
+
+  // picture {}
+
+  img {
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .text {
+    font-size: clamp(1.5rem, 3vw, 3rem); // 1.5rem, 3vw, 3rem - for example
+    color: var(--c-theme-white);
+  } // text 
+  
+} // hero_banner
+
+.hero_banner___TAMPOPCO {
+  display: grid;
+  align-items: center; /* Center items vertically */
+  justify-content: center; /* Center items horizontally */
+  // height: 100vh; /* Example height, adjust as necessary */
+  height: calc(100dvh - var(--header-height)); // JS CALCULATION
+  overflow: hidden; // precauton, but not an ideal solution
+}
+
+.hero_banner___TAMPOPCO img {
+  // width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensure the image covers the container */
+  grid-area: 1 / 1; /* Place the image in the first grid cell */
+  // max-height: 100%; /* Ensure the image does not exceed the container height */ // doesnt work as expected either...
+  height: calc(100dvh - var(--header-height)); // JS CALCULATION - thsi solution is too verbiose, but go along with it for now
+}
+.hero_banner___TAMPOPCO .text {
+  grid-area: 1 / 1; /* Place the text in the same grid cell as the image */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white; /* Adjust text color for better visibility */
+  background: rgba(0, 0, 0, 0.5); /* Optional: Add a semi-transparent background for readability */
+  padding: 10px; /* Optional: Add padding for better appearance */
+  border-radius: 5px; /* Optional: Add border-radius for smoother edges */
+  z-index: 1; /* Ensure the text is above the image */
+}
+
+
+// TEST WRAP !!!! 
+
+.page_banner { // OBS - was hero_banner
+  // height: 100dvh; // CALC AWAY TEH EHEADER
+  // height: calc(100vh - var(--header-height));
+  // height: calc(100dvh - var(--header-height)); // JS CALCULATION
+  
+  // height: 62dvh; // JS CALCULATION - for golden-ish aspect ratio - FALLBACK PERHAPS ...
+  // NO ESTA FUNCINANDO AQIU POR ALÑGIN MOTIVO, COPIADO DE EGYPT  TEXT TO AFDD THEIS WHOEL BLAOCLK TO WP_COWOW TO SEE HOW IT GOES !!!!!
+  height: calc(62dvh - var(--header-height)); // JS CALCULATION - for golden-ish aspect ratio
+  // height: calc(100dvh - var(--js-header-height)); // JS CALCULATION - naming concept: values extracted thorugh js are named --js- etc to make it clear that they are dynamicaly genertaed
+  @media only screen and (max-width: $bp_l) {
+    height: calc(100dvh - var(--header-height)); // FULLSCREEN  
+  } // MEDIA-QUERY
+
+  // DONE - OK, NOW JUST NED TO GIEV THE PDDING TOP TO THE MAIN PAGE LAYER !!!!
+  // border: 3px solid var(--c-theme-red); // TEMP
+  // picture {}
+  // temp wil not be rwuiqred onecce i'nm done - FALSE
+  /* */
+  overflow: hidden; // A SIHAVE THE IMAG TAL CUAL, SI NOBJEVT FOIR NI BACKGROUDN IMAGE ETC !!! 
+  /*
+  display: grid;
+  place-items: center;
+  */
+
+  // then stack things in the same temapet area using css grid ???
+
+  // https://joyofcode.xyz/stacking-items-with-css-grid
+  display: grid;
+  place-content: center;
+
+  // a very simple & elegants way to stack things in the same temapet area using css grid ! :-)
+  // pero hay n podoc fde funky en el bototm ... 
+
+// pèor pj, la im se está moviendo .. 
+
+  // picture {}
+  /*
+  img {
+    position: absolute;
+    inset: 0;
+    // height: 100%;
+    object-fit: cover;
+  }
+  */
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  /*
+  .text {
+    font-size: clamp(1.5rem, 3vw, 3rem); // 1.5rem, 3vw, 3rem - for example
+    color: var(--c-theme-white);
+    text-shadow: 0px 0px 2px var(--c-theme-beige);
+  } // text 
+  */
+
+  h1 {
+    // font-size: clamp(1.5rem, 3vw, 3rem); // 1.5rem, 3vw, 3rem - for example
+    // font-size: clamp(2em, 8vw, 8em); // 1.5rem, 3vw, 3rem - for example
+    font-size: clamp(2em, 8vw, 5em); // 1.5rem, 3vw, 3rem - for example
+    /*
+    color: var(--c-theme-white);
+    text-shadow: 0px 0px 2px var(--c-theme-beige); 
+    */
+    color: var(--c-text-inv);
+    text-shadow: 0px 0px 2px var(--c-text);
+    text-align: center; // PRECAUTION FOR WHEN TEXT WRAPS
+  } // h1
+
+} // hero_banner
+
+
+
+
+
+/*
+ *
+ *
+ *
+ * PAGE
+ *
+ *
+ *
+ */
+
+/*
+ *
+ *
+ *
+ * SECTION
+ *
+ *
+ *
+ */
+
+// LAYOUT_SECTION partial .... 
+
+
+hgroup { // NOTE - takes the place of the .page_title concept
+
+  /*
+  // text-align: center;
+  font-size: var(--fs-xl); // create intermediate, for main titles, etc, as h1, anyways.. 
+  // padding-block: $spacing; 
+  padding-bottom: 1em;
+  */
+  
+  text-align: center; // CHANGTO TO FLEX... ?'
+
+  // NOTE - paret font sizes determine the inner font sizes, which are in golden proprtion 1.618:1.define font size here, and then the others wil be proptrinlly as golden ratio, tes it.. 
+  // font-size: 3em;
+  font-size: 2em;
+
+  h1 { // & h2 ???
+    font-size: 1.618em;
+    font-weight: 500;
+    margin-bottom: 0.5em;
+    color: var(--c-accent);
+  } // hgroup h1
+
+  p {
+    font-size: 1em;
+    font-weight: 300;
+    // margin-bottom: 0.5em;
+    &:not(:last-of-type) {margin-bottom: 0.5em;} // &:not(:last-child)
+  } // hgroup h1  
+
+} // hgroup
+
+
+
+/*
+ * PAGE - TITLE (h1)
+ */
+ h1.page_title_dynamic { // VS  h1.page_title
+  color: var(--c-accent);
+  /*
+  font-size: $fs_xl; // create intermediate, for main titles, etc, as h1, anyways.. 
+  font-size: $fs_xxl;
+  */
+  /*
+  padding-block: $spacing; 
+  */
+  margin-top: unset; // 
+  margin-bottom: unset; // 
+  // margin-bottom: 0.5em;
+  // font-size: clamp(2em, 5vw, 5em); // TEST
+  // font-size: 3em;
+  // font-size: clamp(2em, 4vw, 3em);
+  // font-size: clamp(2em, 4vw, 2.5em);
+  
+  // font-size: 2.5em;
+  font-size: var(--fs-xl);
+  // font-weight: 300; // 
+  font-weight: normal; // RESET, VIP
+  // TEXT-ALIGN: CENTER;
+  // text-align: center; // PRECAUTION, FOR LATER ON RWD CHANGE - GOES INT EFFECT IN RWD, AS BEFORE WE HAVE FLEX MANAGING THE LAYOUT, TRUMPING TEH TEXT ALIGN CENTER HERE
+} // h1.page_title
+
+
+
+
+
+
+ /*
+ * SECTION - TITLE (h2)
+ */
+ h2.section_title_dynamic { // VS h2.section_title
+  // color: var(--c-theme-blue); // later overriden !!!
+  margin-top: unset; // 
+  margin-bottom: 1em; // 
+  // font-size: clamp(2em, 5vw, 5em); // a bit too big, in desktop 
+  // font-size: clamp(2em, 4vw, 5em);
+  font-size: 2em; // 
+  font-weight: normal; // RESET, VIP
+  text-wrap: balance;
+
+  // perghaps only really used in the 3 hoempage settings, so make it center then !!!
+  @media only screen and (max-width: $bp_m) {
+    // text-align: center; / NO, VBACASUE ALSO USED IN LAGEL PAGES...
+  } // MEDIA-QUERY
+
+} // h2.section_title_dynamic
+
+
+
+
+
+
+
+
+.section_link_container {
+  
+  // margin-top: $spacing; // TEST - - - - 
+  margin-top: $spacing2; 
+
+  // border: var(--s-border); //
+
+  display: flex;
+  flex-direction: column;
+  // justify-content: center;
+  align-items: center;
+  // gap: 1em; //
+  // gap: 0.4em; //
+  gap: 0.2em; //
+  // font-size:2em;
+  // font-size:1em;
+  // font-size:1.5em;
+  font-size:1.618em;
+
+  a {
+  
+    // display: inline-block;
+    // display: block;
+    display: inline-block; // para que no sea fullwidth !!!
+    @extend .buttonBig;
+    // can extend .io_classes !!! so no need to edit the html file, just the css file
+    font-size:1em; // 2em;
+  }
+
+  p {
+    // color: red;
+    color: var(--c-text-alt); // 
+    font-size: 0.618em; // 1/1.618
+  }
+
+/*
+ // centrar el boton
+ @media only screen and (max-width: $bp_s) {
+  text-align: center;		
+  } // MEDIA-QUERY	
+*/  
+  
+
+} // section_link
+
+
+
+// crete a section_link, to be used as anchor (or hbutton) to link to a section, or page, or section of a page 
+a.section_link {
+  border: var(--s-border); //
+  outline: 2px solid var(--c-accent); //
+
+  margin-inline: auto; // 
+
+  @extend .buttonBig;
+
+    // display: inline-block;
+    // display: block;
+    display: inline-block; // para que no sea fullwidth !!!
+    
+} // section_link

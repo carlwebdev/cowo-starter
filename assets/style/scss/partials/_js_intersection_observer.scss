@@ -1,0 +1,60 @@
+/*
+ * INTERSECTION OBSERVER - copying fomr dialog - the script, plusthe clas name, and the css and the fadin csss...
+ *
+ * 
+ *
+ *
+ */
+
+
+// .add_class_for_io_test_with_name_like_target_fadein_from_below {
+.io_target_fadein_from_below {
+  
+  
+} // add_class_for_io_test_with_name_like_target_fadein_from_below
+
+
+
+
+// // // pre-situactions
+
+
+
+// .button,
+// .add_class_for_io_test_with_name_like_target_fadein_from_below
+// .io_target_fadein_from_below // io_target_fadein_below VS under, above, left, right etc / quees target es obvio, y e "for" tb, soea que:...
+.io_fadein_below
+/* , .button_test */ {
+  opacity: 0;
+  transform: translateY(100px);
+  transition: transform 1s, opacity 1s;
+}
+
+
+// 2 strategies, either apply this class to the html, or list here the targets...n ot! script dont work like that, nor can we just extnd the class, as it wont be aplied in the script.
+
+
+
+// // // POST FX 
+.fadeIn { // from bwlow - can do library of from left, right, uab
+  opacity: 1;
+  transform: translateY(0px);
+}
+
+
+
+
+.io_fadein_left {
+  opacity: 0;
+  transform: translateX(100px); // this is really "right" .... 
+  // transform: translateX(-100px);
+  transition: transform 1s, opacity 1s;
+}
+
+// // // POST FX 
+.fadeInLeft {          // from bwlow - can do library of from left, right, uab
+  opacity: 1;
+  transform: translateX(0px);
+}
+
+

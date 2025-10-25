@@ -1,0 +1,204 @@
+/* 
+ * CSS 
+ * Header
+ * HEADER BUTTONS
+ */
+
+
+/*
+ .header_options_temp {
+  // border: 12px solid red; // 
+  // border: $s_border; // 
+  color: red; //
+  display: flex;
+  justify-content: center;
+  align-items: center; // PRECAUTION
+  gap: 1em;
+} // header_buttons
+*/
+
+
+
+/*
+// TETS MANUA OVVERDIDE:
+button, button span {
+    box-sizing: border-box;
+  }
+*/
+/*
+button, button span {
+  display: inline-block;
+  padding: 10px; // Adjust as needed
+  border: 1px solid #000; // Adjust as needed 
+}
+*/ 
+
+
+
+/*
+ *
+ * HEADER BUTTONS 
+ *
+ */
+// ALL HEADER UICONS WITH FUNCTIONALITY
+// NOW THEY ARE BUTTONS, SO REST TEH BUTTON BEHAVIOU HERE E... 
+.header_buttons { // aka header_admin_settings
+  // border: $s_border; // 
+  display: flex;
+  align-items: center; // PRECAUTION
+  gap: 1em;
+} // header_buttons
+
+
+
+// TODO - CSS - use is sleector ???
+button.headericon // GENERIC BUTTON, AS GOAL OIS TO HAVE THE ROLE CAUSE THE ACTION 
+/* ,
+button.navicon,
+button.langicon,
+button.searchicon,
+button.modeicon */ {
+
+  // header_search - - - - BUTTON !!!!!!!!!!!! & BTN_FRESET CLASS.... MIXIN ...
+
+display: block; // 
+
+/*
+  // display: none; // UI 
+  @media only screen and (max-width: $bp_m) { 
+    display: block !important;	
+  } // MEDIA-QUERY	
+*/  
+  
+
+
+    // outline: 3px solid #f06; outline-offset: 2px;
+
+
+
+    // display: none; // UI 
+    cursor:pointer; // they are button !!!   
+    /* */
+    // text color is presuposed // peor ha saido un gris..
+    // border-style: solid; // see if this removes the shadow !!! YES !!!! / MOVE TO RESTE ........ OF BUTTON, OJO
+    // move to reset     
+    font-size: 1em; // WHY IS THIS REQUIRED, BUTTON RESTE OR STH I GUESS 
+
+    /*
+    border-color: var(--c-text);
+    border-width: 2px;
+    border-radius: 100vh; // 
+    */
+
+
+  // border: 2px solid red; // 
+    /*
+    // padding: 8px;
+    padding:0.25em; // = 8px compared to 2em, whch is 32px, so 1/4, ok
+    */
+
+
+
+    // MDIcon
+    span {
+
+      display: block;
+      /* */
+      // padding: 8px;
+      padding:0.25em; // = 8px compared to 2em, whch is 32px, so 1/4, ok
+    
+
+      // next goal, make 3 mod clases for icon, round & square etc ..
+
+      // GOAL, MOVE ALL THE STYLING TO THE SPAN, AND THEN THE BUTTON IS JUST A CONTAINER.. (CHATO WOW.)
+      /// border-color: var(--c-text);
+
+
+      /// color: var(--c-text); // MODE
+      // color: white; // MODE
+      color: var(--c-text);
+      // border-color: white; // us einherit, ineate
+      border-color: var(--c-text); // us einherit, ineate
+      border-width: 2px;
+      border-style: solid;
+      border-radius: 100vh; // 
+
+      font-size: 2em; // 
+      // font-size: 3em; // 
+      // font-size: 4em; // 
+      transition: all 0.5s ease-in-out; //
+    }
+  
+    &:hover {
+        // background-color: var(--c-gray-dark); // middle way gray - CHANGE THIS 
+        /*
+        background-color: var(--c-text); // middle way gray - CHANGE THIS 
+        border-color: var(--c-accent); // NEW
+        */
+        // text-decoration:underline;
+        // color:#3F4F9B;
+        // color: var(--c-accent);
+        // MDIcon
+        span {
+          background-color: var(--c-text); // middle way gray - CHANGE THIS 
+          border-color: var(--c-accent); // NEW
+          color: var(--c-accent);
+        }
+      
+    } // hover
+  
+
+
+
+  /* OLÑD ICON FOTN, NOW IM USING MATERIUAL ICONS !!!! NI PROCESS !!!!!!!!!!!!!!!!!! */ 
+  /*
+  .icon { // esto aplica el icon font, solo aki, po rahora, pero lo he usado en otros sitios, y siempre uso el mismo style, osea que metelo como un mixin !!!!! @include icon, ah no!!!! no cal fer res, o no, si que hace falta !!!!!!!!!!
+    // background-color: #ff0; // TEST
+    display: block;
+    height: 1em; // YES !!!!!!!!!!!!
+    // font-size: 48px;
+    font-size: 32px;
+    // color: $c_green;
+    color: #fff;
+    // @include transition(color, 0.25s);
+    // &:hover {color: $c_green_light;	}
+    } // icon
+  */
+  
+  
+  /*
+  .icon { // esto aplica el icon font, solo aki, po rahora, pero lo he usado en otros sitios, y siempre uso el mismo style, osea que metelo como un mixin !!!!! @include icon, ah no!!!! no cal fer res, o no, si que hace falta !!!!!!!!!!
+    // background-color: #ff0; // TEST
+    display: block;
+    height: 1em; // YES !!!!!!!!!!!!
+    // font-size: 48px;
+    font-size: 32px;
+    // color: $c_green;
+    // color: #fff;
+    color: var(--c-white); // TEMP !!!!!!!!!!!!
+    // @include transition(color, 0.25s);
+    // &:hover {color: $c_green_light;	}
+  } // icon
+  */
+  
+
+  } // buttons
+
+
+
+// button[role=trigger_nav],
+[role=trigger_nav] {
+  display: none;
+
+  @media only screen and (max-width: $bp_m) { 
+    display: block !important;	
+    // display: inline-block !important;	
+  } // MEDIA-QUERY
+
+} // trigger_nav
+
+
+
+
+
+

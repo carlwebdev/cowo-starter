@@ -1,0 +1,169 @@
+/*
+ * CSS
+ * WP Pagination
+ */
+
+
+
+
+
+
+// partials foeder, wordpress - add pagination, and sidebara setc ... 
+.w_pagination {
+  // @EXTEND %DEV;
+  // @extend %dev;
+
+  // margin-top: $spacing2;
+  margin-top: $spacing4;
+  
+	text-align: center;
+}
+
+
+.pagination { // pagination2 - - - - -- -
+	display: inline-block;
+	@extend .clearfix;
+	
+	
+	.page-numbers { // a
+			float: left;
+			margin-right: $spacing05; // test
+			margin-bottom: $spacing05; // test, ame same
+			/*
+			background-color: $c_text;
+			color: $c_white;	
+			*/
+			/*
+			
+			
+			color: $c_text;
+
+
+			
+			border: 2px solid $c_text;
+			
+			*/					
+			display: block;
+			padding: 8px 12px; // TEST
+			font-size: 15px; // LIKE LIST/MAP ELEMENT
+    
+      
+      width: 48px; // GOAL - TO BE SQUARED, AND AS HEIGH TSEEMS TO BE 48PX AUTOMATICALLY EHATVER .....
+    
+    
+    
+    
+			/* UI */
+			// HOVER FX
+			@include transitionButton;
+			&:hover {
+				// background-color: lighten($c_text, 20%); // TEST
+
+
+
+				/*
+
+		    background-color: $c_text;
+
+				*/
+
+				// background-color: $c_salmon;
+				// color: $c_white;
+				
+				} // hover
+				
+				
+					
+		} // page-numbers
+	
+	
+	
+	// span.page-numbers,
+  .page-numbers { // span, current / ojo , span is for current, anchor is for the rest 
+			// background-color: $c_blue; // utiul en page eat & drink - en el de events puedo poner el salmon... 
+			// vs al over, either blue or salmon ts & paginatin !!!
+			// color: $c_text;			
+
+			// background-color: #ccc;
+			
+			// background-color: $c_text;
+			// background-color: var(--bg-c-gray-light);
+			background-color: white;
+			// color: $c_white;
+			// color: $c_black;
+			color: black;
+
+
+			// border-color: #ccc;
+			/* UI */
+			// HOVER FX
+			// @include transitionButton;
+			
+			
+			/*
+			background-color: none;
+			color: $c_text;
+			*/
+						
+			&:hover {
+				/*
+				background-color: #ccc;
+				color: $c_text;	
+				*/
+				// background-color: $c_text;
+				// background-color: $c_accent;
+				// background-color: $c_complementary;        
+				/*
+				background-color: $c_accent;
+				color: $c_white;	
+				*/
+				background-color: var(--c-accent);
+				color: var(--c-white);	
+
+
+				/*
+				background-color: none;
+				color: $c_text;	
+				*/						
+				} // TEST - SAME SAME, FOR NO INETRACTION
+					
+    
+    
+      // CASE = CURRENT
+    
+    
+      &.current {
+		/*
+				background-color: $c_text;
+				// background-color: $c_accent;
+				color: $c_white;
+		*/
+				background-color: var(--c-black);
+				color: var(--c-white);						
+        
+        &:hover {
+          // GOAL - DO NOTHING
+          // SO REPLICATE OR INHERIT... - FIRST TEST INHERIT
+          background-color: inherit;
+          color: inherit;	
+			/*	
+				background-color: $c_text;
+				// background-color: $c_accent;
+				color: $c_white;	
+			*/
+				background-color: var(--c-black);
+				color: var(--c-white);		
+
+        } // hover
+        
+        
+        
+        
+    } // current
+    
+    
+    
+		} // page-numbers
+	
+	
+	} // pagination2

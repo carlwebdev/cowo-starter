@@ -1,0 +1,191 @@
+/*
+ * Author: Carl Johansson @carlwebdev
+ * Project: cowo-Boilerplate
+ * File: a grid ... 
+
+
+ * INSTRUCTIONS FOR ANY GRID: 
+ * separate grid behavior (wrapper & cols) from item behavior (and its own rwd behavior)
+
+ */
+
+
+/*
+ * Grid - Blog
+ */
+.grid_blog {
+  // border: $s_border; 
+  display: grid;
+  // grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 2em; // 
+} // grid_blog
+	
+	
+/*
+ * Card - Blog
+ */
+.card_blog {
+  // --card-padding: 1em; 
+  --card-padding: 16px; 
+  
+  // background-color: #FFDFD3; // AKA PEACY , ALST
+  // background-color: var(--c-black);
+  background-color: var(--c-bg);
+  // border: 1px solid black;
+  box-shadow: 0px 0px 2px #ccc; // TODO
+  
+  // color: var(--c-white);
+  color: var(--c-text);
+  
+  a {color: inherit;}
+  
+  // padding: $spacing025;
+  // padding: 1em;
+  padding: var(--card-padding);
+
+
+
+
+  .image_OBSOLETE  {
+    // background-color: #ccc; // TEMP PLACEHOLDER
+    // background-color: #957DAD; // TEMP PLACEHOLDER
+
+    // OPTION A - IMAGE
+
+
+    
+  
+    // OPTION B - BACKGORUND IMAGE
+    /*
+    @include bg_img; // not anymore !!!!!!!! do, oif not size, aspect ratio and object firt !!! and dysnamic object fot etc ... 
+    @include ar_4_3;
+    */
+      
+  } // image
+  
+
+
+
+
+
+
+
+  picture {
+    border: $s_border;
+    background-color: #957DAD; // TEMP PLACEHOLDER
+
+    overflow:hidden; // scale of child
+
+    img {
+      // @include img; // MNOVE TO reset, AND USE THIS WITH PICTURE TAG !important!important!important
+      // aspect-ratio: 2 / 1;
+      // aspect-ratio: 1 / 2;
+      aspect-ratio: 1 / 1;
+      object-fit: cover; 
+
+      transition: scale 0.5s ease-in-out;
+      &:hover {scale: 1.1;}
+
+    } // img
+    
+  
+
+
+  } // picture
+  
+  
+
+
+  // KILL THIS WRAPOEPR, FUCK UP FLEX LOGI C
+  .info { //etc, vs flex & grid layout !!!
+    // padding-top: 0.5em;
+    padding-top: var(--card-padding);
+
+
+
+    .category {
+      // margin-bottom: 1em;
+
+      display: flex;
+      // flex-direction: column;
+      flex-wrap: wrap; // 
+
+      a {
+        // align-self: flex-end;
+        display: inline-block;
+        @extend .buttonSmall;
+      } 
+
+    } // link
+    
+    
+
+    // .title,
+    h3 {
+      // margin-bottom: var(--card-padding);
+      // margin-bottom: 0.4em;
+      margin-block: 0.4em; // MIXIN 
+
+      // font-size: 2em; // !!!
+      // font-size: 1.8em; // !!!
+      // font-size: 1.6em; // !!!
+      font-size: 1.618em; // !!!
+      // a
+    } // h3
+      
+    .text {
+      // margin-bottom: var(--card-padding);
+      // margin-bottom: 2em;
+      // font-size: 1.4em; // !!!
+      // font-size: 1.2em; // !!!
+      font-size: 1em; // !!!
+      // p ... just for a line clamped excerpt
+
+      } // text
+
+
+      
+      .tags {
+
+        margin-block: 1em; // MIXIN 
+
+        display: flex;
+        // flex-direction: column;
+        flex-wrap: wrap; // 
+
+        a {
+          // align-self: flex-end;
+          display: inline-block;
+          @extend .buttonSmall;
+        } 
+  
+      } // link
+
+
+
+    .link {
+      display: flex;
+      flex-direction: column;
+      a {
+        align-self: flex-end;
+        display: inline-block;
+        // @extend .buttonMedium;
+        @extend .buttonBig;
+      } 
+
+    } // link
+
+
+  } // info
+
+
+  
+  
+  
+} // card_blog
+
+
+
+
+

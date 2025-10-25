@@ -1,0 +1,355 @@
+/*
+ * Author: 
+ * Project: 
+ * File: WP - NAV (aka wordpress menu generation)
+ */
+/*
+ * Just the styligg, not the hide/show situations
+ *
+ * nav#nav_header
+ * nav#nav_footer
+ *
+ */
+
+
+
+// nav.main {}
+
+
+/*
+.togglebutton {display: none;}
+*/
+
+// nav#menuresponsive,
+nav#nav_header {
+  // border: var(--s-border); // DEBUG
+
+	ul.menu {
+    display: flex;
+    // gap: $spacing05;
+    gap: 3px;
+    
+    li {
+      
+      // WP NATIVE - CURRENT PAGE
+      &.current-menu-item {
+        a {
+          /*
+          background-color: var(--c-accent);
+          color: var(--c-white);
+          */
+          color: var(--c-accent);
+        }
+      } // li.current-menu-item
+      
+
+      a { // BUTTON BEHAVIOUR !!!
+        display: block;
+        padding: $spacing025 $spacing05;
+        
+        font-weight: bold;
+        // font-size: 1.4em; // 
+        // font-size: 1.2em; // 
+        font-size: 1em; // REDUNDANT
+
+        text-wrap: nowrap; // OBS IN THE RIGHT EXTREEM 
+        
+        /*
+        &:hover,
+        &.is-current {text-decoration: underline;}
+        */
+        
+        // border: $s_border; // this is accent color ..
+        // border: $s_border_text; //  aka text color - esto no existe uan ... 
+         // border: 3px solid var(--c-white); // TETS 
+
+         color: var(--c-text); // NEW
+         transition: all 0.4s ease-in-out; // OUT SLOW
+
+        &:hover {
+          /*
+          // background-color: var(--c-black);
+          // background-color: var(--c-accent);
+          // background-color: var(--c-black);
+          // background-color: var(--c-text);
+          background-color: var(--c-accent);
+          // color: var(--c-white);
+          */
+          color: var(--c-accent);
+          transition-duration: 0.2s; // IN FAST
+          }
+      
+          
+        } // a
+      
+
+      /*
+       *  2nd LEVEL - build it alwasy 3 levesl deep, as precaution, just in case, ya sti sabes 
+       */
+      &:hover {
+        > ul {display: block;} // ONLY FOR CHILD, AS PRECAUTION
+      }
+
+    
+        ul {
+          display: none; // HIDE 2ND LEVEL TEMP
+          position: absolute;
+          background-color: var(--c-black);
+        } // ul
+
+    
+    } // li
+    
+  } // ul.menu
+  
+  
+
+  
+
+  @media only screen and (max-width: $bp_show_navicon) { 
+    // display: none; // OBS, HAVE TO PPALY THSI TP A PAREN TLAYER, SO SAME MENU (HTML /& CSS) CAN BE USED FOR DBANNER & DROPDOWN !!!
+
+    ul.menu {
+      // border: var(--s-border); // DEBUG
+      flex-direction: column;
+
+      padding-block: 3em; // 
+
+
+
+
+
+      li {
+      
+        // WP NATIVE - CURRENT PAGE
+        &.current-menu-item {
+          a {
+            /*
+            background-color: var(--c-accent);
+            color: var(--c-white);
+            */
+            // color: var(--c-accent);
+          }
+        } // li.current-menu-item
+        
+  
+        a { // BUTTON BEHAVIOUR !!!
+
+          text-align: center; // TEMP
+
+          // display: block;
+          padding: $spacing025 $spacing05;
+          
+          // font-weight: bold;
+          // font-size: 1.4em; // 
+          // font-size: 1.2em; // 
+          // font-size: 1em; // REDUNDANT
+          font-size: 2em; // REDUNDANT
+          text-wrap: nowrap; // OBS IN THE RIGHT EXTREEM 
+          
+          /*
+          &:hover,
+          &.is-current {text-decoration: underline;}
+          */
+          
+          // border: $s_border; // this is accent color ..
+          // border: $s_border_text; //  aka text color - esto no existe uan ... 
+           // border: 3px solid var(--c-white); // TETS 
+  
+           color: var(--c-text); // NEW
+           transition: all 0.4s ease-in-out; // OUT SLOW
+  
+          &:hover {
+            /*
+            // background-color: var(--c-black);
+            // background-color: var(--c-accent);
+            // background-color: var(--c-black);
+            // background-color: var(--c-text);
+            background-color: var(--c-accent);
+            // color: var(--c-white);
+            */
+            color: var(--c-accent);
+            transition-duration: 0.2s; // IN FAST
+            }
+        
+            
+          } // a
+    
+  
+      
+      } // li
+
+
+
+
+
+
+
+
+
+
+
+
+    } // ul.menu
+
+
+  } // MEDIA-QUERY
+  
+  
+
+
+  
+} // nav#nav_header
+
+
+
+
+
+
+
+
+
+
+
+nav#nav_footer {
+  // border: var(--s-border); // DEBUG
+  
+	ul.menu {
+    display: flex;
+    // gap: $spacing05;
+    // gap: 3px;
+    gap: 0.5em; // 
+    
+    li {
+      
+
+      a { // BUTTON BEHAVIOUR !!!
+        /*
+        display: block;
+        padding: $spacing025 $spacing05;
+        */
+        text-wrap: nowrap; // OBS IN THE RIGHT EXTREEM 
+
+        // // // font-weight: bold;
+        // font-size: 1.4em; // 
+        // font-size: 1.2em; // 
+        // font-size: 1em; // REDUNDANT
+        font-size: 0.75em; // aka 12px excatly  
+
+        /*
+        &:hover,
+        &.is-current {text-decoration: underline;}
+        */
+        
+        // border: $s_border; // this is accent color ..
+        // border: $s_border_text; //  aka text color - esto no existe uan ... 
+         // border: 3px solid var(--c-white); // TETS 
+
+
+         // color: var(--c-text); // NEW
+         color: inherit; // NEW
+         transition: all 0.4s ease-in-out; // OUT SLOW
+
+        &:hover {
+          /*
+          // background-color: var(--c-black);
+          // background-color: var(--c-accent);
+          // background-color: var(--c-black);
+          // background-color: var(--c-text);
+          background-color: var(--c-accent);
+          // color: var(--c-white);
+          */
+          /*
+          color: var(--c-accent);
+          */
+          transition-duration: 0.2s; // IN FAST
+
+          // todo  underline, buit with border tracik insetad !!! or after elemet 
+          // TEMP SOLUTION:
+          text-decoration: underline;
+          } // hover
+         
+        } // a
+      
+
+      
+
+
+      // WP NATIVE - CURRENT PAGE
+      &.current-menu-item {
+        a {
+          /*
+          background-color: var(--c-accent);
+          color: var(--c-white);
+          */
+          /*
+          color: var(--c-accent);
+          */
+          text-decoration: underline;
+        }
+      } // li.current-menu-item
+      
+      
+
+
+
+
+
+
+      /*
+       *  2nd LEVEL - build it alwasy 3 levesl deep, as precaution, just in case, ya sti sabes 
+       */
+      &:hover {
+        > ul {display: block;} // ONLY FOR CHILD, AS PRECAUTION
+      }
+
+      
+
+        ul {
+          display: none; // HIDE 2ND LEVEL TEMP
+          
+          position: absolute;
+          
+          background-color: var(--c-black);
+          
+        } // ul
+
+      
+      
+      
+      
+    } // li
+    
+  } // ul.menu
+  
+  
+  
+  
+  /* */
+	@media only screen and (max-width: $bp_m) { 				
+		// display: none;
+
+    ul.menu {
+      gap: 1em; // 
+
+      li {
+
+        a { 
+          // font-size: 0.75em; // aka 12px excatly  
+          font-size: 1em;
+          } // a
+        
+      } // li
+      
+    } // ul.menu
+  
+    
+
+
+
+
+  } // MEDIA-QUERY	
+  
+  
+  
+} // nav#nav_footer

@@ -1,0 +1,24 @@
+/*
+ * Author: Carl Johansson @carlwebdev
+ * Project: cowo-Reset
+ * File: Layout
+ */
+
+
+
+/*
+ * CODE FOR RESPONSIVE STICKY FOOTER
+ * Instructions: class "block" to footer
+ */
+html, body {
+	height: 100%;
+	}
+#page {
+	display: table;
+	height: 100%;
+	width:100%; /* VIP for responsiveness */
+	}
+.stickyFooter { // WAS block
+	display: table-row;
+	height: 1px;
+	}

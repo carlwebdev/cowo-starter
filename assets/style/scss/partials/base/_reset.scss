@@ -1,0 +1,337 @@
+/*
+ * Author: Carl Johansson @carlwebdev
+ * Project: cowo-Boilerplate
+ * File: CSS Reset
+ */
+
+
+
+
+/* 
+ * 1 - REMOVE MARGIN AROUND THE PAGE 
+ * BODY MARGIN 0 IS THE KEY 
+ */
+/*
+html, body {
+	margin: 0;
+	padding: 0;
+	}
+*/
+
+/* 
+ * 2 - BOX MODEL
+ * Universal Box Sizing - https://css-tricks.com/box-sizing/ 
+ */
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+
+
+/* 
+ * BOX MODEL 
+ */
+* {
+  // @include box-sizing(border-box); /* Sass - Compass */
+}
+
+
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+/*
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	
+	
+	font: inherit;
+	vertical-align: baseline;
+}
+*/
+
+
+
+/* ==========================================================================
+   HTML5 display definitions - Normalize.css
+   ========================================================================== */
+
+/**
+ * Correct `block` display not defined in IE 8/9. 
+ */
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+summary {
+    display: block;
+}
+
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+
+
+/* COWOWO CSS RESET =============================================================== */
+
+html, body,
+div, span,
+h1, h2, h3, h4, h5, h6, 
+p, 
+pre, code, /* smp, smp , sample ... */
+img,
+dl, dt, dd, 
+ol, ul, li,
+img {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-size:100%; /* for headings, works */
+}
+
+
+/*
+
+body {
+	line-height: 1;
+}
+
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+
+*/
+
+
+ol, ul /* , li */ {list-style:none;}
+
+
+img {
+	max-width:100%; 
+	height:auto; /* The height is added to ensure the aspect ratio of the image is retained. */
+	// max-width: 1000px; // Width of the image uploaded.
+
+	width: 100%;
+	display: block;
+		
+		
+	}
+
+// img {display:block;}  /* this takes away the bottom margin of imgs, it's inline behaviour causes the margin */
+
+
+
+
+picture {
+	// width: 100%;
+  display: block; // VIP - MOVE TO RESET - DONE
+} // picture
+
+
+
+
+
+// a !!!!!!!!!
+
+a {
+    background: transparent; /* Normalize.css - Remove the gray background color from active links in IE 10. */
+}
+
+
+
+
+
+
+
+
+
+b,
+strong {
+	font-weight: bold; /* Normalize.css - Address style set to `bolder` in Firefox 4+, Safari 5, and Chrome. */
+}
+
+
+/**
+ * Address inconsistent and variable font size in all browsers.  - Normalize.js ( O dont really use this tag anyways, hmmm...)
+ */
+
+small {
+	font-size: 80%;
+}
+
+
+/**
+ * Prevent `sub` and `sup` affecting `line-height` in all browsers. - Normalize.css
+ */
+
+sub,
+sup {
+	font-size: 75%;
+	line-height: 0;
+	position: relative;
+	vertical-align: baseline;
+	}
+
+sup {top: -0.5em;}
+
+sub {bottom: -0.25em;}
+
+
+
+
+/* ====================================================================================================================== */
+/* FORMS                                                                                                                  */
+/* ====================================================================================================================== */
+	
+
+/* INFO FRAMWEORK INPUT HOVER FOCUS ACTIVE ETC ----
+
+Write CSS? 
+
+Please don't forget to add :focus and :active styles along with :hover. :focus is important for keyboard and d-pad users.
+
+Iinput ytops _ HOVER &  FOCUS  ar now ok in my framework (and infoOD & fart be)
+
+BUT DSOES ACTIVE still apply to input typoes??????
+
+*/
+
+
+
+/* FORMS - iOS etc RESET ======================================= */
+
+input[type=text], 
+input[type=submit],
+input[type=reset],
+input[type=button], 
+input[type=image], 
+textarea,
+select {
+	-webkit-appearance: none; /* VIP - to override al i.e. iOS safari stryling */
+	border-radius:0px;
+	} 
+
+
+
+input[type=text], 
+textarea {
+	width:100%; 
+	} 
+
+
+input[type=text],
+textarea  {
+	border:none; // THIS GOES TO RESET !!!!!!!!!!!
+}
+
+
+
+
+
+label, /* !!!! */
+input[type="submit"],
+input[type="button"],
+button {
+	cursor:pointer; 
+}
+	
+	
+
+button {
+	/* RESET */
+	/* border-radius: 0px; */ /* ALSO DO FOR IOS ETC */
+	/* this cause sglitcthy border color thingee */
+	border: 0;  /* OK - THIS TAKES CARE OF THE BORDER ASPECT & RADIUS */
+	/*outline: 0;*/ /* DOES NOTHING */
+	padding: 0; /* OK */
+	/* margin: 0; */ 
+	background: none; /* OK, TO DELETE BG COLOR */ 
+} // BUTTON
+
+
+
+
+/* oveflow:hidden; VS clearfix hack VS float:inline-block with font-size issues..... */
+
+/*
+
+I USE overflow:hidden, hwich works the same, UNLESS YOU GET FUCKED UP BY DELETED OVERFLOWING CONTENT.
+view-source:http://mattbango.com/demos/hover-zoom/
+http://css-tricks.com/snippets/css/clear-fix/
+
+///
+to avoid cleafix hack, use display inline block, and then add the vertcal align top..
+but ther's the sapcing issue too... several ways to fix that
+
+*/
+
+
+/* FORM NORTMALIZE.CSS */
+/**
+ * 1. Remove default vertical scrollbar in IE 8/9.
+ * 2. Improve readability and alignment in all browsers.
+ */
+textarea {
+	overflow: auto; /* 1 */
+	vertical-align: top; /* 2 */
+	}
+
+
+
+textarea {
+	// resize: none; /* DEFAULT VALUE */
+
+	&.is-resizable-vertical {}
+	resize:vertical; /* HAY QUE CONFIGURARLO !!!! */
+}
+
+
+
+
+/* ==========================================================================
+   Tables
+   ========================================================================== */
+
+/* TABLES */
+
+/**
+ * Remove most spacing between table cells. (Nomalize.css & Eric Meyer's Reset)
+ */
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}

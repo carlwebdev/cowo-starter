@@ -1,0 +1,26 @@
+/*
+ * CSS
+ * WP - Admin Bar 
+ *
+ * wpadminbar - shown through functions.php 
+ *
+ * Activated through functions.php - and then learn to hide it through the theme settings
+ */
+#wpadminbar {
+  
+  // aka frosted...
+  /*
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  */
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+  
+  // background: #1d2327;
+  // background: rgba(red, 20%) !important;
+  // background-color: rgba(red, 20%) !important;
+  // background-color: rgba(red, 0.3) !important;
+  // background-color: rgba($c_accent, 0.3) !important;
+  background-color: rgba(#1d2327, 0.3) !important;
+
+} // wpadminbar

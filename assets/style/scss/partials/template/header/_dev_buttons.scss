@@ -1,0 +1,177 @@
+/* 
+ * CSS 
+ * Header
+ * HEADER BUTTONS
+ */
+
+
+
+ .header_options_temp {
+  // border: 12px solid red; // 
+  // border: $s_border; // 
+  color: red; //
+
+  display: flex;
+  justify-content: center;
+  align-items: center; // PRECAUTION
+  gap: 1em;
+  
+  
+} // header_buttons
+
+
+
+
+/*
+// TETS MANUA OVVERDIDE:
+button, button span {
+    box-sizing: border-box;
+  }
+*/
+/*
+button, button span {
+  display: inline-block;
+  padding: 10px; // Adjust as needed
+  border: 1px solid #000; // Adjust as needed 
+}
+*/ 
+
+
+
+/*
+ *
+ * HEADER BUTTONS 
+ *
+ */
+// ALL HEADER UICONS WITH FUNCTIONALITY
+// NOW THEY ARE BUTTONS, SO REST TEH BUTTON BEHAVIOU HERE E... 
+
+
+.dev_buttons { // aka header_admin_settings
+  // border: 12px solid green; // 
+  // border: $s_border; // 
+  // border: 6px solid red;
+  display: flex;
+  align-items: center; // PRECAUTION
+  gap: 1em;
+
+
+
+  &.is-vertical {
+    flex-direction: column;
+    gap: 0.5em; //
+  }
+
+
+
+
+} // dev_buttons
+
+
+
+
+
+
+// header_search - - - - BUTTON !!!!!!!!!!!! & BTN_FRESET CLASS.... MIXIN ...
+
+// TODO - CSS - use is sleector ???
+button.devicon // GENERIC BUTTON, AS GOAL OIS TO HAVE THE ROLE CAUSE THE ACTION 
+/* ,
+button.navicon,
+button.langicon,
+button.searchicon,
+button.modeicon */ {
+
+display: block; // 
+
+/*
+  // display: none; // UI 
+  @media only screen and (max-width: $bp_m) { 
+    display: block !important;	
+  } // MEDIA-QUERY	
+*/  
+
+
+    // outline: 3px solid #f06; outline-offset: 2px;
+
+    // display: none; // UI 
+    cursor:pointer; // they are button !!!   
+    /* */
+    // text color is presuposed // peor ha saido un gris..
+    // border-style: solid; // see if this removes the shadow !!! YES !!!! / MOVE TO RESTE ........ OF BUTTON, OJO
+    // move to reset     
+    font-size: 1em; // WHY IS THIS REQUIRED, BUTTON RESTE OR STH I GUESS 
+
+    /*
+    border-color: var(--c-text);
+    border-width: 2px;
+    border-radius: 100vh; // 
+    */
+
+
+
+  // border: 2px solid red; // 
+    /*
+    // padding: 8px;
+    padding:0.25em; // = 8px compared to 2em, whch is 32px, so 1/4, ok
+    */
+
+    // MDIcon
+    span {
+      // next goal, make 3 mod clases for icon, round & square etc ..
+
+      // GOAL, MOVE ALL THE STYLING TO THE SPAN, AND THEN THE BUTTON IS JUST A CONTAINER.. (CHATO WOW.)
+      /// border-color: var(--c-text);
+      border-color: white; // us einherit, ineate
+      border-width: 2px;
+      border-style: solid;
+      border-radius: 100vh; // 
+
+      /// color: var(--c-text); // MODE
+      color: white; // MODE
+
+      font-size: 2em; // 
+      // font-size: 3em; // 
+      // font-size: 4em; // 
+      display: block;
+
+      /* */
+      // padding: 8px;
+      padding:0.25em; // = 8px compared to 2em, whch is 32px, so 1/4, ok
+          //
+      transition: all 0.5s ease-in-out; //
+    }
+  
+    &:hover {
+        // background-color: var(--c-gray-dark); // middle way gray - CHANGE THIS 
+        /*
+        background-color: var(--c-text); // middle way gray - CHANGE THIS 
+        border-color: var(--c-accent); // NEW
+        */
+        // text-decoration:underline;
+        // color:#3F4F9B;
+        // color: var(--c-accent);
+        // MDIcon
+        span {
+          background-color: var(--c-text); // middle way gray - CHANGE THIS 
+          border-color: var(--c-accent); // NEW
+          color: var(--c-accent);
+        }
+      
+    } // hover
+
+
+} // buttons
+
+
+
+
+
+// ACTRION, ADD debugging class to body through jquery / js, and tets for localstoirage, but later on !!!!
+// *, *:before, *:after
+// body *, body *:before, body *:after
+body.debugging *, body.debugging *:before, body.debugging *:after  {
+  // outline: 1px solid red; // TODO - CHOOSE A MORE NEUTRAL COLOR !!! 
+  // outline: 1px solid red !important; // not all tags where getitng te outline for some odd reason... 
+  outline: 1px solid #999 !important; // not all tags where getitng te outline for some odd reason... 
+}

@@ -1,0 +1,198 @@
+/*
+ * CSS
+ * WP Post Nav
+ *
+ * add as molecule as its standalone form blog posts, as it can be used for any kind of posts I guess....
+ */
+
+.post_nav { // postNav
+  // border: $s_border;
+  
+	@include paddingv($spacing05); // TESTING
+  
+	@extend .clearfix;
+
+	font-size: 13px; // CARL
+	line-height: 15px;
+	
+  a {
+    // border: 3px solid red; // DEV
+    } // a
+  
+  img { // TEST
+		width: 32px; // vip for svg !!
+		}
+	
+  span {
+    display: inline-block;
+    vertical-align: middle;
+    } // span
+  
+  // not compiled here yet, copied fomr godset 
+  span.material-icons {
+    // font-size: 32px; 
+    // font-size: 48px; 
+    font-size: 24px;   
+  }
+  
+  
+  
+	.left {
+		float: left;
+
+		a {
+			span:first-of-type {
+				// @include transition(left, 0.3s); // test
+        -webkit-transition: left 0.3s ease;
+        -moz-transition: left 0.3s ease;
+        -ms-transition: left 0.3s ease;
+        -o-transition: left 0.3s ease;
+        transition: left 0.3s ease; 
+        
+        
+				position: relative;
+				// left: -24px; // TEST
+				left: -6px; // TEST 
+				top: 3px;
+				}
+			
+			} // a
+
+
+		img {
+			width: 32px; // TEST
+			@include centered;
+			
+			// CSS ROTATE 180º ... BUT MIGHT NEED A WRAPPER SPOECIFIC FOR THE ICON...
+			-ms-transform: rotate(180deg); /* IE 9 */
+			-webkit-transform: rotate(180deg); /* Safari 3-8 */
+			transform: rotate(180deg);		
+      
+      // USE COMPASS FOR THIS ....
+      
+		} // img
+			
+			
+				
+		// UI 
+		
+		a:hover {
+
+			span:first-of-type {
+				left: -36px; // TEST 
+				// padding-right: 36px; // TEST 
+				
+				// left: -30px; // TEST , from 24
+				left: -12px;
+				}
+			
+			} // a
+		
+		} // left
+		
+	.right {
+		float: right;
+		// border: 2px solid green; // DEV
+			a {
+
+				span:last-of-type {
+					// @include transition(right, 0.3s); // test
+          -webkit-transition: right 0.3s ease;
+          -moz-transition: right 0.3s ease;
+          -ms-transition: right 0.3s ease;
+          -o-transition: right 0.3s ease;
+          transition: right 0.3s ease; 
+          
+          
+          
+					position: relative;
+					// right: -24px; // TEST 
+					right: -6px; // TEST 
+					top: 3px;
+					}
+				
+			} // a
+			
+			
+		// UI 
+		
+		a:hover {
+			
+			span:last-of-type {
+				// right: -36px; // TEST 
+				// right: -30px; // TEST 
+				right: -12px; // TEST 
+				}
+			
+			} // a
+		
+					
+		} // right
+	
+
+  
+  
+  
+  
+  
+  
+  
+  //
+  position: relative;
+    &.case-hero {
+      // border: 3px solid yellow; // DEV
+      @include paddingv(0px); // TESTING - for no height
+
+	.left {
+		// float: left;
+        // border: 3px solid orange; // DEV
+        position: relative; // RESET
+        top: 32px; // 32px
+        left: -140px; // rwd this !!!  
+		}
+		
+	.right {
+		// float: right;
+        // border: 3px solid orange; // DEV
+        position: relative; // RESET
+        top: 32px; // 32px // 10
+        right: -140px;  // rwd this !!!   
+		}
+      
+    @media only screen and (max-width: $bp_xl) { // m vs s // $bp_l
+      // border: 3px solid orange; // DEV
+      @include paddingv($spacing); // TESTING
+
+      @include paddingh($spacing); // TESTING
+
+      // border: 3px solid red; // DEV
+
+    .left {
+        // float: left;
+        // border: 3px solid orange; // DEV
+        position: relative; // RESET
+        top: 0px; // 32px
+        left: 0px; // rwd this !!!  
+        }
+
+    .right {
+        // float: right;
+        // border: 3px solid orange; // DEV
+        position: relative; // RESET
+        top: 0px; // 32px
+        right: 0px;  // rwd this !!!   
+        }
+
+      } // MEDIA-QUERY
+
+
+
+    } // case-hero
+
+
+  
+  
+  
+  
+  
+} // post_nav 

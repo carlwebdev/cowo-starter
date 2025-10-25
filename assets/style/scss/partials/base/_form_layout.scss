@@ -1,0 +1,95 @@
+/*
+* cowoBoilerplate
+* Built by cowowo.cat
+* Author: Carl Johansson @carlwebdev 
+* Project: XXX
+* File: Forms
+* Filename: _forms_layout.scss
+*/
+
+
+
+
+
+
+// copied fomr cbpoiperplate,the ñlayotu for the foms demos... chekc the card varaibel toto !!!.
+.l_gridBase_50_50 {
+	display: grid; 
+	grid-template-columns: repeat(3, 1fr);
+	gap: 48px;
+	
+	.col {
+		// TEMP., CARD 
+		// border: 1px solid grey; 
+		// background-color: $c_white; /* PRECAUTION */
+		background-color: white; // TODO
+		// box-shadow: 0px 0px 2px #ccc;
+		// box-shadow: 0px 0px 4px 2px #ccc;
+		// box-shadow: 0px 0px 8px -2px #ccc;
+		box-shadow: 0px 0px 8px 2px #ccc;
+		padding: 24px;
+
+		&:hover {
+			cursor: pointer;
+			box-shadow: 0px 0px 4px 0px #ccc;
+			// @include transition(box-shadow, 0.2s);
+			// transition: box-shadow $t_fast linear;
+			transition: box-shadow 0.4s linear;
+		}
+
+	} // col
+	
+} // l_gridBase_50_50
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// COWO-BOILERPLATE - system for ir 3 class forms, etc, severak environments in one - DOING THIS IIN GLOBALDESK to start
+// ACTUALLY ALMOST KINDA CONE IN CB..
+
+
+// COPY FOMR LAYOUTTS FOMR COWObOILEPOLAT E!!!!
+
+
+
+
+form {
+	max-width:400px;
+	@include centered;
+	
+	
+	&.formType_1 {} // ie contact
+
+	&.formType_2 {} // ie search, newlstter, etc
+
+
+} // form
+
+
+
+
+
+
+/* SASS PARTIAL - FORM LAYOUTS is not the ame as form elements */ 
+
+
+.formLine {	 
+	overflow:hidden; /* if submit is floated (right)) */ // NOT GOOD FOR SOME SITUATIONS.. 
+	margin-bottom: $spacing;
+	&:last-of-type {margin-bottom: 0px;}	
+
+	// Instruction - COPY FORM COWOCMS
+
+	// Error - COPY FORM COWOCMS, ASLO TEH ERROR COLOR 
+
+} // formLine

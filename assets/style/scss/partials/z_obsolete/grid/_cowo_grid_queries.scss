@@ -1,0 +1,122 @@
+/* CSS Document */
+
+
+/* PLACE CUSTOMIZED QUERIES FOR THE RWD GRID HERE, USING THE FORMULAS - SASS FUNCTONS 8that have bee exlained)  AT YOUR DISPLOSAL */
+
+
+
+
+/* ========================================= */
+/* CUSTOMIZED WIDTH ======================== */
+/* ========================================= */
+
+@media only screen and (max-width: 800px) {
+
+/* 1of2's turn into 1of4's */ /* DEMO ONLY */
+/*
+.span_1of2 {width:my-columnwidth-function(4); margin-right:$gutterwidth; FONT-SIZE:3REM;} 
+	.span_1of2:last-of-type {margin-right:0%;} // FOR SINGLE-LINE SCENARIO 
+	.span_1of2:nth-of-type(2n) {margin-right:0%;} // FOR MULTI-LINE SCENARIO - THIS ACTUALLY INCLUDES THE SINGLE-LINE SCENARIO, SO THE ABOVE LINE COULD BE DELETED, in all cases ...
+*/
+
+}
+
+
+
+
+
+
+
+/* ========================================================================================================================================== */
+
+
+
+
+/* ========================================= */
+/* FINAL WIDTH ============================= */
+/* ========================================= */
+
+
+/* turn everything into 100% width at this viewport width */
+@media only screen and (max-width: 400px) { // 480
+
+.span_1of2,
+.span_1of3,
+.span_1of4,
+.span_1of5,
+.span_1of6,
+.span_1of7,
+.span_1of8,
+.span_1of9,
+.span_1of10,
+.span_1of11,
+.span_1of12 {width:100%; margin-right:0%;}
+
+/* BAJAO TB FALTAN LOS DE 100%'S aunque sean obvios claro... */
+.span_2of3 {width:100%; margin-right:0%;}
+
+.span_2of4, 
+.span_3of4 {width:100%; margin-right:0%;}
+
+.span_2of5, 
+.span_3of5, 
+.span_4of5 {width:100%; margin-right:0%;}
+
+.span_2of6, 
+.span_3of6, 
+.span_4of6,
+.span_5of6 {width:100%; margin-right:0%;}
+
+.span_2of7, 
+.span_3of7, 
+.span_4of7,
+.span_5of7,
+.span_6of7 {width:100%; margin-right:0%;}
+
+.span_2of8, 
+.span_3of8, 
+.span_4of8,
+.span_5of8,
+.span_6of8,
+.span_7of8 {width:100%; margin-right:0%;}
+
+.span_2of9, 
+.span_3of9, 
+.span_4of9,
+.span_5of9,
+.span_6of9,
+.span_7of9,
+.span_8of9 {width:100%; margin-right:0%;}
+
+.span_2of10, 
+.span_3of10, 
+.span_4of10,
+.span_5of10,
+.span_6of10,
+.span_7of10,
+.span_8of10,
+.span_9of10 {width:100%; margin-right:0%;}
+
+.span_2of11, 
+.span_3of11, 
+.span_4of11,
+.span_5of11,
+.span_6of11,
+.span_7of11,
+.span_8of11,
+.span_9of11,
+.span_10of11 {width:100%; margin-right:0%;}
+
+.span_2of12, 
+.span_3of12, 
+.span_4of12,
+.span_5of12,
+.span_6of12,
+.span_7of12,
+.span_8of12,
+.span_9of12,
+.span_10of12,
+.span_11of12 {width:100%; margin-right:0%;}
+
+		
+} // MEDIA-QUERY

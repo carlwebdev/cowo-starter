@@ -1,0 +1,90 @@
+/*
+ * CSS
+ * search
+ * grid_results_simple VS the other ne that is more complex, comeplete
+
+ as separator, just have an organge line ..... 
+  and so some anchor ui inteactivity 
+
+ */
+
+/* 
+ * GRID - RESULTS
+ */
+.grid_results_simple { 
+  display: grid;
+  // gap: $spacing2; // TEST 
+  gap: $spacing; // TEST 
+  // TEMP
+  background-color: white; // 
+} // w_gridPosts
+	
+	
+/* 
+ * CARD - RESULTS - SIMPLE - BUT THIS IS NOT SIMPLE ENOUGH, DO I TMORE GOOGLE-LIKE 
+ */
+.card_result_simple { 
+  // border: $s_border;
+  // CARD - CONTAINER
+  /*
+  @include card;
+  padding: $spacing075;
+  */
+  padding-block: 1em; // 
+
+  // copied fomr oslo 
+  .category { // also in smalles font size possibel, // anad also tets to add fields for publishged date & author ...
+    // margin-bottom: 0.5em; // TEST 
+    margin-bottom: 1em; // TEST 
+    // @include f_main_bold;        
+    // font-size: $fs_card_small; // TEST - NICE SYSTEM !!!! HAVE A GENERIDC FIEL FOR CRDS-
+    // color: $c_text_2; // TEST 
+    color: var(--c-gray); // TEST 
+
+    // & BOLD PERHAPS & LINK TOO !!!
+
+    a {
+      color: inherit;
+      // text-decoration: none;
+      &:hover {text-decoration: underline;} 
+    } // a
+
+  } // category
+
+  
+  
+  
+  // h3
+  .title {
+    // margin-bottom: 1em; // TEST 
+    margin-bottom: 0.5em; // TEST 
+    @include css_line_clamp(2);
+    // TODO - mixin for font_card_title - size, color, wwierght.... - SPECIALLY NOW QUE LO ESTOY REPLICANBDO EN grid_staff . . . . . . . . . .s
+    // font-size: $fs_card_title;
+    font-weight: bold;
+
+    a {
+      &:hover {text-decoration: underline;} // mixin, and check default anchor behavior (with or withouundelrine to start off with ) / a_ui_base / alt / bold
+    } // a
+
+  } // title
+
+
+  .text {
+    color: var(--c-gray); // TEST 
+    // font-size: $fs_card_text; // test the conetnt fvs system for exceport if filled inonlyh ,,,
+    // line height !!!! 1.5, not 1 .............
+    // line-height: 1.5em; // TETS TEMP !!!!
+    line-height: 1.7em; // TETS TEMP !!!!
+
+
+    // @include css_line_clamp(3);
+    @include css_line_clamp(2);
+
+    
+  } // text
+
+
+
+  
+} // card_result_simple

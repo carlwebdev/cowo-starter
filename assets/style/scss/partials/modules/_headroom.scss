@@ -1,0 +1,11 @@
+	/* carl demo */ .navbar {background-color:#f00;}
+	
+	
+	
+.headroom {position: fixed;top: 0;left: 0;right: 0;transition: all .2s ease-in-out;}
+.headroom--unpinned {
+	// top: -100px;
+	top: -300px; // TIENE QUE SER MAS ALTO QUE LO QUE SE QUIERE TAPAR !!! ERGO ME SIRVE PARA hacer cosas chulas
+	}
+.headroom--pinned {top: 0;}
+

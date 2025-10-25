@@ -1,0 +1,115 @@
+/*
+ * Author: Carl Johansson @carlwebdev
+ * Project: cowo-Boilerplate
+ * File: Forms - file button hack
+ */
+
+// esto es copiado de un txt que venis ad eotro sitio... en el fondo ya lao tengo en el fporms partial file, al final de todo.
+/* 
+ * FORM HACKS - input image / checkbox / select // SEEK AND DESTROOOY! - no creo que esté siendo usado en este cms, pspaaad !!! 
+ */
+
+
+/* FORM - label covering input[type=file] */
+/* HTML FOR THIS:
+<label class="filebutton">
+Browse For File!
+<span><input type="file" id="myfile" name="myfile"></span>
+</label>
+*/
+label.filebutton {
+	display: inline-block;
+	margin-top: 1px;	
+	position:relative;
+	overflow:hidden; // ???
+	
+	height:32px; // ???
+
+	padding: $spacing025 $spacing05;
+	
+	
+	color: #fff; // sassi fy !!!!
+	font-size: 12px; // SASSIFY !!!!!!!!!!
+	
+	text-transform: uppercase; // sassify it !!! // creat an class to extend !!!!!!!!!!!!! 
+
+	// border:1px solid #43a40a;
+	// background-color: $c_primary;
+	background-color: var(--c-accent);
+	
+	// &:hover {background-color:$c_primary_light;}
+		
+		
+	span input {
+			// margin: 0; // ya está en el reset general
+			// padding:0; // ya está en el reset general
+				
+			cursor: pointer;
+			/* _cursor: hand; */
+				
+			z-index: 999;
+			// line-height: 0;
+			
+			position: absolute;
+			/* top: -2px; */
+			top: -4px;
+			
+			left: -9999px;
+			
+			opacity: 0;
+			filter: alpha(opacity = 0);
+			-ms-filter: "alpha(opacity=0)";
+	
+	}
+
+				
+} // label.filebutton
+
+
+
+
+
+
+
+/* FRAMEWORK - input type image */
+
+/* input[type=file] & label trick */
+/* THE HTML
+        <label class="filebutton">
+        Seleccionar arxiu
+        <span><input type="file" name="doiser" id="dosier" /></span>
+        </label>
+*/	
+
+label.filebutton_NOT {
+    width:120px;
+    height:40px;
+    overflow:hidden;
+    position:relative;
+    background-color:#fff;
+	border:1px solid #ccc;
+	padding:0 5px;
+}
+label.filebutton_NOT:hover {
+    background-color:#ddd;
+}
+
+label_NOT span input {
+    z-index: 999;
+    line-height: 0;
+    /* font-size: 50px; */
+	font-size: 15px;
+    position: absolute;
+    /* top: -2px; */
+	top: -4px;
+    /* left: -700px; */
+	left: -245px;
+    opacity: 0;
+    filter: alpha(opacity = 0);
+    -ms-filter: "alpha(opacity=0)";
+    cursor: pointer;
+    /* _cursor: hand; */
+    margin: 0;
+    padding:0;
+}
+/* END OF - FORM - label covering input[type=file] */

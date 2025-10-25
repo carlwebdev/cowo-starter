@@ -1,0 +1,272 @@
+/*
+ * Author: Carl Johansson @carlwebdev
+ * Project: wp-cowowo
+ * File: Typography
+ */
+
+
+blockquote {
+	border-left: 3px solid #999;
+	background-color: #ccc;
+	padding: $spacing05;
+	}
+
+
+/*  TEXT: GENERAL TYPOGRAPHY ======================== */
+
+	
+	
+	
+	
+	
+/* 
+ * FONTS - FONT-FACE
+ */
+
+
+// meter algun con fontface aqui para tenerlo ya montado tambien !!!!
+
+
+
+
+
+/* 
+ * SASS - VARIABLES - FONTS - "IMPORT" GOOGLE FONTS
+ */
+@mixin f_roboto { // regular
+	font-family: 'Roboto', Arial, sans-serif;
+	font-weight: 400;
+	}
+		@mixin f_roboto_italic {
+			@include f_roboto;
+			font-style: italic;
+			}
+	@mixin f_roboto_light { // f_roboto_light
+		font-family: 'Roboto', Arial, sans-serif;
+		font-weight: 300;
+		}	
+		@mixin f_roboto_light_italic {
+			@include f_roboto_light;
+			font-style: italic;
+			}					
+	@mixin f_roboto_bold {
+		font-family: 'Roboto', Arial, sans-serif;
+		font-weight: bold;
+		// font-weight: 700;
+		}
+
+@mixin f_main { // CMS MAIN FONT - for body tag 
+    @include f_roboto;
+    }		
+		
+
+// AQUI LO DE LSO INPUTS & LSO PLACEHOLDERS, COMO EN EL ADMI DE COWOCMS ETC !!!!!!!!!!!!!!!
+
+
+
+
+
+
+/*
+// ideas de font size y line height
+body{
+  font-size:100%;
+  line-height: 1.5;
+}
+*/
+
+body {
+	@include f_main;
+	// color: $c_text;
+	color: var(--c-text);
+	font-size: 16px;
+	/* line-height: $baseSpacing; */	
+	}
+
+
+a, 
+a:visited, 
+a:hover {
+	// color: $c_text; /* VS color: inherit */
+	// color: var(--c-text);
+	// color: inherit;
+	
+	color: inherit; // NEW
+	text-decoration:none; 
+
+	// ?? default transition - maybe, for color... and boldness... hmmm
+	}
+	
+	
+p {
+	margin-bottom: $spacing; // change to em !!!!	
+	&:last-of-type {margin-bottom: 0px;} // use not last !!!
+}
+
+
+
+
+
+h1, h2 {
+	// font-weight: 300; // hacky, por los h1 y h2 del header - que hay en esta demo.... hmmm, hacerlo todo mas sencillo to start with !!!!
+}
+
+
+
+
+/*  Typography - Headers ======================== */
+
+/*
+h1, h2, h3, h4, h5, h6 {
+	margin: 10px 0 5px 0;
+	// font-family: Arial, Helvetica, sans-serif;
+	font-family: Tahoma, Geneva, sans-serif;
+	font-weight : normal;
+	margin-top: 0px;
+	// letter-spacing: -1px;
+
+	}
+
+
+h1 {font-size: 32px;}
+h2 {font-size: 28px;}
+h3 {font-size: 24px;}
+h4 {font-size: 20px;}
+h5 {font-size: 18px;}
+h6 {font-size: 16px;}
+
+*/
+
+/*
+h1 {
+	font-size:4rem;
+	// font-family: Arial, Helvetica, sans-serif;
+	line-height:1.4;
+	color:#000;
+	margin-bottom:0.2em;
+	}
+
+h2 {
+	font-size:2.5rem;
+	line-height:1.2;
+	color: #222;
+	margin-bottom:.5em;
+	margin-top:.5em;
+	}
+
+h3 {
+	font-size : 1.75rem;
+	line-height : 1.3; 
+	color: #333;
+	margin-bottom : 0.3em;
+	letter-spacing: -1px;
+	}
+
+h4 {
+font-size:1.5rem;
+	line-height:1.25; 
+	color:#444;
+	margin-bottom:0.5em;
+	}
+
+h5 {
+font-size:1.25rem; 
+	color:#555;
+	margin-bottom:1.25em;
+	}
+
+h6 {
+	// font-size:1rem; 
+	color:#666;
+
+	font-size: $fontsizeMedium; 
+	}
+*/	
+	
+	
+	
+	/*  TEXT: ANCHORS ======================== */
+a {
+/*color : #cc1122; */
+/*
+-webkit-transition: all 0.3s ease;
+-moz-transition: all 0.3s ease;
+-o-transition: all 0.3s ease;
+transition: all 0.3s ease;
+*/
+}
+
+/*
+a:visited {color:#ee3344; }
+a:focus {outline:thin dotted; color:rgb(0,0,0);}
+a:hover, a:active {outline:0; color:#dd2233;}
+*/
+
+
+
+	
+	
+	
+/** Text / TEXT FORMAT **/
+/*
+b, strong, .s {font-weight: bolder;} // VS bold ...
+i, em, .i {font-style: italic;}
+*/
+
+/*  TEXT - PARAGRAPHS ======================== */
+
+p { }
+
+
+/* and do sth perhaps for p's firts line and first word stufff */
+
+
+
+/* CSS HYPHENATION */
+/*
+p {
+-webkit-hyphens: auto;
+-moz-hyphens: auto;
+hyphens: auto;
+}		
+*/
+
+
+
+/* ADD CODE, PRE, SMAPEL, XMP ETC ETC ETC */
+/*
+
+CSS FILE FOR TYPOGRAPHYS...
+
+h headings
+
+p ....
+
+then, 
+
+cursive
+
+pre/code stuff
+
+superscript, subscript ewtc
+
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		

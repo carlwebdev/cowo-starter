@@ -1,0 +1,109 @@
+/* CSS Document - SASS */
+/* Front-End */
+
+
+
+
+
+
+
+
+
+/* STYLEGUIDE */
+
+
+#styleguideWrapper {
+
+	}
+	
+	.styleguideColor {
+	
+		}
+				
+				
+				
+	.styleguideFont {
+		
+		}				
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+// /////////////////////////////////////////////////////////////
+
+
+
+
+
+// .w_demo_section
+
+
+#demo_wrapper {
+background-color:#ccc;
+}
+
+
+
+
+
+#w_fonts { 
+	font-size: var(--fs-xl);
+	
+	}
+
+
+		.fonts_item { // grid !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+			&:nth-of-type(1) {@include f_roboto}	
+			&:nth-of-type(2) {@include f_roboto_italic}
+			&:nth-of-type(3) {@include f_roboto_light}
+			&:nth-of-type(4) {@include f_roboto_light_italic}
+			&:nth-of-type(5) {@include f_roboto_bold}
+			&:nth-of-type(6) {@include f_roboto}
+			&:nth-of-type(7) {@include f_roboto}
+			&:nth-of-type(8) {@include f_roboto}
+			}
+
+
+
+
+
+#w_colors { 
+	overflow:hidden;
+	}
+
+	.colors_item { // grid !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+		float:left; 
+		// width: 23.5%; 
+		width: 10.75%; 
+		// padding-top: 23.5%; 
+		padding-top: 10.75%; 
+		margin-right:2%; 
+		margin-bottom:2%; 
+		&:nth-of-type(8n) {margin-right:0%;}	
+		
+		// inlcude mixin, (loop) with color and color hex added as pseudo eleent so that its on tiop of the box.. sass loops and maps of colors or arrays or whatever...
+		/*
+		&:nth-of-type(1) {background-color: $c_primary_dark;}	
+		&:nth-of-type(2) {background-color: $c_primary;}	
+		&:nth-of-type(3) {background-color: $c_primary_light;}	
+		&:nth-of-type(4) {background-color: $c_white;}	
+		&:nth-of-type(5) {background-color: $c_accent;}	
+		&:nth-of-type(6) {background-color: $c_text;}	
+		&:nth-of-type(7) {background-color: $c_text_2;}	
+		&:nth-of-type(8) {background-color: $c_divider;}	
+		*/
+		}
+		
+
+
+
+
+
+	

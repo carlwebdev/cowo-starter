@@ -1,0 +1,111 @@
+/*
+ * Author: Carl Johansson @carlwebdev
+ * Project: cowo-Boilerplate
+ * File: Footer - Components
+ */
+ 
+
+ .footer_social {} // footer_social 
+
+
+
+
+
+
+
+
+/*
+ * Atom
+ * Scroll To Top
+ */
+a.scrollToTop { // change the button !!!!!!!!!!!!!!!!!
+	
+    color: inherit;
+    cursor: pointer;
+    &:hover {
+      // color: $c_primary_light;
+      color: var(--c-accent); // temp
+    }
+  
+    /*
+    .icon {
+      font-size: 32px;
+    }
+    */
+    // MDICON
+    span {
+      display: block;
+      font-size: 3em;
+    }
+    
+  }	// scrollToTop		
+  
+      
+  
+  
+
+
+
+  
+  
+  
+
+  
+  .footerContent {
+    font-size: var(--fs-l);
+  
+    span {font-size: var(--fs-m);}
+  
+  
+    img {
+      width: 86px;
+      vertical-align: middle;
+      }
+  
+    } // footerContent			
+  
+  
+  
+
+  
+  
+  
+  
+  // SLOGAN, MOVE TO FOFOTER
+  
+      
+      
+      
+  .m_socialFooter {
+      
+      
+      } // m_socialFooter	
+      
+      
+      
+  
+  
+      
+      
+      
+  // ADD FOOTER GRID FOR FATS LINKS ETC 
+  
+  .gridFooter {
+      overflow: hidden;
+      
+      // vs align system !!!
+          
+      .col {
+          float: left;
+          width: 25%; // TEST
+          border: 1px solid red;
+          } // col
+      
+      
+      
+      } // gridFooter
+  
+  
+  
+  
+  
