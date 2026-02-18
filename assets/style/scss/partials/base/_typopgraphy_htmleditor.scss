@@ -12,6 +12,7 @@
 
 .m_htmleditor { // REALMENTE SERIA S_ DE STYLE 
 
+
     /*
 		&.case_dark {
 			// background-color: $c_black_2; // TEMP
@@ -20,6 +21,55 @@
 			a {color: inherit;} // TEST
 			}
 		*/
+        
+        
+        
+    p {
+        margin-bottom: 12px;
+        // padding-bottom: 12px; // LAST OF TYPE...
+        }
+
+		
+		
+    a {
+        // color: $c_black_grey; // test 
+        font-weight: bold; // HMMMMMMM
+        &:hover {text-decoration: underline;}
+        } // a
+    
+        
+
+
+/*
+    * LISTS
+    */
+    ul {
+        margin-left:24px;
+        // margin-bottom: 12px;
+        margin-bottom: 24px;
+        list-style:  disc;
+        // list-style-image: url('../assets/img/bullet_blue.jpg'); /* deberia ser un gif */
+
+        li {
+            // margin-bottom: 18px;
+            // margin-bottom: 12px;
+            margin-bottom: 10px;
+
+            ul {
+                margin-top: 10px;
+                } 
+                
+                
+            } // li   
+        
+ 	
+        
+    } // ul
+    
+    
+
+
+
 		
 		/*	
     h2 { // se usa en legalpages !!! was
@@ -84,43 +134,12 @@
 		
 		
 						
-    p {
-			margin-bottom: 12px;
-			// padding-bottom: 12px; // LAST OF TYPE...
-			}
-    
-		
-		
-    a {
-			// color: $c_black_grey; // test 
-			font-weight: bold; // HMMMMMMM
-			&:hover {text-decoration: underline;}
-			} // a
-    
+
     
 		
 		
 		
-		/*
-		 * LISTS
-		 */
-    ul {
-			margin-left:24px;
-			// margin-bottom: 12px;
-			margin-bottom: 24px;
-			list-style:  disc;
-			// list-style-image: url('../assets/img/bullet_blue.jpg'); /* deberia ser un gif */
-			}
-			
-			li {
-				// margin-bottom: 18px;
-				// margin-bottom: 12px;
-				margin-bottom: 10px;
-				}   
-			
-				li ul {
-					margin-top: 10px;
-					}  	
+
 	
 	
 	

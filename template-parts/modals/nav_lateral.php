@@ -5,8 +5,6 @@
 ?>    
 
 
-
-
 <nav id="lateral" role="target_settings">
 
 
@@ -15,7 +13,9 @@
       /*
       * dev buttons - the target !!
       */
-      include get_template_directory() . '/components/template/header/dev_buttons.php'; // the list, not the wrapper
+      // include get_template_directory() . '/components/template/header/dev_buttons.php'; // the list, not the wrapper
+      // DEV buttons ..
+      get_template_part('template-parts/header/dev_buttons'); // .... // the list, not the wrapper      
       ?>
     </div> <!-- /header_buttons -->
 

@@ -1,0 +1,22 @@
+/* CSS Document - SASS */
+/* Front-End */
+
+
+// MATERIAL DESIGN COOR PICKER TOOLS !!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+/* 
+ * FALLBACKS using Sass
+ */
+ 
+
+/* CREATE MIXIN for rem fontsize and px fallback solution */
+
+/* FALLBACK for background opacity */
+	#asfgasafasf {
+		background: #ccc; /* Fall-back for brosers that don't support opacity */
+		background: rgba(204, 204, 204, 0.85);
+
+	}
+
+// create mixin - CSS_FALLBACK_tricks - LINK - the RGB fallback color only works when using shorthand. 
+// http://css-tricks.com/ie-background-rgb-bug/

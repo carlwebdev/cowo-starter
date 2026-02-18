@@ -1,0 +1,35 @@
+/*
+ * Author: Carl Johansson @carlwebdev
+ * Project: cowo-Boilerplate
+ * File: Sass - Layout
+ */
+
+
+/*
+ * SASS - VARIABLES - LAYOUT - BREAK-POINTS 
+ */ 
+$bp_xl: 1200px;
+$bp_l: 1024px;
+$bp_m: 800px;
+$bp_s: 599px;
+$bp_xs: 480px;
+
+/*
+ * SASS - VARIABLES - LAYOUT - SPACING
+ */
+$spacing: 24px;
+$spacing2: $spacing * 2;
+$spacing3: $spacing * 3;
+$spacing4: $spacing * 4;
+$spacing6: $spacing * 6;
+$spacing8: $spacing * 8;
+$spacing075: $spacing * 0.75;
+$spacing05: $spacing * 0.5;
+$spacing025: $spacing * 0.25;
+$spacing0125: $spacing * 0.125;
+
+
+
+// $s_border: 3px solid #f06;
+$s_border: 3px solid var(--c-accent);
+

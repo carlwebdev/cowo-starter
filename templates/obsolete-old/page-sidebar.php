@@ -4,22 +4,18 @@
 Template Name: Sidebar
 */ 
 get_header(); ?>
-
 <?php if (have_posts()) : ?>
 <?php while (have_posts()) : the_post(); ?>
-
 
 <?php 
 // PAGE BANNER
 include get_template_directory() . '/components/template/page/page_banner.php'; 
 ?>
 
-
 <?php
 // PAGE BACKGROUNDS START
 include get_template_directory() . '/components/template/page/page_backgrounds_start.php';  
 ?>  
-
 
 <?php
 /*

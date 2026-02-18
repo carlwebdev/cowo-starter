@@ -60,16 +60,13 @@ get_template_part('template-parts/page/page_banner');
       // include get_template_directory() . '/inc/menus/submenu.php'; 
       get_template_part('template-parts/nav/submenu');
       ?>    
-  
-      <?php
-      // PAGE TITLE
-      // include get_template_directory() . '/components/template/page/page_title.php'; 
-      ?>
-      
-      <?php // PAGE - THE CONTENT ?>
-      <div class="m_htmleditor">	
-        <?php the_content(); ?>
-      </div> <!-- /m_htmleditor -->
+
+    <?php
+    // PAGE TITLE H1
+    get_template_part('template-parts/page/page_title');
+    // PAGE CONTENT
+    get_template_part('template-parts/page/page_content');
+    ?>
 
     </div> <!-- /frame -->
   </section>

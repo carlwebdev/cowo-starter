@@ -4,7 +4,7 @@
 
 <?php
  /*
-  * SIDEBAR AKA SCRIPTS
+  * SIDEBAR AKA SCRIPTS - OBS - JQUERY 4.O IS OUT !!!!!!!!!!!!!!!
   */ 
 // include get_template_directory() . '/components/footer.php'; 
 ?>

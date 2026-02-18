@@ -2,205 +2,105 @@
  * CSS
  * Global
  */
- 
-/* COMPASS */
-/*
-@import "compass/css3";
-*/
+// @import "compass/css3"; /* COMPASS */
 
-
-/*
- *
- * 
- * BASE
- *
- * 
- */
-
-/* 
- * RESET 
- */
+// BASE - CSS RESET 
 @import "partials/base/reset";
 
-/* 
- * VARIABLES - create fie for css_variables etc
- */
+// BASE - VARIABLES
 @import "partials/base/colors";
-// @import "partials/base/font_sizes"; // OBSOLETE-KILL
-// @import "partials/base/spacing";
-// @import "partials/base/break_points";
-@import "partials/base/css_variables"; // CSS VARIABLES - include font-sizes, spacing, break-points, etc. NOT BREAKPOINTS AS THEY CANNOT ME USED IN MEDIA QUERY DEFINITIONS !!!!
+@import "partials/base/css_variables"; // goasl- al variabels except breakpoitnms.
 
-// @import "partials/base/sass_variables";
-// @import "partials/base/sass_mixins"; // etc
-
-
-
-
-/* 
- * 0 - DEV ( & DEMO) PURPOSES ONLY - ojo qu ehay un .css en la css folder... 
- */
-/* */
-@import "partials/dev/dev";
-
-
-/* 
- * STYLINGS AKA SASS
- */
-/*  */
-// mixins, etc extends, paceholders etc 
-@import "partials/base/sass_style"; // quitar la s final .... com si se llama branding ... peor no e sbranding solo ...
-@import "partials/base/sass_layout";
+// BASE - SASS - mixins, etc extends, paceholders etc 
+@import "partials/base/sass_variables";
+@import "partials/base/sass_mixins"; // OBS - MUST BE AFTER SASS VARIABLES
 @import "partials/base/sass_transitions";
-@import "partials/base/sass_functions";
+// @import "partials/base/sass_functions";
 
-
-@import "partials/js_intersection_observer"; // tets, have html, now css, solo falat el script !
-
-
-/* 
- * TYPOGRAPHY
- */
+// BASE - TYPOGRAPHY
 @import "partials/base/typography";
-@import "partials/base/typopgraphy_htmleditor";
-/* @import "partials/base/typography_BULLSHIT"; */
+@import "partials/base/typopgraphy_htmleditor"; // THIS SI ALSO MEZZZO HTML TAGS ... 
 
-/* 
- * BUTTONS - AMYBE AFTER TYPOGRAPHY, IF BUTOTN REQUIER ETYPOGRAPHIES...
- */
+// 0 - DEV ( & DEMO) PURPOSES ONLY - ojo qu ehay un .css en la css folder... 
+@import "partials/dev/dev";
+// @import "partials/dev/wp_adminbar"; // NOW MANAGED THROUGH FUNCTIONS
+// @import "partials/dev/dev_ruler";  // OBS conflict with ".item" class in global.scss
+// STYLEGUIDE !!!! COPY SYSTEM FORM MOSS WESBIET, AND EXPAND IT !!!!S
+@import "partials/dev/dev_styleguide"; // !!!  -AFTER TYPOGRAPHY !!! AS IS ASASSS...
+
+// BUTTONS - AMYBE AFTER TYPOGRAPHY, IF BUTOTN REQUIER ETYPOGRAPHIES...
 @import "partials/base/buttons";  /* MUST BE CALLED BEFORE FORMS, AS CERTAIN FOMR ELEMENTS CALL BUTOTN STYLES */
 
-/* 
- * 6 - FORMS 
- */
+// 6 - FORMS 
 @import "partials/base/form_layout";
 @import "partials/base/form_elements";
 @import "partials/base/form_filebutton";
 
-/* 
- * 7 - TABLES 
- */
+// 7 - TABLES 
 @import "partials/base/tables"; // ui_tables
 
-
-
-/* 
- * 0 - STYLEGUIDE !!!! COPY SYSTEM FORM MOSS WESBIET, AND EXPAND IT !!!!S
- */
-
-
-/* 
- * 8 - LAYOUT 
- */
-// @import "partials/layout/layout"; // layout VS layout_main
-@import "partials/layout/layout_main"; // RENAME ABOVE FILE
+// BASE - LAYOUT 
+@import "partials/layout/layout_main";
+@import "partials/layout/layout_scroll"; //  SCROLL SMOOTHENESS AND SCROL SNAP
 // @import "partials/layout/layout_stickyFooter_table"; // TODO . IMPEEMNT FLEX STICKY FOOTER IN LAUPTY MAIN PAGE, WITH PABE GE AND PAGE CNETNT LAYER, STAT & END INCLUDES 
 @import "partials/layout/layout_stickyFooter_flex"; 
 @import "partials/layout/layout_page"; // AS FOR STH GERENCI TO START-OFF-HERE FILE - aka page_component(s) //, page_layout, page_structure, page_template, page_layout, page_layout_main
+// // // @import "partials/wp/layout_wp";
 
-/* 
- * COMPONENTS 
- */
-
-/* 
- * COMPONENTS - POPUPS
- */
-// @import "partials/template/popups/cookies";
-@import "partials/template/popups/wp_cookies";
-
-/* 
- * COMPONENTS - ORGANISMS
- */
-// // // @import "components/organisms/header";
-
-/* 
- * TEMPLATE 
- */
-
-
- /* 
- * tails - header & footer ... 
- */
+// TEMPLATE PARTS - HEADER
 @import "partials/template/header/header_main"; // header
 @import "partials/template/header/header_components"; // header
-
-@import "partials/template/header/nav"; // NOT IN USE...
-@import "partials/template/header/wp_nav";
-
-// hedaer buttons & header dropdwosn are related .
-// @import "partials/tails/header/header_buttons"; 
+// OBS - hedaer buttons & header dropdwosn are related .
 @import "partials/template/header/header_buttons"; 
-
- // @import "partials/layout/header_dropdowns"; // 
-// @import "partials/tails/header/header_dropdowns"; 
 @import "partials/template/header/header_dropdowns"; 
-
 @import "partials/template/header/dev_buttons"; // dev buttons
 
-// FOOTER
+/* PLUGINS */
+@import "partials/plugins/headroom"; 
+@import "partials/plugins/jquery.mmenu.all"; /* Mmenu - Side menu */
+
+// TEMPLATE PARTS - FOOTER
 @import "partials/template/footer/footer_main"; 
 @import "partials/template/footer/footer_components"; 
 
-// GENERLA COMPONETS,LIKE SOCIAL 
-// @import "partials/atoms/components"; // NEVER CERATED
+// TEMPLATE PARTS - NAV (WP BASICS)
+@import "partials/template/nav/wp_nav"; // and move this to /nav fodler !!!!!!!!! as the tempaltepartss   & KIL THE OLD WP_NAVE FIEL 
+// // // @import "partials/template/nav/wp_nav_old"; // OLD - KILL LATER
+@import "partials/template/nav/wp_submenu";
+@import "partials/template/nav/wp_pagination";
+@import "partials/template/nav/wp_post_nav";
+
+// TEMPLATE PARTS - SEARCH (WP BASICS) - - - WORDPRESS - RESULTS - INTEGRATION (either one or the other)
+@import "partials/template/search/grid_results";
+@import "partials/template/search/grid_results_simple";
+// // // @import "partials/wp/wp_form_search"; // basic CSS mgmt
+
+// TEMPLATE PARTS - POST (WP BASICS) - - - WORDPRESS - POSTS (aka Blog)
+@import "partials/template/post/home_blog"; // aka grid-post(s) for home.php aka newspaper layout ...
+@import "partials/template/post/grid_blog"; // aka grid-post(s)
+@import "partials/template/post/blogPost"; // aka single-post
+
+// TEMPLATE PARTS - COMPONETS - GENERAL COMPONENTS, LIKE SOCIAL 
 @import "partials/template/components/components"; // ater can split up into
+@import "partials/template/components/ui_social"; // social media icons VS social share as s separate componete !!!!
+// @import "partials/template/components/ui-social-share"; // social media icons VS social share as s separate componete !!!!
 
-/* 
- * COMPONENTS - ATOMS 
- */
-// @import "partials/atoms/atoms";
+// COMPONENTS - POPUPS
+// @import "partials/template/popups/cookies";
+@import "partials/template/popups/wp_cookies";
 
-/* 
- * WORDPRESS - POSTS (aka Blog)
- */
- @import "partials/wp/blog/home_blog"; // aka grid-post(s) for home.php aka newspaper layout ...
-@import "partials/wp/blog/grid_blog"; // aka grid-post(s)
-@import "partials/wp/blog/blogPost"; // aka single-post
+// TEMPLATE PARTS - PATTERNS
+@import "partials/template/patterns/cowo_tabs";
+@import "partials/template/patterns/cowo_accordion";
+@import "partials/template/patterns/cowo_dropdown";
+@import "partials/template/patterns/ui_gridlist";
+@import "partials/template/patterns/lightboxme"; // vs popover modail dialog whatevrr !!!!!!!!!!!!!!!!!!!
+@import "partials/template/patterns/megatron_ui_flipcard"; 
 
-/* 
- * WORDPRESS - RESULTS - INTEGRATION (either one or the other)
- */
- @import "partials/wp/results/grid_results";
- @import "partials/wp/results/grid_results_simple";
- 
-
-// NOT - atoms
-// NOT - molecules
-// NOT - organisms
+//  UI / UX ENHANCEMENTS - ALSO ADD PAGE VIEW TRASITON S!!!!
+@import "partials/ui/js_intersection_observer"; // tets, have html, now css, solo falat el script !
 
 
-/* 
- * COMPONENTS - UI 
- */
-@import "partials/ui/ui_social"; // social media icons VS social share as s separate componete !!!!
-// @import "partials/ui/ui-social-share"; // social media icons VS social share as s separate componete !!!!
-
-
-// CUSTM POST TYPES
-// cpt_snsatte etc ...s
-
-/* MODULES */
-
-
-// @import "partials/modules/cowo_gridlist"; // copied to here fomr cb, so i can then copyu it to phabuous ... 
-@import "partials/ui/ui_gridlist";
-
-
-@import "partials/modules/cowo_tabs";
-@import "partials/modules/cowo_accordion";
-@import "partials/modules/cowo_dropdown";
-@import "partials/modules/lightboxme";
-// @import "partials/modules/dev_ruler";  // OBS conflict with ".item" class in global.scss
-@import "partials/modules/dev_styleguide"; // !!!
-
-
-@import "partials/modules/jquery.mmenu.all"; /* Mmenu - Side menu */
-
-
-// @import "partials/modules/megatron"; 
-@import "partials/modules/megatron_ui_flipcard"; 
-
-@import "partials/modules/headroom"; 
 
 
 /* 
@@ -210,22 +110,17 @@
 // @import "partials/z_obsolete/grid/cowo_grid";
 // @import "partials/z_obsolete/grid/cowo_grid_queries";
 
-
-
- /* 
- * 12  WORDPERSS - BASICS - copied fomr pahbuous wtf !! maybe copied to there fomr wp eimoe, so never excisted her ein wp_Cowowo ?!?! wtf !!! this is basi cthsit man !!
+/* 
+ * COMPONENTS - UI 
  */
 
-// MOVE HERE ALSO THE NV WP PARTIAL THAS CURENTLY INSIDE HEDARE TEMAPET FORLDER  
-// @import "partials/wp/wp_adminbar"; // NOW MANAGED THROUGH FUNCTIONS
-// // // @import "partials/wp/wp_nav";
-@import "partials/wp/wp_submenu";
-// // // @import "partials/wp/layout_wp";
-// // // @import "partials/wp/wp_form_search"; // basic CSS mgmt
+// CUSTOM POST TYPES
 
-@import "partials/wp/wp_pagination";
-@import "partials/wp/wp_post_nav";
-// // // @import "partials/wp/wp_post_nav";
-
-
-
+/* MODULES */
+// NOT - atoms
+// NOT - molecules
+// NOT - organisms
+/* 
+ * COMPONENTS - ATOMS 
+ */
+// @import "partials/atoms/atoms";

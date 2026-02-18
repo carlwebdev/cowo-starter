@@ -1,38 +1,16 @@
 /*
  * Author: Carl Johansson @carlwebdev
- * Project: cowo-Boilerplate
+ * Project: cowoStarter
  * File: CSS Reset
  */
 
 
-
-
 /* 
- * 1 - REMOVE MARGIN AROUND THE PAGE 
- * BODY MARGIN 0 IS THE KEY 
- */
-/*
-html, body {
-	margin: 0;
-	padding: 0;
-	}
-*/
-
-/* 
- * 2 - BOX MODEL
+ * BOX MODEL
  * Universal Box Sizing - https://css-tricks.com/box-sizing/ 
  */
 *, *:before, *:after {
   box-sizing: border-box;
-}
-
-
-
-/* 
- * BOX MODEL 
- */
-* {
-  // @include box-sizing(border-box); /* Sass - Compass */
 }
 
 
@@ -60,43 +38,10 @@ time, mark, audio, video {
 	border: 0;
 	font-size: 100%;
 	
-	
 	font: inherit;
 	vertical-align: baseline;
 }
 */
-
-
-
-/* ==========================================================================
-   HTML5 display definitions - Normalize.css
-   ========================================================================== */
-
-/**
- * Correct `block` display not defined in IE 8/9. 
- */
-
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-main,
-nav,
-section,
-summary {
-    display: block;
-}
-
-
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
-}
 
 
 
@@ -117,24 +62,6 @@ img {
 	outline: 0;
 	font-size:100%; /* for headings, works */
 }
-
-
-/*
-
-body {
-	line-height: 1;
-}
-
-blockquote, q {
-	quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
-}
-
-*/
 
 
 ol, ul /* , li */ {list-style:none;}
@@ -177,21 +104,6 @@ a {
 
 
 
-
-
-b,
-strong {
-	font-weight: bold; /* Normalize.css - Address style set to `bolder` in Firefox 4+, Safari 5, and Chrome. */
-}
-
-
-/**
- * Address inconsistent and variable font size in all browsers.  - Normalize.js ( O dont really use this tag anyways, hmmm...)
- */
-
-small {
-	font-size: 80%;
-}
 
 
 /**
@@ -298,18 +210,6 @@ to avoid cleafix hack, use display inline block, and then add the vertcal align 
 but ther's the sapcing issue too... several ways to fix that
 
 */
-
-
-/* FORM NORTMALIZE.CSS */
-/**
- * 1. Remove default vertical scrollbar in IE 8/9.
- * 2. Improve readability and alignment in all browsers.
- */
-textarea {
-	overflow: auto; /* 1 */
-	vertical-align: top; /* 2 */
-	}
-
 
 
 textarea {

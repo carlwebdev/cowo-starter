@@ -25,10 +25,11 @@ get_header(); ?>
     ?>
     <div class="frame">	  
       
-      <div class="page_title">
-        <h1><?php the_title(); ?></h1>
-      </div>
-      
+        <?php
+        // PAGE TITLE H1
+        get_template_part('template-parts/page/page_title');      
+        ?>
+
     </div> <!-- /frame -->  
 
 
@@ -40,10 +41,13 @@ get_header(); ?>
     <section id="the_content">
       <div class="frame">	
         
-        <div class="m_htmleditor">	
-          <?php the_content(); ?>
-        </div> <!-- /m_htmleditor -->
-        
+        <?php
+        // PAGE TITLE H1
+        get_template_part('template-parts/page/page_title');
+        // PAGE CONTENT
+        get_template_part('template-parts/page/page_content');
+        ?>
+              
       </div> <!-- /frame -->
     </section>
 
@@ -59,7 +63,20 @@ get_header(); ?>
     <?php endwhile; endif; ?>
     <?php /*?>BLOG POSTS HAVE TO BE OUTSIDE THE GENERIC PHP CLAUSE, AS I ALREADY KNOW<?php */?>
 
+
 </div>
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -81,6 +98,8 @@ get_template_part('template-parts/page/page_hero'); // cerate also page_hero.php
 include get_template_directory() . '/components/template/page/page_backgrounds_start.php';  
 ?>  
 
+
+<div style="display:none;">
 
 
 <?php
@@ -123,26 +142,34 @@ include get_template_directory() . '/components/template/page/page_backgrounds_s
     <div class="frame medium">	
       
       <?php
-      // PAGE TITLE
-      // include get_template_directory() . '/components/template/page/page_title.php'; // TODO - enable alternatve page title right here !!!!!!
+        // PAGE TITLE H1
+        // get_template_part('template-parts/page/page_title'); // YATA? - TODO - enable alternatve page title right here !!!!!!     
       ?>
 
       <?php
       // THE CONTENT
       ?> 
       <section id="the_content">
-          <div class="m_htmleditor">	
-            <?php the_content(); ?>
-          </div> <!-- /m_htmleditor -->
+
+        <?php
+        // PAGE TITLE H1
+        // get_template_part('template-parts/page/page_title');
+        // PAGE CONTENT
+        get_template_part('template-parts/page/page_content');
+        ?>
+
       </section>
       
     </div> <!-- /frame -->
   </section>
   
+
   
+</div>
   
-  
-  
+
+
+
 <section class="background pb4">
   <div class="frame">	
 
@@ -152,13 +179,11 @@ include get_template_directory() . '/components/template/page/page_backgrounds_s
       $section_title = 'Updates'; // Recent Posts
 			// include get_template_directory() . '/components/template/section/section_title.php'; 
       get_template_part('template-parts/section/section_title');
-      
 			?>
 
       <?php 
-      // GRID - BLOG - INDEX (STANDALONE CASE)
-      // include get_template_directory() . '/components/post_types/blog/grid_blog_index.php'; 
-      include get_template_directory() . '/components/post_types/blog/grid_blog.php'; 
+      // GRID - BLOG
+      get_template_part('template-parts/post/grid_blog');
       // get_template_part('template-parts/section/section_link');
       ?>  
 

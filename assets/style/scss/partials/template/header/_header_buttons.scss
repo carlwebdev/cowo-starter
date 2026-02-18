@@ -46,7 +46,8 @@ button, button span {
   // border: $s_border; // 
   display: flex;
   align-items: center; // PRECAUTION
-  gap: 1em;
+  // gap: 1em;
+  gap: 0.5em;
 } // header_buttons
 
 
@@ -105,8 +106,8 @@ display: block; //
       display: block;
       /* */
       // padding: 8px;
-      padding:0.25em; // = 8px compared to 2em, whch is 32px, so 1/4, ok
-    
+      // padding:0.25em; // = 8px compared to 2em, whch is 32px, so 1/4, ok
+      padding:0.20em;
 
       // next goal, make 3 mod clases for icon, round & square etc ..
 
@@ -123,7 +124,10 @@ display: block; //
       border-style: solid;
       border-radius: 100vh; // 
 
-      font-size: 2em; // 
+      // font-size: 2em; // 
+      font-size: 1.6em; // 
+      // font-size: 1.8em; // 
+
       // font-size: 3em; // 
       // font-size: 4em; // 
       transition: all 0.5s ease-in-out; //

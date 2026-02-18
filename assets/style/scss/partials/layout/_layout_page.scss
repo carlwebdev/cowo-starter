@@ -343,7 +343,7 @@ hgroup { // NOTE - takes the place of the .page_title concept
  * PAGE - TITLE (h1)
  */
  h1.page_title_dynamic { // VS  h1.page_title
-  color: var(--c-accent);
+  // color: var(--c-accent);
   /*
   font-size: $fs_xl; // create intermediate, for main titles, etc, as h1, anyways.. 
   font-size: $fs_xxl;
@@ -359,12 +359,19 @@ hgroup { // NOTE - takes the place of the .page_title concept
   // font-size: clamp(2em, 4vw, 3em);
   // font-size: clamp(2em, 4vw, 2.5em);
   
-  // font-size: 2.5em;
-  font-size: var(--fs-xl);
+  // font-size: var(--fs-xl);
+  // font-size: var(--fs-xxl);
+  font-size: var(--fs-xxxl);
+
+
   // font-weight: 300; // 
   font-weight: normal; // RESET, VIP
+  // font-weight: 500;
+
   // TEXT-ALIGN: CENTER;
   // text-align: center; // PRECAUTION, FOR LATER ON RWD CHANGE - GOES INT EFFECT IN RWD, AS BEFORE WE HAVE FLEX MANAGING THE LAYOUT, TRUMPING TEH TEXT ALIGN CENTER HERE
+
+  margin-bottom: 1lh; // 
 } // h1.page_title
 
 

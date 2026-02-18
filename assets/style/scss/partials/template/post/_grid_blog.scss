@@ -26,9 +26,18 @@
  * Card - Blog
  */
 .card_blog {
+
+
+
+
   // --card-padding: 1em; 
   --card-padding: 16px; 
   
+  --card-radius: 48px;
+
+  border-radius: var(--card-radius);
+
+
   // background-color: #FFDFD3; // AKA PEACY , ALST
   // background-color: var(--c-black);
   background-color: var(--c-bg);
@@ -72,9 +81,13 @@
 
 
   picture {
+    background-color: #957DAD; // PRECAUTION - TEMP PLACEHOLDER
+    border-radius: calc(var(--card-radius) - var(--card-padding)); 
+    /*
     border: $s_border;
-    background-color: #957DAD; // TEMP PLACEHOLDER
-
+    border-width: 1px; // 
+    */
+    box-shadow: 0px 0px 2px #ccc; // TODO
     overflow:hidden; // scale of child
 
     img {
@@ -83,10 +96,8 @@
       // aspect-ratio: 1 / 2;
       aspect-ratio: 1 / 1;
       object-fit: cover; 
-
       transition: scale 0.5s ease-in-out;
       &:hover {scale: 1.1;}
-
     } // img
     
   

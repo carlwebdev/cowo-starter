@@ -14,6 +14,13 @@
 
 	
 header#header {
+
+  // background-color: #f0d83e;
+  background-color: rgb(255, 210, 0);
+
+  // border-bottom: 3px solid var(--c-accent); //
+
+
 	/* START - STICKY */
 	// As you can see in that demo, it's a decent candidate for progressive enhancement, as if you don't see the sticky header feature, it's no big deal.
 	// http://caniuse.com/#feat=css-sticky
@@ -57,7 +64,7 @@ header#header {
 
 
 
-  border-bottom: 3px solid var(--c-accent); //
+  
 
 
 

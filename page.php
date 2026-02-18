@@ -46,27 +46,20 @@ include get_template_directory() . '/components/template/page/page_backgrounds_s
 
 
 <?php
-  /*
-  * PAGE - MAIN CONTENT - - - PAGE BASICS, THE ARTICLE, VS SECTION.... 
-  */ 
-  ?>
-  <section class="background pb4">
+/*
+* PAGE - MAIN CONTENT - - - PAGE BASICS, THE ARTICLE, VS SECTION.... 
+*/ 
+?>
+<section class="background pb4">
   <div class="frame">	
-
     <?php
-    // PAGE TITLE - - ??? - -  -title needs a generic page header hero title section...
-    include get_template_directory() . '/components/template/page/page_title.php'; 
+    // PAGE TITLE H1
+    get_template_part('template-parts/page/page_title');
+    // PAGE CONTENT
+    get_template_part('template-parts/page/page_content');
     ?>
-    
-    <?php
-    // PAGE - THE CONTENT
-    ?>
-    <div class="m_htmleditor">	
-      <?php the_content(); ?>
-    </div> <!-- /m_htmleditor -->
-
   </div> <!-- /frame -->
-  </section>
+</section>
 
 
 

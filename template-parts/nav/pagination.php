@@ -1,27 +1,25 @@
 <?php 
 /*
- * PHP
- * WORDPRESS PAGINATION
- * Wordpress - Pagination - then do the samne for next / prev .....    
- - edit the css & move to the new wordprwess patrtial 
- 
- 
-         
-          WORDPRESS PAGINATION 
-          PAGINATION MUST NBE INSIDE THE IF !!!!!!!! IF CORRECT, THEN WRITE IT ECLEARLY AS 
-          - - - 
-          MAYBE THE RWQUIREMENT IS TO SSPECIFCY THE TYPOR POF POST AS I DID TIN THE SEARC RESULST BLOB ?????
-           
-           
-           
+ * Template Part: Pagination
+ * 
+ * Usage: get_template_part('template-parts/nav/pagination', null, ['query' => $query]);
  */
+
+// Extract the query from args if passed via get_template_part()
+$pagination_query = $args['query'] ?? null;
+
+// If no query passed, use global query
+if (!$pagination_query) {
+    global $wp_query;
+    $pagination_query = $wp_query;
+}
 ?>
 <div class="w_pagination">      
   <div class="pagination">
     <?php 
       echo paginate_links( array(
         'base'         => str_replace( 999999999, '%#%', esc_url( get_pagenum_link( 999999999 ) ) ),
-        'total'        => $query->max_num_pages,
+        'total'        => $pagination_query->max_num_pages,
         'current'      => max( 1, get_query_var( 'paged' ) ),
         'format'       => '?paged=%#%',
         'show_all'     => false,

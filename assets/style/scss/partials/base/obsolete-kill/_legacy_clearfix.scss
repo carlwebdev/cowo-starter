@@ -1,0 +1,30 @@
+/* START - CLEARFIX */ /* apply clearfix to parent */
+.clearfix:after {
+	visibility: hidden;
+	display: block;
+	font-size: 0;
+	content: " ";
+	clear: both;
+	height: 0;
+	}
+* html .clearfix             { zoom: 1; } /* IE6 */
+*:first-child+html .clearfix { zoom: 1; } /* IE7 */
+/*/END - CLEARFIX */
+
+
+/* oveflow:hidden; VS clearfix hack VS float:inline-block with font-size issues..... */
+
+/*
+
+I USE overflow:hidden, hwich works the same, UNLESS YOU GET FUCKED UP BY DELETED OVERFLOWING CONTENT.
+
+view-source:http://mattbango.com/demos/hover-zoom/
+
+http://css-tricks.com/snippets/css/clear-fix/
+
+///
+to avoid cleafix hack, use display inline block, and then add the vertcal align top..
+but ther's the sapcing issue too... several ways to fix that
+
+
+*/

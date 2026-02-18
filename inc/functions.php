@@ -1,6 +1,43 @@
 <?php if ( !defined('ABSPATH')) exit; ?>
 <?php
 
+// Registrer WP menu
+register_nav_menus(array(
+	'header-menu'      => __('Hovedmeny')
+	)
+);
+
+
+// functions_cms.php
+
+/*
+ * GENERAL
+ */
+// ADD EXCERPT TO PAGES - https://www.wpbeginner.com/plugins/add-excerpts-to-your-pages-in-wordpress/
+add_post_type_support( 'page', 'excerpt' );
+
+// Ensure excerpt is enabled for posts
+// add_post_type_support( 'post', 'excerpt' ); / /not tested her eyer, just pasted, now testing in phabulous.
+
+
+/*
+// DEV & DEBUG
+// https://stackoverflow.com/questions/32801036/wordpress-is-not-using-home-php-and-instead-index-php-for-posts-page
+// I used the following code(in functions.php) to display which template the page was using:
+function show_template() {
+	global $template;
+	if ( current_user_can('administrator') ) {
+	   print_r("<div class='template-name' style='padding: 5px; border: 3px solid red; background-color: #FFFFFF; position: fixed; bottom: 0; left: 0;'>$template</div>");
+	}
+ }   
+*/
+
+
+
+
+
+
+
 // Include Rel on galleries.
 add_filter('wp_get_attachment_link', 'rc_add_rel_attribute');
 function rc_add_rel_attribute($link) {
@@ -39,11 +76,7 @@ if( !is_admin()){
 }
 */
 
-// Registrer WP menu
-register_nav_menus(array(
-	'header-menu'      => __('Hovedmeny')
-	)
-);
+
 
 // fix WPNAV from div to ul
 function eimoe_wp_page_menu ($page_markup) {
@@ -104,29 +137,7 @@ define('ICL_DONT_LOAD_LANGUAGE_SELECTOR_CSS', true);
 
 
 
-// functions_cms.php
 
-/*
- * GENERAL
- */
-// ADD EXCERPT TO PAGES - https://www.wpbeginner.com/plugins/add-excerpts-to-your-pages-in-wordpress/
-add_post_type_support( 'page', 'excerpt' );
-
-// Ensure excerpt is enabled for posts
-// add_post_type_support( 'post', 'excerpt' ); / /not tested her eyer, just pasted, now testing in phabulous.
-
-
-/*
-// DEV & DEBUG
-// https://stackoverflow.com/questions/32801036/wordpress-is-not-using-home-php-and-instead-index-php-for-posts-page
-// I used the following code(in functions.php) to display which template the page was using:
-function show_template() {
-	global $template;
-	if ( current_user_can('administrator') ) {
-	   print_r("<div class='template-name' style='padding: 5px; border: 3px solid red; background-color: #FFFFFF; position: fixed; bottom: 0; left: 0;'>$template</div>");
-	}
- }   
-*/
 
 
 

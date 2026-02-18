@@ -29,11 +29,11 @@
     
       <?php       
         // HEADER BAR TOP
-        get_template_part('template-parts/header/header_bar_top');
+        // get_template_part('template-parts/header/header_bar_top');
         // HEADER BAR MAIN
         get_template_part('template-parts/header/header_bar_main');
         // HEADER BAR BOTTOM
-        get_template_part('template-parts/header/header_bar_bottom');
+        // get_template_part('template-parts/header/header_bar_bottom');
       ?>
       
     </div> <!-- /inner -->
@@ -46,8 +46,10 @@
 
 </header>
 
+
+
+
 <?php
-// MODAL - NAV - LATERAL  -this could be moved to header.php ??????????????????????????????????
-// include get_template_directory() . '/components/template/page/nav_lateral.php';
+// MODAL - NAV - LATERAL  -this could be moved to header.php ?????????????????????????????????? YES, DO IT
 get_template_part('template-parts/modals/nav_lateral');
 ?>

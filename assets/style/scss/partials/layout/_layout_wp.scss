@@ -180,8 +180,6 @@ add classes for mods a rwd behavioru !! dummY! styel agnoistidc!!
 
 .layout_page_blog {
   // border: 12px solid red; // 
-
-  
   display: grid;
   // grid-template-columns: 2fr 1fr;
   // grid-template-columns: 3fr 1fr;
@@ -190,8 +188,6 @@ add classes for mods a rwd behavioru !! dummY! styel agnoistidc!!
   // gap: $spacing2; // ?? VARIABLE 
   // gap: 4em; 
   gap: 2em; 
-
-  
 } // layout_page_blog
 
 
@@ -221,10 +217,6 @@ add classes for mods a rwd behavioru !! dummY! styel agnoistidc!!
 
 
 } // MEDIA-QUERY
-
-
-
-
 
 
 // can move this inito a folder de wordpress VS woocommerce s
@@ -257,8 +249,6 @@ main { // WAS "PLACEHOLDER"
 */
 
 
-
-
 // doing sidebar sticky logic.
 
 .layout_page_blog {
@@ -284,62 +274,34 @@ main { // WAS "PLACEHOLDER"
   
   
   width: calc(100% - 300px); // very hacky or not, dunno, but it swaht it is for now !!! - RWD NO NEED, AS IT DISAAPEARS 
-  
-
 
 }
 
-  
-  
 
   .sidebar {
-
-
     // border: 12px solid pink; // DEBUGGING  
-
-
     position: -webkit-sticky; /* For Safari */
     position: sticky;
     // top: 0; /* Adjust this value to control the sticky position */
-
     // top: var(--header-height); // VIP - tets this, plus an extra ,with calc
     top: calc(var(--header-height) + 2em); // VIP - tets this, plus an extra ,with calc
-
     // z-index: 1000; /* Ensure the sidebar stays above other content */
     /*
     width: 300px; // Adjust the width as needed
     */
     height: 100vh; /* Ensure the sidebar takes the full height of the viewport */
     overflow-y: auto; /* Add scroll if the content overflows */
-
     // physically here, but then also in the tolbar, so name it sidebar_coinetnt insietad, as inner menas tha tits inside the parent.
     // .sidebar_inner {} // sidebar__inner
-
-
-
     // flex-shrink: 0; // TETSING SWIIEPR ISSUE
     flex: 0 0 300px; /* Fixed width of 250px */
-
-
     .sidebar_content {} // sidebar__inner
-
   }
   
 } // layout_page_blog
 
 
-
-
-
-
-
-
-
-
 // TODO - GOAL - split the sidebar laytu extenral behaviour c¡form interanl compenets 
-
-
-
 
 
 
@@ -348,7 +310,6 @@ main { // WAS "PLACEHOLDER"
   // here si the conetent taht wil be reused in the tolbar drodwon 
   // border: var(--s-border); // DEV
 } // sidebar_content
-
 
 
 
@@ -365,7 +326,6 @@ main { // WAS "PLACEHOLDER"
       // gap: 1em; // 
       gap: 1.5em; // 
       */
-
       padding: 1em;
       border: 1px solid #ccc; // TEMP
       /*
@@ -373,14 +333,11 @@ main { // WAS "PLACEHOLDER"
       border-bottom-right-radius: 8px;
       */
       border-radius: 8px;
-
-
       display: flex;
       flex-direction: row;
       gap: 1.5em;
       flex-wrap: wrap; // FOR THE LATS ONE TO BREAK LINE
       
-     
       > div:last-of-type {
         // border: var(--s-border); // DEV
 
@@ -409,11 +366,7 @@ main { // WAS "PLACEHOLDER"
 
    } // sidebar_content
 
-
 } // toolbar_sidebar_content
-
-
-
 
 
 // .siderbar aside (when comes form .wp_search_no_results/ /vs
@@ -421,18 +374,14 @@ main { // WAS "PLACEHOLDER"
 
 // .sidebar,
 .sidebar_content {
-
   // big tasks - diferenciate bewteen manua sidebar and wp sidebar - as wp sidebar comes with h3 etc inyeected code, whil I in peroanl mode want o have abetre control !!!!
   // HOW TRO DEBUG THS? i MUST HAVE A WO SIDEBAR FOR THE POSTS PAGE !!! O QUE??
-
   // DEFAULT, IN THE SIDEBAR  LATER IN THE TOOLBAR WE HAVE PAREN TLAYER TO MODIFY THIS LAYOUT
   display: flex;
   flex-direction: column;
   // gap: 2em; // 
   // gap: 1em; // 
   gap: 1.5em; // 
-
-
 /*
 // TODO - tod test to stick the sidebar ... ojo !!!! - lo habia conseguid en el steirerkole last, css del sidebar !!!
 // en steinerportalen:
@@ -447,14 +396,7 @@ main { // WAS "PLACEHOLDER"
   top: calc(var(--header-height) + 2em);
 */
 
-
   // maybe have flex with gap here... 
-
-
-
-
-
-
 
   // @extend %dev;
   
@@ -463,7 +405,6 @@ main { // WAS "PLACEHOLDER"
   // s_sidebar  yeah !!!!!
   
   // background-color: #D8D8D8; //  this was the dark i guesss
-  
   
   /* 
   // background-color: var(--bg-c-gray-light); // c-bg_alt
@@ -474,17 +415,11 @@ main { // WAS "PLACEHOLDER"
   padding: 2em; // TEST 
   
   align-self: baseline; // FROM STEINERPORTALEN, TO  MAKE IT STICK TO THE TOP, AND NOT TO THE BOTTOM, AS IT WAS DOING ... NOT!
-  
-
 
   */
 
-
-  
   /* align-self: start */
-    
-
-
+  
 
     /*
     display: grid;

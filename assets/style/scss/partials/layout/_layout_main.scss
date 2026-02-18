@@ -3,81 +3,26 @@
  * Project: cowo-Reset
  * File: Layout
  */
-
-
- // also copied fomr eimor - but chang it to the value of the header heigh variablke for exampe !!!!!!!!!!!!!!!!!!!!!!!!!!
-
-
-
-// FOR WHEN DROPDOWN (NAV) IS ACTIVATED, SO PAGE DOESNT SCROL ANYMORE (TRANSAPRENEICES) AND TEHREFORE MAYBE HEADROOM WIL STIL WORK !!!! - AND LASTLY, CJEHECK THE BAR WC - BUT ALSO CHECK THE ... SCRIPT STOP PROAAHGET ... 
-
-// AND THIS CLASS MUST BE ADDED THROUGH THE NAV SCRIPT SYSTEM !!!!!!
-
-// https://stackoverflow.com/questions/9280258/prevent-body-scrolling-but-allow-overlay-scrolling
-body.noscroll{
-  // position:fixed; // If you want to prevent overscrolling on ios, you can add position fixed to your .noscroll class
-  overflow:hidden;
-}
-// not applied thi sclas ehere yet, comes fomr wp_eimoe !!!!!  - - cheeeck !!!
-
-
-
-
-
-
-
-
-
-
-
-
-// Smooth Scrolling
-// https://css-tricks.com/snippets/jquery/smooth-scrolling/
-html {
-  
-  /* START OF BLOCK */
-  // NICE FOR cowo_index MODULE + FOR PAGE HASHTAG TARGET LINKS I GUESS ...
-  scroll-behavior: smooth; // MAKES SCROLL BEHAVIOUR IN PLAIN HTML WORKS SMOOTHLY - CAN IT BE CUSTOMIZED FURTHER (NATIVELY) ? ... NO
-  // Does it also cause that epic-assoc scroll to position after page refresh?
-  /* END OF BLOCK */
-  
-  /* START OF BLOCK */
-  // scroll-padding-top: 50px; // GOAL, OFFSET THE HEIGHT OF THE HEADER (DYNAMICALLY) SO THAT THE SCROLL BEHAVIOUR (SMOOTH) ISN'T HIDDEN BEHIND THE HEADER ... / GOAL, HAVE BOTH HTINGS COMBINES ??? HMMMMMMMMMMS
-  // scroll-padding-top: 110px; // sthis could be a css variable, and it can be geenrrate din the form through jquery !!!!!!!!!!!!!!!!!!!!! --- SCRIPTING REQUIRED
-  /*
-  scroll-padding-top: 100px; // AFTER "HEADER IS SMALLERS"
-  */
-  // NOT IMELEMETED YET, AS NO PAGE BANNER ON THIW WP_COWOW THINEE YET , PEOR SI QUE HABIA HEADER HEIGHT SCRIPT ALREADY IN SCROPTS FIEL, SO JUST DO THE SCROL SNAP Y LISTSO 
-  
-  scroll-padding-top: var(--header-height);
-  
-
-  /* END OF BLOCK */
-} // html
-
-
-
-
-
-
-
-
 body {
   background-color: var(--c-bg);  // tets 
 }
-#page {
-  /* PLACEHOLDER */
-}
-header#header, 
-footer#footer {
-  // background-color: $c_accent;  
-  // background-color: #957DAD;  // tets 
-  // background-color: var(--c-black);  // tets / chNGE TO VARIABLES, AFET R CIPYING DARK MODE FOMR OTHER PLACE
-  
-  // background-color: var(--c-bg); 
-  background-color: var(--c-bg-tails);
-  color: var(--c-text-tails);
-}
+  #page {
+    /* PLACEHOLDER */
+  }
+    header#header, 
+    footer#footer {
+      // background-color: $c_accent;  
+      // background-color: #957DAD;  // tets 
+      // background-color: var(--c-black);  // tets / chNGE TO VARIABLES, AFET R CIPYING DARK MODE FOMR OTHER PLACE
+      
+      // background-color: var(--c-bg); 
+      background-color: var(--c-bg-tails);
+      color: var(--c-text-tails);
+    }
+
+
+
+// meter aqui en flex sticky footer wn vez de que este en un pattial aparte, ioverkill 
 
 
 
@@ -91,24 +36,6 @@ footer#footer {
  */
 
  .backgrounds { // s_
-
-  /*
-
-  // flex: 1;
-  overflow-y: auto;
-  scroll-snap-type: y mandatory;
-  height: 100dvh; 
-
-
-  .background {
-    scroll-snap-align: start;
-    // vs height there ...
-  }
-
-  */
-
-
-
   
   .background:nth-of-type(odd) {
     // background-color: var(--c-bg-website);
@@ -128,86 +55,15 @@ footer#footer {
 
 
 
-
-
-
-
-
-// TODO NOW - MAYBE, FOR EASY OF DECOUPLING, SEPARATE SCROLL SNAP FOMR BG COLOR SYSTEM...
-
-
-/*
-.backgrounds { // s_
-
-  // CSS SCROLL SNAPPING
-  // https://css-tricks.com/practical-css-scroll-snapping/
-  
-  // scroll-snap-type: y mandatory; // vs proximity 
-  
-  
-    // START - COPIED FROM CJNET
-    // 2 - DONE - TODO - ADD THE SCROLL SNAP BEHAVIOUR TO THE PAGE, AND SEE IF IT WORKS, AND IF IT WORKS, THEN COPY IT - FROM THE DIALOGUE, WOW...
-    // TODO-NEXT NOW DO SCROLL, AKA SCROL SANP COPY FOMR DIALO, LAST IMPLEMETATION ANY GOOD - AS CJENT IS THE PERFCT USE CASE FOR VERTICAL SCROLS CNAP BEHAVIOUR ...
-    // https://css-tricks.com/practical-css-scroll-snapping/
-    // scroll-snap-type: mandatory;
-    // scroll-snap-points-y: repeat(300px);
-    // scroll-snap-type: y mandatory;
-
-    // scroll-snap-type: y mandatory; // perhaps ony for desktop ??
-    scroll-snap-type: y proximity; // LESS AGGRESIVE, VERY NICE, WHEN THERE IS MORE CONTENT THAN SCREEN HEIGHT - ELSE, MANDATORY IS NCE FOR CONTAINED CONTENT
-    // height: 100%;
-    height: 100dvh; // chatgpt - Ensure that: The height of #l_content is defined and not just 100%. It needs a definitive height to make the overflow content scrollable, or it should inherit a height from its parent that limits its size.
-    overflow-y: scroll;
-    // END - COPIED FROM CJNET
-  
-  
-    .background { // ALL
-      scroll-snap-align: start;
-    } // ALL
-    
-  } // backgrounds
-*/
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// meter aqui en flex sticky footer wn vez de que este en un pattial aparte, ioverkill 
-
-
 /* 
  * VERTICAL SECTIONS
  */	
 section {
-	
 	// ASA CLASS MODIFIER, ELSE IT'S TOO GENERAL.
 	// background-color: #CCC; 
 	// margin-bottom: $spacing2; // TEST
-	
 	// border: 1px solid black; 
-  
-
   // ALTERNATING BG ....
-  
   // TEMP
   // // // padding-block: $spacing2; // shoudl kil thos probably !!! / yes,l this is dangerous.. 
   
@@ -219,40 +75,21 @@ section {
 } // section
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* 
- * HORIZONTAL SECTIONS - WIDTHS
+ * HORIZONTAL SECTIONS - WIDTHS  -todo - renamer as wrapper or frame ..
  */		
 .frame {
   // border: $s_border;
-
   // @include centered;
   margin-inline: auto;
-
   min-width: 320px; 
   // max-width: 1240px;
   max-width: 1440px;
   // max-width: 1640px;
-
-
   /* HORIZONTAL PADDING */
   // @include paddingh($spacing);
   @include paddingh($spacing2);
 	// CAN BE SIMPLIFIED AS GENRIC TRANSIITON VALUE MIXIN
-  
   /*
   @include transition(padding-left, $t_slow); // RWD EYE-CANDY
   @include transition(padding-right, $t_slow); // RWD EYE-CANDY
@@ -271,12 +108,6 @@ section {
 } // frame 			
 	
 	
-	
-
-
-
-
-
 /*
 
 // RENAME AS page_content (div id)
@@ -290,9 +121,6 @@ section {
 	
 	.inner {} // too unspecific, as there is a frame in between... but could be a different frame... 
 	
-	
 	} // content
-
-
 
 */

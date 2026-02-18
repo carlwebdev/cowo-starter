@@ -47,6 +47,11 @@ get_template_part('template-parts/page/page_backgrounds_start');
 		$section_link_text = 'We will show you what is right';
 		get_template_part('template-parts/section/section_link');
 		?>
+
+
+
+
+
 		<?php
 		// PAGE - THE CONTENT 
 		?>
@@ -54,6 +59,10 @@ get_template_part('template-parts/page/page_backgrounds_start');
 			<?php the_content(); ?>
 		</div> <!-- /m_htmleditor -->
 
+
+
+
+		
   </div> <!-- /frame -->     
 </section>  
 
@@ -104,12 +113,13 @@ get_template_part('template-parts/page/page_backgrounds_start');
     $section_title = 'Table(s)';
     include get_template_directory() . '/components/template/section/section_title.php'; 
     ?>     
-
-	<?php 
-	// TODO - table through css grid spans todos seguidos trick de css tricks
-	include get_template_directory() . '/components/demo/cowo_tables.php'; 
-	?>
     
+	<?php 
+	// DEMO - TABLES // TODO - table through css grid spans todos seguidos trick de css tricks
+	get_template_part('template-parts/demo/cowo_tables');
+	?>
+		
+		
   </div>    
 </section> 
 
@@ -132,12 +142,10 @@ get_template_part('template-parts/page/page_backgrounds_start');
 		include get_template_directory() . '/components/template/section/section_title.php'; 
 		?>           
 
-		<?php 
-		/*
-		* DEMO - - - GRID - BLOG
-		*/
-		include get_template_directory() . '/components/demo/cowo_forms.php'; 
-		?>
+			<?php 
+			// DEMO - FORMS
+			get_template_part('template-parts/demo/cowo_forms');
+			?>
 		
 	</div> <!-- /frame -->     
 </section>   
@@ -164,11 +172,10 @@ get_template_part('template-parts/page/page_backgrounds_start');
 		?>           
 
 		<?php 
-		/*
-		* DEMO - - - GRID-LIST
-		*/
-		include get_template_directory() . '/components/demo/cowo_gridlist.php'; 
+		// DEMO - GRIDLIST
+		get_template_part('template-parts/demo/cowo_gridlist');
 		?>
+		
 		
 	</div> <!-- /frame -->     
 </section>   
@@ -195,10 +202,17 @@ get_template_part('template-parts/page/page_backgrounds_start');
 	get_template_part('template-parts/section/section_title');
     ?>
 
-    <?php 
-     // DEMO - - - GRID - BLOG
-     include get_template_directory() . '/components/blog/demo_grid_blog.php'; 
-    ?>
+
+
+
+      <?php 
+      // GRID - BLOG
+      get_template_part('template-parts/post/grid_blog');
+      // get_template_part('template-parts/section/section_link');
+      ?> 	
+
+
+
 
   </div> <!-- /frame -->
 </section>

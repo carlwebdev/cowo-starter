@@ -22,7 +22,8 @@
 
 .pagination { // pagination2 - - - - -- -
 	display: inline-block;
-	@extend .clearfix;
+	// @extend .clearfix;
+	overflow: hidden; // to avoid clearfix hack - alternative ...
 	
 	
 	.page-numbers { // a

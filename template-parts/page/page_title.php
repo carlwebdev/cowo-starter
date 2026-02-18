@@ -19,6 +19,9 @@
     // REPO OPTIONS: News, Posts, Community, Blog, Articles, Stories, Journal, Updates, Insights + [Category Name]
     // TOKILL: NEWS - not dynamic, why ??? - bacause it just aint... name for the page with all the posts - i have that in wp eimeo or whatver !!!! -->
     // AND IT'S MULTILINGUAL, PERFECT
+
+
+    // add otpisn for is_serach Serch ersults for $s 
     ?>
       <?php echo $page_title; ?>
   <?php else: ?>

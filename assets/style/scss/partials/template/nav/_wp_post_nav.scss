@@ -10,7 +10,8 @@
   
 	@include paddingv($spacing05); // TESTING
   
-	@extend .clearfix;
+	// @extend .clearfix;
+	overflow: hidden; // to avoid clearfix hack - alternative ...
 
 	font-size: 13px; // CARL
 	line-height: 15px;

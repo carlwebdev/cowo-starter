@@ -3,36 +3,8 @@
  * Project: cowo-Boilerplate
  * File: Sass - Layout
  */
+
  
-
-/* FUNCTIONS */ // for the sass grid thingee	 - would be as sepoarate file anyways - DO THIS FOR THE BOLEPLATE !!!!!!!!!!!!!!!!!!!!
-
-/*
- * SASS - VARIABLES - LAYOUT - BREAK-POINTS 
- */ 
-$bp_xl: 1200px;
-$bp_l: 1024px;
-$bp_m: 800px;
-$bp_s: 599px;
-$bp_xs: 480px;
-
-/*
- * SASS - VARIABLES - LAYOUT - SPACING
- */
-$spacing: 24px;
-$spacing2: $spacing * 2;
-$spacing3: $spacing * 3;
-$spacing4: $spacing * 4;
-$spacing6: $spacing * 6;
-$spacing8: $spacing * 8;
-$spacing075: $spacing * 0.75;
-$spacing05: $spacing * 0.5;
-$spacing025: $spacing * 0.25;
-$spacing0125: $spacing * 0.125;
-
-
-
-
 /* SPACINGS */
 
 @mixin spacing($anyth)  {
@@ -166,46 +138,41 @@ $spacing0125: $spacing * 0.125;
 		
 		
 
-/* START - CLEARFIX */ /* apply clearfix to parent */
-.clearfix:after {
-	visibility: hidden;
-	display: block;
-	font-size: 0;
-	content: " ";
-	clear: both;
-	height: 0;
-	}
-* html .clearfix             { zoom: 1; } /* IE6 */
-*:first-child+html .clearfix { zoom: 1; } /* IE7 */
-/*/END - CLEARFIX */
+/* 
+ *
+ * CARDS
+ *
+ */
+ @mixin s_card____NOT { // // s_card_default // default / (base, or just npothing ...)
+	// s_CARD_BASE ... ETC 
 
+	// background-color: $c_white; /* PRECAUTION */
+	background-color: white; /* PRECAUTION */
 
-/* oveflow:hidden; VS clearfix hack VS float:inline-block with font-size issues..... */
-
-/*
-
-I USE overflow:hidden, hwich works the same, UNLESS YOU GET FUCKED UP BY DELETED OVERFLOWING CONTENT.
-
-view-source:http://mattbango.com/demos/hover-zoom/
-
-http://css-tricks.com/snippets/css/clear-fix/
-
-///
-to avoid cleafix hack, use display inline block, and then add the vertcal align top..
-but ther's the sapcing issue too... several ways to fix that
-
-
-*/
+	// box-shadow: 0px 0px 2px #ccc;
+	// box-shadow: 0px 0px 4px 2px #ccc;
+	// box-shadow: 0px 0px 8px -2px #ccc;
+	box-shadow: 0px 0px 8px 2px #ccc;
 
 
 
+	// padding: $space025;		
+	padding: 1em;
+	// border-radius: $spacing05;
+	border-radius: 12px; // 
 
 
-	
-/* FUNCTIONS */ // for the sass grid thingee	 - would be as sepoarate file anyways
+  } // a_ui_default
 
 
 
-
-
-
+  @mixin card {
+	// CARD - CONTAINER
+	// background-color: $c_white;  // card - need bg color always, as precautin but also as best practices ...
+	// background-color: $c_white; /* PRECAUTION */
+	background-color: white; /* PRECAUTION */
+	// box-shadow: 0px 0px 2px #ccc;
+	// box-shadow: 0px 2px 11px 8px #999; // 999 - FOR EHWN BG IS CCC
+	box-shadow: 0px 4px 4px 2px #999; // 999 - FOR EHWN BG IS CCC
+	border-radius: 6px; // TEST 
+  } // card

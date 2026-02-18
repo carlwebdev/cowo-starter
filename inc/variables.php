@@ -2,19 +2,28 @@
 /*
  * VARIABLES - ONLY CALLING IN CONETENT FOR NOW, NOT IN HEADER OR FOOTER VS LEARN GLOBAL VARIABLES DEINFITION SS. 
  */
-?>
-<?php
+
+
+
 // DEV ASSETS:
 $demo_img ="https://picsum.photos/1920"; // demo_img_random, demo_img // $cb_img_random
-?>
 
 
-<?php
+
+//////////////////////////////////////////////////
+
+
+
+
 // COPY
 $demo_img___not ="https://picsum.photos/1920"; // demo_img_random, demo_img // $cb_img_random
-?>
 
-<?php
+
+
+//////////////////////////////////////////////////
+
+
+
 // ICONS - GOOGLE FONTS ICONS - ADD THE IMPORT !!!
 // https://fonts.google.com/icons
 // <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
@@ -45,12 +54,11 @@ $GLOBALS['icon_arrow_up'] = '<span class="material-symbols-outlined">arrow_upwar
 // Material Symbols are our newest icons consolidating over 2,500 glyphs in a single font file with a wide range of design variants. Symbols are available in three styles and four adjustable variable font styles (fill, weight, grade, and optical size).
 
 
-?>
 
 
+//////////////////////////////////////////////////
 
 
-<?php 
 
 
 
@@ -119,7 +127,6 @@ $GLOBALS['icon_cart'] ='<span class="material-symbols-outlined">shopping_cart</s
 // BOTH OF THESE ARE INVOED THROUGH SCRIPT, MUCH LIEK THE DARK MODEE TOGGLE DOES IN OTHER SITES, NOT YET IMEMETE HERE IN CB !!!
 $GLOBALS['icon_fullscreen'] ='<span class="material-symbols-outlined">fullscreen</span>'; // cart
 $GLOBALS['icon_fullscreen_exit'] ='<span class="material-symbols-outlined">close_fullscreen</span>'; // close_fullscreen VS fullscreen_exit 
-
 
 $GLOBALS['icon_responsive'] ='<span class="material-symbols-outlined">responsive_layout</span>';
 

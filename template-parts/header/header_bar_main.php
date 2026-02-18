@@ -21,10 +21,10 @@
     // HEADER OPTIONS
     get_template_part('template-parts/header/header_options'); 
     // DEV OPTIONS
-    get_template_part('template-parts/header/dev_options');
+    // get_template_part('template-parts/header/dev_options');
 
     // DEV buttons ..
-    get_template_part('template-parts/header/dev_buttons');
+    // get_template_part('template-parts/header/dev_buttons');
     
     // HEADER - SOCIAL
     get_template_part('template-parts/header/header_social');
